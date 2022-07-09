@@ -1,0 +1,3 @@
+
+
+width = sprite_width;

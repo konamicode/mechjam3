@@ -1,0 +1,43 @@
+{
+  "spriteId": null,
+  "solid": false,
+  "visible": true,
+  "managed": true,
+  "spriteMaskId": {
+    "name": "sprMeleeSwipe",
+    "path": "sprites/sprMeleeSwipe/sprMeleeSwipe.yy",
+  },
+  "persistent": false,
+  "parentObjectId": {
+    "name": "objAttack",
+    "path": "objects/objAttack/objAttack.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsGroup": 1,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
+  "properties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"dmg","path":"objects/objAttack/objAttack.yy",},"objectId":{"name":"objAttack","path":"objects/objAttack/objAttack.yy",},"value":"100","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"lifetime","path":"objects/objAttack/objAttack.yy",},"objectId":{"name":"objAttack","path":"objects/objAttack/objAttack.yy",},"value":"10","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
+  "parent": {
+    "name": "Objects",
+    "path": "folders/Objects.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "objMeleeSwipe",
+  "tags": [],
+  "resourceType": "GMObject",
+}
