@@ -1,12 +1,17 @@
 {
   "resources": [
     {"id":{"name":"sprInput","path":"sprites/sprInput/sprInput.yy",},"order":2,},
+    {"id":{"name":"sprMapController","path":"sprites/sprMapController/sprMapController.yy",},"order":3,},
     {"id":{"name":"Menu","path":"scripts/Menu/Menu.yy",},"order":0,},
+    {"id":{"name":"rmCombat","path":"rooms/rmCombat/rmCombat.yy",},"order":3,},
     {"id":{"name":"sprCamera","path":"sprites/sprCamera/sprCamera.yy",},"order":0,},
+    {"id":{"name":"objMapMgr","path":"objects/objMapMgr/objMapMgr.yy",},"order":3,},
+    {"id":{"name":"rmMap","path":"rooms/rmMap/rmMap.yy",},"order":2,},
     {"id":{"name":"sprPlaceHolder","path":"sprites/sprPlaceHolder/sprPlaceHolder.yy",},"order":0,},
     {"id":{"name":"objManager","path":"objects/objManager/objManager.yy",},"order":0,},
     {"id":{"name":"objInputMgr","path":"objects/objInputMgr/objInputMgr.yy",},"order":2,},
     {"id":{"name":"objCamera","path":"objects/objCamera/objCamera.yy",},"order":1,},
+    {"id":{"name":"Map","path":"scripts/Map/Map.yy",},"order":1,},
     {"id":{"name":"sprGameController","path":"sprites/sprGameController/sprGameController.yy",},"order":1,},
     {"id":{"name":"rmMenu","path":"rooms/rmMenu/rmMenu.yy",},"order":0,},
   ],
@@ -30,6 +35,8 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"rmMenu","path":"rooms/rmMenu/rmMenu.yy",},},
+    {"roomId":{"name":"rmMap","path":"rooms/rmMap/rmMap.yy",},},
+    {"roomId":{"name":"rmCombat","path":"rooms/rmCombat/rmCombat.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

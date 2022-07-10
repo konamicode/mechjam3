@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprGameController",
-    "path": "sprites/sprGameController/sprGameController.yy",
+    "name": "sprMapController",
+    "path": "sprites/sprMapController/sprMapController.yy",
   },
   "solid": false,
   "visible": true,
@@ -29,7 +29,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "objManager",
+  "name": "objMapMgr",
   "tags": [],
   "resourceType": "GMObject",
 }
