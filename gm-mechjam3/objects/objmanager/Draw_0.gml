@@ -5,3 +5,5 @@ switch(room) {
 	break;
 		
 }
+
+roomMenu.DrawMenu(room_width/4, 8);

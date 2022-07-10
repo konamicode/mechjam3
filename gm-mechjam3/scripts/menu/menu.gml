@@ -28,6 +28,8 @@ function Menu(type = menuType.text, _expand = expandType.vertical) constructor
 	bgHeight = 0;
 	bgWidth = 0;
 	bgMargin = 6;
+	hAlign = fa_left;
+	vAlign = fa_middle;
 	
 	static AddItem = function(text, callback, image_bg = -4) {
 		var itemArray;
@@ -87,15 +89,25 @@ function Menu(type = menuType.text, _expand = expandType.vertical) constructor
 		menuFont = _font;
 	}
 
-	static SetSpacing = function(_spacing)
+	function SetSpacing(_spacing)
 	{
 		menuSpacing = _spacing;	
 	}
 	
-	static SetMargin = function(_margin)
+	function SetMargin(_margin)
 	{
 		bgMargin = _margin;
 	}
+	
+	function SetHAlign(_align) {
+		hAlign = _align;
+	}
+	
+	function SetVA(_align)
+	{
+		vAlign = _align;
+	}
+
 	
 	static GetText = function(index)
 	{
@@ -115,7 +127,7 @@ function Menu(type = menuType.text, _expand = expandType.vertical) constructor
 		_func();
 	}
 	
-	function DrawMenu(_x, _y, spacing = menuSpacing) {
+	function DrawMenu(_x, _y) {
 		if ( sprite_exists(menuBG) ) {
 			var _xscale = (bgMargin + bgWidth + bgMargin) / sprite_get_width(menuBG);
 			var _yscale = (bgMargin + bgHeight + bgMargin) / sprite_get_height(menuBG);
@@ -135,16 +147,18 @@ function Menu(type = menuType.text, _expand = expandType.vertical) constructor
 				var _height = sprite_get_height(bg);
 				var _width = sprite_get_width(bg);
 				var _alpha = 1; //currentItem = i ? 1 : .25;
-				var textX = _x + bgMargin + (i * spacing * (expand)) + (_width / 2);
-				var textY = _y + bgMargin + ( i * spacing * (1 -expand));
+				var textX = _x + bgMargin + (i * menuSpacing * (expand)) + (_width / 2);
+				var textY = _y + bgMargin + ( i * menuSpacing * (1 -expand));
 								
-				draw_sprite_ext(bg, (currentItem == i) ? 0 : 1, _x + bgMargin + (i * spacing * expand), _y + bgMargin + ( i * spacing * (1- expand)), 1, 1, 0, -1, _alpha);
+				draw_sprite_ext(bg, (currentItem == i) ? 0 : 1, _x + bgMargin + (i * menuSpacing * expand), _y + bgMargin + ( i * menuSpacing * (1- expand)), 1, 1, 0, -1, _alpha);
 				draw_set_halign(fa_center);
 			}
 			else
 			{
-				textX = _x + bgMargin + (i * spacing * (expand));
-				textY = _y + bgMargin + ( i * spacing * (1 - expand));
+				draw_set_halign(hAlign);
+				draw_set_valign(vAlign);
+				textX = _x + bgMargin + (i * menuSpacing * (expand));
+				textY = _y + bgMargin + ( i * menuSpacing * (1 - expand));
 			}
 
 			var _oldFont = draw_get_font();
@@ -161,6 +175,7 @@ function Menu(type = menuType.text, _expand = expandType.vertical) constructor
 			//reset draw font
 			draw_set_font(_oldFont);
 			draw_set_halign(fa_left);	
+			draw_set_valign(fa_middle);
 		}
 	}
 }
