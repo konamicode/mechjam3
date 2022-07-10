@@ -15,7 +15,7 @@ startMenu = new Menu();
 startMenu.AddItem("Start", DoNothing);
 
 //comment these out when we launch, debug only
-startMenu.AddItem("Go To Map", DoNothing);
+startMenu.AddItem("Go To Map", GoToMapRoom);
 startMenu.AddItem("Go To Combat", DoNothing);
 //
 
