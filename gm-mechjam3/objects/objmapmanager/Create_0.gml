@@ -23,6 +23,23 @@ function GenerateMap()
 		}
 	}
 	
+	//Give the player a starting location
+	map[irandom(height-1)][irandom(width-1)].isLiberated = true;
+	
+	//Determine exclusion portion
+	var exclusionCount = floor((width * height) - (random_range(minDensity, maxDensity) * width * height));
+	
+	while(exclusionCount > 0)
+	{
+		var xLoc = irandom(height-1);
+		var yLoc = irandom(width-1);
+		
+		if(map[xLoc][yLoc].isLiberated == false and map[xLoc][yLoc].isPresent == true)
+		{
+			map[xLoc][yLoc].isPresent = false;
+			exclusionCount = exclusionCount - 1;
+		}
+	}
 }
 
 function DisplayMap()
