@@ -13,6 +13,7 @@
     {"id":{"name":"objCamera","path":"objects/objCamera/objCamera.yy",},"order":1,},
     {"id":{"name":"Map","path":"scripts/Map/Map.yy",},"order":1,},
     {"id":{"name":"sprGameController","path":"sprites/sprGameController/sprGameController.yy",},"order":1,},
+    {"id":{"name":"Helper","path":"scripts/Helper/Helper.yy",},"order":2,},
     {"id":{"name":"rmMenu","path":"rooms/rmMenu/rmMenu.yy",},"order":0,},
   ],
   "Options": [
