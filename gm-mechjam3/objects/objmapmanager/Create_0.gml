@@ -5,26 +5,32 @@ height = 6;
 minDensity = 0.7;
 maxDensity = 0.9;
 
-map = [];
+mapData = [];
+tileMap = [];
+
+playerStartX = 0;
+playerStartY = 0;
 
 function GenerateMap()
 {
-	//Initialize the tile array
+	//Initialize the tile data array
 	for(i = 0; i < height; i++)
 	{
-		map[i] = [width];
+		mapData[i] = [width];
 	}
 	
 	for(j = 0; j < height; j++)
 	{
 		for(k = 0; k < width; k++)
 		{
-			map[j][k] = new mapTileData();
+			mapData[j][k] = new mapTileData();
 		}
 	}
 	
 	//Give the player a starting location
-	map[irandom(height-1)][irandom(width-1)].isLiberated = true;
+	playerStartX = irandom(width-1);
+	playerStartY = irandom(height-1);
+	mapData[playerStartY][playerStartX].isLiberated = true;
 	
 	//Determine exclusion portion
 	var exclusionCount = floor((width * height) - (random_range(minDensity, maxDensity) * width * height));
@@ -34,9 +40,9 @@ function GenerateMap()
 		var xLoc = irandom(height-1);
 		var yLoc = irandom(width-1);
 		
-		if(map[xLoc][yLoc].isLiberated == false and map[xLoc][yLoc].isPresent == true)
+		if(mapData[xLoc][yLoc].isLiberated == false and mapData[xLoc][yLoc].isPresent == true)
 		{
-			map[xLoc][yLoc].isPresent = false;
+			mapData[xLoc][yLoc].isPresent = false;
 			exclusionCount = exclusionCount - 1;
 		}
 	}
@@ -44,6 +50,12 @@ function GenerateMap()
 
 function DisplayMap()
 {
+	//Initialize the tile array
+	for(t = 0; t < height; t++)
+	{
+		tileMap[t] = [width];
+	}
+	
 	for(i = 0; i < height; i++)
 	{
 		for(j = 0; j < width; j++)
@@ -56,13 +68,17 @@ function DisplayMap()
 			xLoc = xLoc - sprite_get_width(sprHexTile)/4;
 			
 			var yLoc = ((i * sprite_get_height(sprHexTile)) - i * (sprite_get_height(sprHexTile))/4) + sprite_get_height(sprHexTile);
-			
-			
-			var newTile = instance_create_layer(xLoc, yLoc, "Map", objHexTile);
-			newTile.isLiberated = map[i][j].isLiberated;
-			newTile.buff = map[i][j].buff;
-			newTile.bonus = map[i][j].bonus;
-			newTile.isPresent = map[i][j].isPresent;
+					
+			tileMap[i][j] = instance_create_layer(xLoc, yLoc, "Map", objHexTile);
+			tileMap[i][j].isLiberated = mapData[i][j].isLiberated;
+			tileMap[i][j].buff = mapData[i][j].buff;
+			tileMap[i][j].bonus = mapData[i][j].bonus;
+			tileMap[i][j].isPresent = mapData[i][j].isPresent;
 		}
 	}
+	
+	
+	var player = instance_create_layer(tileMap[playerStartY][playerStartX].x, tileMap[playerStartY][playerStartX].y, "Pawns", objPlayerPawn);
+	player.mapX = playerStartX;
+	player.mapY = playerStartY;
 }
