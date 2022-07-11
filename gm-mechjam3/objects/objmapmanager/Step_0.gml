@@ -4,10 +4,12 @@
 //Debug functionality
 if(input_check_released("mapMenuConfirm"))
 {
-	PlayerVictory();
+	if(room == rmMap)
+		PlayerVictory();
 }
 
 if(input_check_released("cancel"))
 {
-	PlayerFailure();
+	if(room == rmMap)
+		PlayerFailure();
 }
