@@ -1,12 +1,12 @@
 
 
-var _down = keyboard_check_pressed(vk_down);
-var _left = keyboard_check_pressed(vk_left);
-var _right = keyboard_check_pressed(vk_right);
-var _up = keyboard_check_pressed(vk_up);
-var _enter = keyboard_check_pressed(vk_enter);
-var _esc = keyboard_check_pressed(vk_escape);
-var _backspace = keyboard_check_pressed(vk_backspace);
+var _down = input_check_pressed("down");
+var _left = input_check_pressed("left");
+var _right = input_check_pressed("right");
+var _up = input_check_pressed("up");
+var _accept = input_check_pressed("accept");
+var _esc = input_check_pressed("cancel");
+var _backspace = input_check_pressed("mapMenuConfirm");
 
 switch(room) {
 	case rmMenu:
@@ -16,7 +16,7 @@ switch(room) {
 		if _up
 			startMenu.MenuUp();
 	
-		if _enter
+		if _accept
 			startMenu.RunCallback(startMenu.currentItem);
 	break;	
 	

@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sprMapController",
+    "path": "sprites/sprMapController/sprMapController.yy",
+  },
   "solid": false,
   "visible": false,
   "managed": true,
