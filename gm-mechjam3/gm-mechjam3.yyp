@@ -72,6 +72,7 @@
     {"id":{"name":"input_axis_threshold_set","path":"scripts/input_axis_threshold_set/input_axis_threshold_set.yy",},"order":1,},
     {"id":{"name":"__input_binding_get_label","path":"scripts/__input_binding_get_label/__input_binding_get_label.yy",},"order":3,},
     {"id":{"name":"input_player_ghost_get","path":"scripts/input_player_ghost_get/input_player_ghost_get.yy",},"order":8,},
+    {"id":{"name":"Player","path":"scripts/Player/Player.yy",},"order":6,},
     {"id":{"name":"input_player_connected","path":"scripts/input_player_connected/input_player_connected.yy",},"order":3,},
     {"id":{"name":"input_system_reset","path":"scripts/input_system_reset/input_system_reset.yy",},"order":9,},
     {"id":{"name":"input_gamepad_value","path":"scripts/input_gamepad_value/input_gamepad_value.yy",},"order":10,},
@@ -309,6 +310,7 @@
     {"folderPath":"folders/Input/Sources.yy","order":17,"resourceVersion":"1.0","name":"Sources","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Input/Verbs.yy","order":18,"resourceVersion":"1.0","name":"Verbs","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/BG.yy","order":4,"resourceVersion":"1.0","name":"BG","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Combat/Components.yy","order":6,"resourceVersion":"1.0","name":"Components","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
