@@ -20,3 +20,8 @@ lastDir = aimDir;
 
 aim_x = 0;
 aim_y = 0;
+
+moveSpeed = 6.0;
+
+
+
