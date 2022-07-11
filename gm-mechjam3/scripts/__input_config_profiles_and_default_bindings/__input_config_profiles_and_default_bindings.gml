@@ -27,7 +27,7 @@ INPUT_DEFAULT_PROFILES = {
         
         //No aiming verbs since we use the mouse for that (see below for aiming verb examples)
         shoot: input_binding_mouse_button(mb_left),
-        
+        aim: input_binding_mouse_button(mb_right),
         pause: input_binding_key(vk_escape),
     },
     
@@ -47,8 +47,11 @@ INPUT_DEFAULT_PROFILES = {
         aim_down:  input_binding_gamepad_axis(gp_axisrv, false),
         aim_left:  input_binding_gamepad_axis(gp_axisrh, true),
         aim_right: input_binding_gamepad_axis(gp_axisrh, false),
-        shoot:     [ input_binding_gamepad_button(gp_shoulderrb)],
         
+		shoot:     [ input_binding_gamepad_button(gp_shoulderrb)],
+        
+		aim: input_binding_gamepad_button(gp_shoulderlb),
+		
         pause: input_binding_gamepad_button(gp_start),
     },
     

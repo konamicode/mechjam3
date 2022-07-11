@@ -57,6 +57,7 @@
     {"id":{"name":"input_combo_get_phase_count","path":"scripts/input_combo_get_phase_count/input_combo_get_phase_count.yy",},"order":3,},
     {"id":{"name":"input_check_opposing","path":"scripts/input_check_opposing/input_check_opposing.yy",},"order":7,},
     {"id":{"name":"input_binding_mouse_button","path":"scripts/input_binding_mouse_button/input_binding_mouse_button.yy",},"order":4,},
+    {"id":{"name":"objPlayer","path":"objects/objPlayer/objPlayer.yy",},"order":3,},
     {"id":{"name":"__input_key_get_name","path":"scripts/__input_key_get_name/__input_key_get_name.yy",},"order":16,},
     {"id":{"name":"rmCombat","path":"rooms/rmCombat/rmCombat.yy",},"order":3,},
     {"id":{"name":"input_profile_auto","path":"scripts/input_profile_auto/input_profile_auto.yy",},"order":0,},
