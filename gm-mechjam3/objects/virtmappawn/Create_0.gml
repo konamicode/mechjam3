@@ -8,8 +8,12 @@ function MoveLeft(mapInfo)
 	{
 		if(mapInfo[mapY][mapX-1].isPresent)
 		{
-			mapX = mapX - 1;
-			MoveToNewLocation();
+			if(mapInfo[mapY][mapX].isLiberated
+				or mapInfo[mapY][mapX-1].isLiberated)
+			{
+				mapX = mapX - 1;
+				MoveToNewLocation();
+			}
 		}
 	}
 }
@@ -20,8 +24,12 @@ function MoveRight(mapInfo)
 	{
 		if(mapInfo[mapY][mapX+1].isPresent)
 		{
-			mapX = mapX + 1;
-			MoveToNewLocation();
+			if(mapInfo[mapY][mapX].isLiberated
+				or mapInfo[mapY][mapX+1].isLiberated)
+			{
+				mapX = mapX + 1;
+				MoveToNewLocation();
+			}
 		}
 	}
 }
@@ -30,10 +38,11 @@ function MoveUp(mapInfo)
 {
 	if(mapY > 0)
 	{
-		if(mapInfo[mapY-1][mapX].isPresent)
+		if(mapInfo[mapY-1][mapX].isPresent and 
+			(mapInfo[mapY][mapX].isLiberated or mapInfo[mapY-1][mapX].isLiberated))
 		{
-			mapY = mapY - 1;
-			MoveToNewLocation();
+				mapY = mapY - 1;
+				MoveToNewLocation();
 		}
 		//In the case that the logical up isn't present, attempt to travel to the alternate intuitive up
 		else
@@ -42,7 +51,8 @@ function MoveUp(mapInfo)
 			{
 				if(mapX < array_length(mapInfo[mapY])-1)
 				{
-					if(mapInfo[mapY-1][mapX+1].isPresent)
+					if(mapInfo[mapY-1][mapX+1].isPresent
+						and mapInfo[mapY-1][mapX+1].isLiberated)
 					{
 						mapY = mapY - 1;
 						mapX = mapX + 1;
@@ -54,7 +64,8 @@ function MoveUp(mapInfo)
 			{
 				if(mapX > 0)
 				{
-					if(mapInfo[mapY-1][mapX-1].isPresent)
+					if(mapInfo[mapY-1][mapX-1].isPresent
+						and mapInfo[mapY-1][mapX-1].isLiberated)
 					{
 						mapY = mapY - 1;
 						mapX = mapX - 1;
@@ -70,10 +81,11 @@ function MoveDown(mapInfo)
 {
 	if(mapY < array_length(mapInfo)-1)
 	{
-		if(mapInfo[mapY+1][mapX].isPresent)
+		if(mapInfo[mapY+1][mapX].isPresent 
+			and (mapInfo[mapY][mapX].isLiberated or mapInfo[mapY+1][mapX].isLiberated))
 		{
-			mapY = mapY + 1;
-			MoveToNewLocation();
+				mapY = mapY + 1;
+				MoveToNewLocation();
 		}
 		//In the case that the logical down isn't present, attempt to travel to the alternate intuitive down
 		else
@@ -82,7 +94,8 @@ function MoveDown(mapInfo)
 			{
 				if(mapX < array_length(mapInfo[mapY])-1)
 				{
-					if(mapInfo[mapY+1][mapX+1].isPresent)
+					if(mapInfo[mapY+1][mapX+1].isPresent
+						and mapInfo[mapY+1][mapX+1].isLiberated)
 					{
 						mapY = mapY + 1;
 						mapX = mapX + 1;
@@ -94,7 +107,8 @@ function MoveDown(mapInfo)
 			{
 				if(mapX > 0)
 				{
-					if(mapInfo[mapY+1][mapX-1].isPresent)
+					if(mapInfo[mapY+1][mapX-1].isPresent
+						and mapInfo[mapY+1][mapX-1].isLiberated)
 					{
 						mapY = mapY + 1;
 						mapX = mapX - 1;
