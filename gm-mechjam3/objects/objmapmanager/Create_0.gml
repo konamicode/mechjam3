@@ -29,6 +29,7 @@ function GenerateMap()
 		for(k = 0; k < width; k++)
 		{
 			mapData[j][k] = new mapTileData();
+			mapData[j][k].buff = irandom(enmBuffTypes.Length-1);
 		}
 	}
 	

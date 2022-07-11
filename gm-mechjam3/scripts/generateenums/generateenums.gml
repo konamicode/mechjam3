@@ -3,6 +3,9 @@
 
 enum enmBuffTypes {
 	HP,
+	Stamina,
 	Speed,
-	Power
+	MeleePower,
+	RangedPower,
+	Length
 }
