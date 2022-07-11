@@ -14,6 +14,8 @@ playerStartY = 0;
 playerLastX = 0;
 playerLastY = 0;
 
+playerPawn = noone;
+
 function GenerateMap()
 {
 	//Initialize the tile data array
@@ -84,7 +86,30 @@ function DisplayMap()
 		}
 	}	
 	
-	var player = instance_create_layer(tileMap[playerStartY][playerStartX].x, tileMap[playerStartY][playerStartX].y, "Pawns", objPlayerPawn);
-	player.mapX = playerStartX;
-	player.mapY = playerStartY;
+	playerPawn = instance_create_layer(tileMap[playerStartY][playerStartX].x, tileMap[playerStartY][playerStartX].y, "Pawns", objPlayerPawn);
+	playerPawn.mapX = playerStartX;
+	playerPawn.mapY = playerStartY;
+}
+
+//Tile encounter results
+function PlayerVictory()
+{
+	mapData[playerPawn.mapY][playerPawn.mapX].isLiberated = true;
+	tileMap[playerPawn.mapY][playerPawn.mapX].isLiberated = true;
+	
+	playerPawn.UpdateLastLocation();
+}
+
+function PlayerFailure()
+{
+	playerStartX = playerLastX;
+	playerStartY = playerLastY;
+	
+	playerPawn.mapX = playerLastX;
+	playerPawn.mapY = playerLastY;
+	
+	playerLastX = playerPawn.mapX;
+	playerLastY = playerPawn.mapY;
+	
+	playerPawn.MoveToNewLocation();
 }
