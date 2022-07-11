@@ -1,4 +1,7 @@
 // Inherit the parent event
+
+frame = noone;
+
 event_inherited();
 
 
