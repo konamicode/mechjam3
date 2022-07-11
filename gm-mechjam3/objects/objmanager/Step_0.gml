@@ -24,12 +24,12 @@ switch(room) {
 
 if (roomMenu)
 {
-	if _left	
-		roomMenu.MenuUp();
-			
-	if _right
-		roomMenu.MenuDown();
-				
-	if _backspace
-		roomMenu.RunCallback(roomMenu.currentItem);
+	if keyboard_check_pressed(ord("1"))
+		GoToMapRoom()
+		
+	if keyboard_check_pressed(ord("2"))
+		GoToCombatRoom();
+		
+	if keyboard_check_pressed(ord("3"))
+		GoToStartRoom();
 }
