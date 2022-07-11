@@ -1,11 +1,16 @@
-#macro screenWidth 1280
-#macro screenHeight 720
+#macro screenWidth 640
+#macro screenHeight 360
 
 #macro mouse_gui_x device_mouse_x_to_gui(0)
 #macro mouse_gui_y device_mouse_y_to_gui(0)
 
 
-window_scale = 1;
+window_scale = 2;
+camera_destroy(view_camera[0]);
+view_camera[0] = camera_create_view(0, 0, screenWidth * 1, screenHeight * 1);
+room_set_view_enabled(room, true);
+view_enabled = true;
+view_visible[0] = true;
 
 function SetupGameWindow(_window_scale) {
 	view_width = screenWidth;
