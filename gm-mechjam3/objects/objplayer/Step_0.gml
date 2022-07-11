@@ -41,8 +41,9 @@ if (actorState == state.dead) {
 	
 	}		
 	
-	if input_check_pressed("shoot") {
-		
+	if input_check_pressed("shoot") && canFire {
+		ChangeAnimation(sprPlayer_attack_beamrifle);
+		canFire = false;
 	}
 }
 

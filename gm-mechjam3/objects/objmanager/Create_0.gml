@@ -18,6 +18,8 @@ function GoToStartRoom() {
 
 startMenu = new Menu();
 startMenu.AddItem("Start", DoNothing);
+//startMenu.AddItem("New Game, 
+//startMenu.AddItem("Continue, 
 startMenu.AddItem("Options", DoNothing);
 startMenu.AddItem("Quit", game_end);
 
