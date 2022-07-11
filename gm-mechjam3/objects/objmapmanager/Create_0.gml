@@ -11,6 +11,9 @@ tileMap = [];
 playerStartX = 0;
 playerStartY = 0;
 
+playerLastX = 0;
+playerLastY = 0;
+
 function GenerateMap()
 {
 	//Initialize the tile data array
@@ -30,6 +33,10 @@ function GenerateMap()
 	//Give the player a starting location
 	playerStartX = irandom(width-1);
 	playerStartY = irandom(height-1);
+	
+	playerLastX = playerStartX;
+	playerLastY = playerStartY;
+	
 	mapData[playerStartY][playerStartX].isLiberated = true;
 	
 	//Determine exclusion portion
@@ -75,8 +82,7 @@ function DisplayMap()
 			tileMap[i][j].bonus = mapData[i][j].bonus;
 			tileMap[i][j].isPresent = mapData[i][j].isPresent;
 		}
-	}
-	
+	}	
 	
 	var player = instance_create_layer(tileMap[playerStartY][playerStartX].x, tileMap[playerStartY][playerStartX].y, "Pawns", objPlayerPawn);
 	player.mapX = playerStartX;
