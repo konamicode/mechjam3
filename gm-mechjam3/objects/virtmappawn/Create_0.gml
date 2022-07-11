@@ -35,6 +35,34 @@ function MoveUp(mapInfo)
 			mapY = mapY - 1;
 			MoveToNewLocation();
 		}
+		//In the case that the logical up isn't present, attempt to travel to the alternate intuitive up
+		else
+		{
+			if(mapY mod 2 == 0)
+			{
+				if(mapX < array_length(mapInfo[mapY])-1)
+				{
+					if(mapInfo[mapY-1][mapX+1].isPresent)
+					{
+						mapY = mapY - 1;
+						mapX = mapX + 1;
+						MoveToNewLocation();
+					}
+				}
+			}
+			else
+			{
+				if(mapX > 0)
+				{
+					if(mapInfo[mapY-1][mapX-1].isPresent)
+					{
+						mapY = mapY - 1;
+						mapX = mapX - 1;
+						MoveToNewLocation();
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -46,6 +74,34 @@ function MoveDown(mapInfo)
 		{
 			mapY = mapY + 1;
 			MoveToNewLocation();
+		}
+		//In the case that the logical down isn't present, attempt to travel to the alternate intuitive down
+		else
+		{
+			if(mapY mod 2 == 0)
+			{
+				if(mapX < array_length(mapInfo[mapY])-1)
+				{
+					if(mapInfo[mapY+1][mapX+1].isPresent)
+					{
+						mapY = mapY + 1;
+						mapX = mapX + 1;
+						MoveToNewLocation();
+					}
+				}
+			}
+			else
+			{
+				if(mapX > 0)
+				{
+					if(mapInfo[mapY+1][mapX-1].isPresent)
+					{
+						mapY = mapY + 1;
+						mapX = mapX - 1;
+						MoveToNewLocation();
+					}
+				}
+			}
 		}
 	}
 }
