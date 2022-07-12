@@ -28,12 +28,3 @@ function AddEnemy(_x, _y) {
 	var inst = CreateMechObject(enemy, _x, _y);
 	return inst;
 }
-
-
-function EndCombat(result) {
-	GoToMapRoom();
-}
-
-function StartCombat() {
-	GoToCombatRoom();	
-}

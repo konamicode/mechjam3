@@ -125,4 +125,6 @@ function MoveToNewLocation()
 	var tileMap = global.mapManager.tileMap;
 	x = tileMap[mapY][mapX].x;
 	y = tileMap[mapY][mapX].y;
+	global.mapManager.playerStartX = mapX;
+	global.mapManager.playerStartY = mapY;
 }

@@ -188,6 +188,7 @@
     {"id":{"name":"sprBuffSpeed","path":"sprites/sprBuffSpeed/sprBuffSpeed.yy",},"order":4,},
     {"id":{"name":"Animation","path":"scripts/Animation/Animation.yy",},"order":7,},
     {"id":{"name":"input_verb_get_group","path":"scripts/input_verb_get_group/input_verb_get_group.yy",},"order":1,},
+    {"id":{"name":"GameHelper","path":"scripts/GameHelper/GameHelper.yy",},"order":8,},
     {"id":{"name":"input_player_export","path":"scripts/input_player_export/input_player_export.yy",},"order":1,},
     {"id":{"name":"input_combo_create","path":"scripts/input_combo_create/input_combo_create.yy",},"order":1,},
     {"id":{"name":"sprBullet","path":"sprites/sprBullet/sprBullet.yy",},"order":8,},

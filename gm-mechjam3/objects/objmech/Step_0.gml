@@ -1,5 +1,12 @@
 event_inherited();
 
+if (actorState == state.dead) {
+	instance_destroy();
+	if (!isPlayer)
+		objCombatManager.RemoveEnemy(id);
+	exit;
+}
+
 if (!isPlayer)
 {
 

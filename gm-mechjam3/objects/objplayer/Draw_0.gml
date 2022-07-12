@@ -1,3 +1,5 @@
+draw_self();
+draw_set_color(c_white);
 if aiming {
 		var _aimDir = aimDir;
 		var aimOffset = clamp((45 - input_held_time("aim")), 0, 30);
@@ -7,4 +9,3 @@ if aiming {
 		draw_set_alpha(1);
 }
 
-draw_self();

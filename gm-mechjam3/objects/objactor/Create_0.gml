@@ -24,4 +24,6 @@ aim_y = 0;
 moveSpeed = 6.0;
 
 
+hitFlash = false;
+
 

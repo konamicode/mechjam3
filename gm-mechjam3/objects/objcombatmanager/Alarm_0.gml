@@ -1,0 +1,2 @@
+objManager.GoToMapRoom();
+changeRoom = false;

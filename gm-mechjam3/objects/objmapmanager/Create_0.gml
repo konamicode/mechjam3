@@ -99,6 +99,7 @@ function PlayerVictory()
 	tileMap[playerPawn.mapY][playerPawn.mapX].isLiberated = true;
 	
 	playerPawn.UpdateLastLocation();
+	ClearMissionStatus();
 }
 
 function PlayerFailure()
@@ -113,4 +114,12 @@ function PlayerFailure()
 	playerLastY = playerPawn.mapY;
 	
 	playerPawn.MoveToNewLocation();
+	ClearMissionStatus();
 }
+
+function ClearMissionStatus() {
+	global.missionStatus = enmMissionStatus.none;
+}
+
+ClearMissionStatus();
+GenerateMap();

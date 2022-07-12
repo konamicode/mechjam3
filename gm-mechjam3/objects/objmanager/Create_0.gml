@@ -1,6 +1,6 @@
 
 
-
+Init();
 
 
 function GoToMapRoom() {

@@ -9,3 +9,9 @@ enum enmBuffTypes {
 	RangedPower,
 	Length
 }
+
+enum enmMissionStatus {
+	none,
+	incomplete,
+	succeed
+}

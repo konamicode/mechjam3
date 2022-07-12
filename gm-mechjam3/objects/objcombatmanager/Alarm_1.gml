@@ -1,0 +1,2 @@
+objManager.GoToCombatRoom();
+changeRoom = false;

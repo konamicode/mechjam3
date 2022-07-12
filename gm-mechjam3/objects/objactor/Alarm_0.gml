@@ -1,0 +1,1 @@
+hitFlash = 0;
