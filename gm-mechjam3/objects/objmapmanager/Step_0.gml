@@ -2,14 +2,24 @@
 // You can write your code in this editor
 
 //Debug functionality
-if(input_check_released("mapMenuConfirm"))
-{
-	if(room == rmMap)
-		PlayerVictory();
-}
 
-if(input_check_released("cancel"))
-{
-	if(room == rmMap)
-		PlayerFailure();
+
+if ( room == rmMap) {
+	if(input_check_released("mapMenuConfirm"))
+	{
+			PlayerVictory();
+	}
+
+	if(input_check_released("cancel"))
+	{
+			PlayerFailure();
+	}	
+	
+	if(input_check_released("accept"))
+	{
+		objCombatManager.StartCombat();	
+	
+	
+	}	
+	
 }

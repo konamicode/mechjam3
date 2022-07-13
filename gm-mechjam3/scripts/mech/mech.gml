@@ -14,17 +14,41 @@ function Mech(_frame = noone ) constructor {
 		ds_list_destroy(weakpoints);
 		ds_list_destroy(defenses);		
 	}
+	
+	function AddComponent(type, label, creator) {
+		var comp = instance_create_layer(x, y, "Instances", objComponent, {creator: creator, type : type, label: label});
+		//switch(type) {
+		//	case componentType.weakpoint :	
+				
+		//	break;
+		//	case componentType.weapon: 
+		//	break;
+		//	case componentType.defenses: 
+		//	break;
+		//}
+		return comp;
+	}
 }
 
 
-function CreateMechObject(mechStruct, _x, _y, _layer="Instances") {
-	var inst = instance_create_layer(	_x, _y, _layer, objMech, mechStruct);
+function CreateMechObject(mechStruct, _x, _y, obj = objMech, _layer="Instances") {
+	var inst = instance_create_layer(	_x, _y, _layer, obj, mechStruct);
 	return inst;
 }
 
 
 function AddEnemy(_x, _y) {
-	var enemy = new Mech(sprPlaceholderEnemyFrame);
+	var enemy = new Mech();
 	var inst = CreateMechObject(enemy, _x, _y);
+	var _comp = enemy.AddComponent(componentType.weakpoint, "head", inst);
+	ds_list_add(inst.components, _comp);
 	return inst;
+}
+
+function CreatePlayer(_x, _y) {
+	var player = new Mech();
+	var inst = CreateMechObject(player, _x, _y, objPlayer );
+	var _comp = player.AddComponent(componentType.weakpoint, "head", inst);
+	ds_list_add(inst.components, _comp);
+
 }

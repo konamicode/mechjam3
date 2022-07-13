@@ -2,15 +2,15 @@ var _string = event_data[? "message"];
 switch(_string)
 {
 	case "colliderOn":
-		meleeCollider = instance_create_layer(x, y, "Instances", objMeleeSwipe);
+		//meleeCollider = instance_create_layer(x, y, "Instances", objMeleeSwipe);
 		//meleeCollider.image_angle = aimDir;
 	break;
 	case "colliderOff":
-		if (meleeCollider != noone)
-		{
-			instance_destroy(meleeCollider);
-			meleeCollider = noone;
-		}
+		//if (meleeCollider != noone)
+		//{
+		//	instance_destroy(meleeCollider);
+		//	meleeCollider = noone;
+		//}
 	break;
 	case "canFire":
 		canFire = true;

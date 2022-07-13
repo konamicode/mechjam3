@@ -1,9 +1,9 @@
 
 if (sprite_index == sprPlayer_attack_beamrifle)
 {
-	sprite_index = sprPlayer_idle_beamrifle;
+	ChangeAnimation(faction + "_idle_beamrifle");
 	canFire = true;
 }
 
 if (sprite_index == sprPlayer_attack_melee)
-	sprite_index = sprPlayer_idle_melee;
+	ChangeAnimation(faction + "_idle_beamrifle");

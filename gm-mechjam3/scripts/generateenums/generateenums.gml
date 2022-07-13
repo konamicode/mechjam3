@@ -15,3 +15,10 @@ enum enmMissionStatus {
 	incomplete,
 	succeed
 }
+
+
+enum componentType {
+	weakpoint,
+	weapon,
+	defenses
+}
