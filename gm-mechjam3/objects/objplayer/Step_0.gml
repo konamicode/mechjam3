@@ -38,8 +38,8 @@ if (actorState == state.dead) {
 			lastDir = aimDir; 
 		} else
 			aimDir = lastDir;
-	
-	}		
+	} else 
+		aimDir = point_direction(0, 0, image_xscale, 0);	
 	
 	if input_check_pressed("shoot") && canFire {
 		ChangeAnimation(faction + "_attack_beamrifle");

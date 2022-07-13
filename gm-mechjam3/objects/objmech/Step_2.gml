@@ -10,13 +10,11 @@ for ( var i = 0; i < ds_list_size(components); i++) {
 		var sprMultiplier = seqSpeed / spriteSpeed;
 		//show_debug_message(sprMultiplier);
 		var frameIndex = floor(image_index * sprMultiplier);
-		if (isPlayer)
-			show_debug_message(string(image_index) + ": " + string(frameIndex));
+		//if (isPlayer)
+		//	show_debug_message(string(image_index) + ": " + string(frameIndex));
 		var frameData = map[? frameIndex];
 		
-		if (frameIndex > 6) {
-			show_debug_message("got here");	
-		}
+
 		if ds_map_exists(map, frameIndex) {
 			if (frameData != undefined) {
 				//var frameData = map[? 0];

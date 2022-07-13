@@ -52,7 +52,7 @@ function StripKeyframeData(hitboxKeys) {
 			}
 		}
 	}
-	show_debug_message(frameMap);
+	//show_debug_message(frameMap);
 	return frameMap
 	//[ xPos, yPos, xScale, yScale, rotation]
 }
@@ -81,7 +81,7 @@ function GetSequenceHitboxData(sequence) {
 		var wpHitboxData = ds_map_create();
 		switch(prefix) {
 			case "wp":
-				show_debug_message(" Found a weakpoint named " + ident);
+				//show_debug_message(" Found a weakpoint named " + ident);
 				var wpTracks = variable_struct_get(struct, "tracks");
 				var wpKeys = array_create(3);
 				for (var j = 0; j < array_length(wpTracks); j++) {

@@ -28,11 +28,11 @@ switch(_string)
 			var _offx = coords[0] - sprite_xoffset;
 			var _offy = sprite_yoffset - coords[1];
 	
-			show_debug_message(_offx);
-			show_debug_message(string(y - abs(_offy)));
+			//show_debug_message(_offx);
+			//show_debug_message(string(y - abs(_offy)));
 			
 			//var _shot = instance_create_layer(x - _offx, y - _offy, "Instances", objShot);
-			instance_create_layer(x + _offx, y - abs(_offy), "Instances", objAttack, { attackType : collision.line, sprite_index: sprFX_beamBlast, image_angle : aimDir, creator : id}) ;
+			instance_create_layer(x + _offx, y - abs(_offy), "Instances", objAttack, { aimed: aiming, attackType : collision.line, sprite_index: sprFX_beamBlast, image_angle : aimDir, creator : id}) ;
 
 			//fx.shotParent = _shot;
 			//_shot.moveDir = _aimDir;

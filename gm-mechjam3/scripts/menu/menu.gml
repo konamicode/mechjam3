@@ -45,10 +45,10 @@ function Menu(type = menuType.text, _expand = expandType.vertical) constructor
 		}
 		ds_list_add(items, itemArray);
 		if ( expand == expandType.vertical ) {
-			show_debug_message(bgHeight);
+			//show_debug_message(bgHeight);
 			bgWidth = max(bgWidth, string_width(string_upper(text)), _sprite_width);
 			bgHeight += max(string_height(string_upper(text)), _sprite_height) ;
-			show_debug_message(bgHeight);
+			//show_debug_message(bgHeight);
 		}
 		else
 		if (expand == expandType.horizontal) {
