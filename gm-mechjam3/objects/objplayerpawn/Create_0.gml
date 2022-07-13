@@ -6,6 +6,6 @@ event_inherited();
 
 function UpdateLastLocation()
 {
-	global.mapManager.playerLastX = mapX;
-	global.mapManager.playerLastY = mapY;
+	objMapManager.playerLastX = mapX;
+	objMapManager.playerLastY = mapY;
 }

@@ -1,1 +1,1 @@
-global.mapManager.DisplayMap();
+objMapManager.DisplayMap();

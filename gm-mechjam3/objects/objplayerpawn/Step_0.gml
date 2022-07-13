@@ -3,23 +3,23 @@
 if(input_check_released("left"))
 {	
 	UpdateLastLocation();
-	MoveLeft(global.mapManager.mapData);
+	MoveLeft(objMapManager.mapData);
 }
 
 if(input_check_released("right"))
 {
 	UpdateLastLocation();
-	MoveRight(global.mapManager.mapData);
+	MoveRight(objMapManager.mapData);
 }
 
 if(input_check_released("up"))
 {
 	UpdateLastLocation();
-	MoveUp(global.mapManager.mapData);
+	MoveUp(objMapManager.mapData);
 }
 
 if(input_check_released("down"))
 {
 	UpdateLastLocation();
-	MoveDown(global.mapManager.mapData);
+	MoveDown(objMapManager.mapData);
 }

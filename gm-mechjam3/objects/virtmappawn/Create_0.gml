@@ -122,9 +122,9 @@ function MoveDown(mapInfo)
 
 function MoveToNewLocation()
 {
-	var tileMap = global.mapManager.tileMap;
+	var tileMap = objMapManager.tileMap;
 	x = tileMap[mapY][mapX].x;
 	y = tileMap[mapY][mapX].y;
-	global.mapManager.playerStartX = mapX;
-	global.mapManager.playerStartY = mapY;
+	objMapManager.playerStartX = mapX;
+	objMapManager.playerStartY = mapY;
 }
