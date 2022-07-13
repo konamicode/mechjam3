@@ -17,9 +17,10 @@ if ( room == rmMap) {
 	
 	if(input_check_released("accept"))
 	{
-		objCombatManager.StartCombat();	
-	
-	
+		if(tileMap[playerPawn.mapY][playerPawn.mapX].isLiberated == false)
+		{
+			objCombatManager.StartCombat();	
+		}
 	}	
 	
 }
