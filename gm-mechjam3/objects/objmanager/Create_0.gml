@@ -16,6 +16,8 @@ function GoToStartRoom() {
 	
 }
 
+gameData = new GameData();
+
 startMenu = new Menu();
 startMenu.AddItem("Start", DoNothing);
 //startMenu.AddItem("New Game, 

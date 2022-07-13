@@ -3,11 +3,50 @@
 
 function PlayerData() constructor {
 	subWeapons = [];
-	meleeWeaponLvl = 1;
-	rngWeaponLvl = 1;
+	
+	meleeAttackPower = 10;
+	rngAttackPower = 10;
+	maxHP = 100;
+	maxStamina = 50;
+	moveSpeed = 10;
+	
+	buffLevel = 0;
 	
 	function AddSubWeapon(subWeaponData) {
 		subWeapons[array_length(subWeapons)] = subWeaponData;
+	}
+	
+	function UpgradePlayer(stat)
+	{
+		switch(stat)
+		{
+			case enmBuffTypes.HP:
+			{
+				maxHP = floor(maxHP * 1.1);
+				break;
+			}
+			case enmBuffTypes.Speed:
+			{
+				moveSpeed = floor(moveSpeed * 1.1);
+				break;
+			}
+			case enmBuffTypes.Stamina:
+			{
+				maxStamina = floor(maxStamina * 1.1);
+				break;
+			}
+			case enmBuffTypes.MeleePower:
+			{
+				meleeAttackPower = floor(meleeAttackPower * 1.1);
+				break;
+			}
+			case enmBuffTypes.RangedPower:
+			{
+				rngAttackPower = floor(rngAttackPower * 1.1);
+				break;
+			}
+		}
+		buffLevel = buffLevel + 1;
 	}
 	
 }

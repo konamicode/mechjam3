@@ -94,7 +94,8 @@ function DisplayMap()
 
 //Tile encounter results
 function PlayerVictory()
-{
+{	
+	objManager.gameData.player.UpgradePlayer(mapData[playerPawn.mapY][playerPawn.mapX].buff);
 	mapData[playerPawn.mapY][playerPawn.mapX].isLiberated = true;
 	tileMap[playerPawn.mapY][playerPawn.mapX].isLiberated = true;
 	
