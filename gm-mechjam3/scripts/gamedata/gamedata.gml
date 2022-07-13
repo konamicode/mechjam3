@@ -8,7 +8,7 @@ function PlayerData() constructor {
 	rngAttackPower = 10;
 	maxHP = 100;
 	maxStamina = 50;
-	moveSpeed = 10;
+	moveSpeed = 6.0;
 	
 	buffLevel = 0;
 	
@@ -27,7 +27,7 @@ function PlayerData() constructor {
 			}
 			case enmBuffTypes.Speed:
 			{
-				moveSpeed = floor(moveSpeed * 1.1);
+				moveSpeed = moveSpeed * 1.05;
 				break;
 			}
 			case enmBuffTypes.Stamina:

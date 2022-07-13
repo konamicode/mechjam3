@@ -15,6 +15,12 @@ actorState = state.idle;
 maxHp = 100;
 hp = maxHp;
 
+maxStamina = 50;
+stamina = maxStamina;
+
+meleePower = 10;
+rangedPower = 10;
+
 aimDir = 0;
 lastDir = aimDir;
 
