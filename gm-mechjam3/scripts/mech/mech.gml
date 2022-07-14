@@ -66,6 +66,13 @@ function CreatePlayer(_x, _y, playerData) {
 function GenerateRivalData(mech, initialResult)
 {
 	rivalData = {
+		
+		maxHp : mech.maxHp,
+		maxStamina : mech.maxStamina,
+		meleePower : mech.meleePower,
+		rangedPower : mech.rangedPower,
+		moveSpeed : mech.moveSpeed,
+		
 		frame : mech.frame,
 		weapons : mech.weapons,
 		weakpoints : mech.weakpoints,
