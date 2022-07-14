@@ -74,19 +74,20 @@ function GetSequenceHitboxData(sequence) {
 	{
 		var struct;
 		struct = trackArray[i];
-		var name = variable_struct_get(struct, "name");
-		var nameParts = string_parse(name, "_");
+		var trackName = variable_struct_get(struct, "name");
+		var nameParts = string_parse(trackName, "_");
 		var prefix = nameParts[0];
 		var ident = nameParts[1];
-		var wpHitboxData = ds_map_create();
+
 		switch(prefix) {
 			case "wp":
 				//show_debug_message(" Found a weakpoint named " + ident);
+				var wpHitboxData = ds_map_create();
 				var wpTracks = variable_struct_get(struct, "tracks");
 				var wpKeys = array_create(3);
 				for (var j = 0; j < array_length(wpTracks); j++) {
 					var wpTrackStruct = wpTracks[j];
-					name = variable_struct_get(wpTrackStruct, "name");
+					var name = variable_struct_get(wpTrackStruct, "name");
 
 					switch(name) {
 						case "scale":
@@ -114,6 +115,40 @@ function GetSequenceHitboxData(sequence) {
 				}
 				wpHitboxData = StripKeyframeData(wpKeys);
 				animationHitboxData[? ident] = wpHitboxData;
+			break;
+			case "weapon":
+				var weaponAnimData = ds_map_create();
+				var weaponTracks = variable_struct_get(struct, "tracks");
+				var weapKeys = array_create(3);
+				for (var j = 0; j < array_length(weaponTracks); j++) {
+					var weapTrackStruct = weaponTracks[j];
+					var name = variable_struct_get(weapTrackStruct, "name");
+					switch(name) {
+						case "scale":
+	//						scaleTrack = [];
+							var scaleKeys = [];
+							//scaleTrack = variable_struct_get(wpTrackStruct, "tracks");
+							scaleKeys = variable_struct_get(weapTrackStruct, "keyframes");							
+							weapKeys[1] = scaleKeys;
+						break;
+						case "position":
+							//posTrack = [];
+							var posKeys = [];					
+							//posTrack = variable_struct_get(wpTrackStruct, "tracks");
+							posKeys = variable_struct_get(weapTrackStruct, "keyframes");
+							weapKeys[0] = posKeys;
+						break;
+						case "rotation":
+							//rotTrack = [];
+							var rotKeys = [];					
+							//rotTrack = variable_struct_get(wpTrackStruct, "tracks");
+							rotKeys = variable_struct_get(weapTrackStruct, "keyframes");		
+							weapKeys[2] = rotKeys;
+						break;
+					}
+				}				
+				weaponAnimData = StripKeyframeData(weapKeys);
+				animationHitboxData[? trackName] = weaponAnimData;
 			break;
 			default:
 			break;

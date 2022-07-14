@@ -1,7 +1,8 @@
 
 if (sprite_index == sprPlayer_attack_beamrifle)
 {
-	ChangeAnimation(faction + "_idle_beamrifle");
+	action = "idle";
+	ChangeAnimation(GetAnimationName());
 	canFire = true;
 }
 

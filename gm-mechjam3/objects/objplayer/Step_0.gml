@@ -31,18 +31,32 @@ if (actorState == state.dead) {
 		show_debug_message("released!")
 	}
 	
-	if aiming {
-		var _aimDir = GetAimDirection();
-		if !is_undefined(_aimDir) {
-			aimDir = _aimDir;
-			lastDir = aimDir; 
-		} else
-			aimDir = lastDir;
-	} else 
-		aimDir = point_direction(0, 0, image_xscale, 0);	
+	//if aiming {
+	//	var _aimDir = GetAimDirection();
+	//	if !is_undefined(_aimDir) {
+	//		aimDir = _aimDir;
+	//		lastDir = aimDir; 
+	//	} else
+	//		aimDir = lastDir;
+	//} else 
+	//	aimDir = point_direction(0, 0, image_xscale, 0);	
+	
+	var _aimDir = GetAimDirection();
+	if !is_undefined(_aimDir) {
+		aimDir = _aimDir;
+		lastDir = aimDir; 
+	} else
+		aimDir = lastDir;
+		
+	if (aimDir > 90) && ( aimDir < 270) {
+		image_xscale = -1;	
+	} else
+		image_xscale = 1;
 	
 	if input_check_pressed("shoot") && canFire {
-		ChangeAnimation(faction + "_attack_beamrifle");
+		action = "attack";
+		var _sprite = GetAnimationName();
+		ChangeAnimation(_sprite);
 		canFire = false;
 	}
 	

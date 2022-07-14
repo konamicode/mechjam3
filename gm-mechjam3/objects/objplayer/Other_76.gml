@@ -19,20 +19,13 @@ switch(_string)
 		var coords = [];
 		coords = string_parse(_string, "_", false);
 
-			//if ( target != noone){
-			//	_aimDir = point_direction(x, y, target.x, target.y);
-		
-			//}
-			
-			//turning this off for now
-			var _offx = coords[0] - sprite_xoffset;
-			var _offy = sprite_yoffset - coords[1];
+			var _offx = coords[0];
+			var _offy = coords[1];
 	
-			//show_debug_message(_offx);
-			//show_debug_message(string(y - abs(_offy)));
-			
-			//var _shot = instance_create_layer(x - _offx, y - _offy, "Instances", objShot);
-			instance_create_layer(x + _offx, y - abs(_offy), "Instances", objAttack, { aimed: aiming, attackType : collision.line, sprite_index: sprFX_beamBlast, image_angle : aimDir, creator : id}) ;
+			var _x = lengthdir_x(_offx, aimDir);
+			var _y = lengthdir_y(_offx, aimDir);
+			show_debug_message(string(aimDir) + ": x: " + string(_offx) + ", " + string(_x) + " |y : " + string(_offy) + ", " + string(_y));
+			instance_create_layer(x + weapPosX + _x , y + weapPosY + _y , "Instances", objAttack, { aimed: aiming, attackType : collision.line, sprite_index: sprFX_beamBlast, image_angle : aimDir, creator : id}) ;
 
 			//fx.shotParent = _shot;
 			//_shot.moveDir = _aimDir;

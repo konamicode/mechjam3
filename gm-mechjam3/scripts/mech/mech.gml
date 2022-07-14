@@ -17,6 +17,8 @@ function Mech(_frame = noone ) constructor {
 	
 	function AddComponent(type, label, creator) {
 		var comp = instance_create_layer(x, y, "Instances", objComponent, {creator: creator, type : type, label: label});
+		if label == "head"
+			creator.head = comp;
 		//switch(type) {
 		//	case componentType.weakpoint :	
 				

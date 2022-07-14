@@ -16,7 +16,10 @@ if (canDamage) {
 				_componentCollision = BeamCollision(x, y, screenWidth, image_angle, objComponent);
 	
 				if ( _componentCollision != noone) { 
-					if ( !_componentCollision.active )
+					if ( !_componentCollision.active ) 
+						_componentCollision = noone;
+						
+					if (_componentCollision.creator == creator.id)
 						_componentCollision = noone;
 				} 
 					
