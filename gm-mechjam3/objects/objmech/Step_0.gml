@@ -3,7 +3,10 @@ event_inherited();
 if (actorState == state.dead) {
 	instance_destroy();
 	if (!isPlayer)
+	{
+		objCombatManager.AttemptToAddRival(self, true);
 		objCombatManager.RemoveEnemy(id);
+	}
 	exit;
 }
 

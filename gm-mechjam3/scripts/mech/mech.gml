@@ -62,3 +62,21 @@ function CreatePlayer(_x, _y, playerData) {
 	ds_list_add(inst.components, _comp);
 
 }
+
+function GenerateRivalData(mech, initialResult)
+{
+	rivalData = {
+		frame : mech.frame,
+		weapons : mech.weapons,
+		weakpoints : mech.weakpoints,
+		defenses : mech.defenses,
+	
+		battleRecord : ds_list_create(),
+	
+		name : "Rival Name"
+	}
+	
+	ds_list_add(rivalData.battleRecord, initialResult);	//true = player won, false = rival won
+	
+	return rivalData;
+}
