@@ -73,10 +73,26 @@ function GenerateRivalData(mech, initialResult)
 	
 		battleRecord : ds_list_create(),
 	
-		name : "Rival Name"
+		name : GenerateRivalName()
 	}
 	
 	ds_list_add(rivalData.battleRecord, initialResult);	//true = player won, false = rival won
 	
 	return rivalData;
+}
+
+function GenerateRivalName()
+{
+	firstNames = [
+		"Steve",
+		"Fey",
+		"James"
+	];
+	lastNames = [
+		"Rynders",
+		"Harkness",
+		"Youngman"
+	];
+	
+	return firstNames[irandom(2)]+" "+lastNames[irandom(2)];
 }
