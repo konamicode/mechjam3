@@ -39,9 +39,9 @@ function CreateMechObject(mechStruct, _x, _y, obj = objMech, _layer="Instances")
 }
 
 
-function AddEnemy(_x, _y) {
+function AddEnemy(_x, _y, enemyType=objMech) {
 	var enemy = new Mech();
-	var inst = CreateMechObject(enemy, _x, _y);
+	var inst = CreateMechObject(enemy, _x, _y, enemyType);
 	var _comp = enemy.AddComponent(componentType.weakpoint, "head", inst);
 	ds_list_add(inst.components, _comp);
 	return inst;

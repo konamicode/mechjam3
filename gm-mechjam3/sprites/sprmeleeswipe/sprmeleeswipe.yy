@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Attacks",
+    "path": "folders/Sprites/Attacks.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprMeleeSwipe",

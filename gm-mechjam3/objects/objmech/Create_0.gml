@@ -1,6 +1,6 @@
 // Inherit the parent event
 event_inherited();
-
+animationHitboxData = undefined;
 
 if (frame != noone) {
 	sprite_index = frame;
@@ -13,7 +13,7 @@ components = ds_list_create();
 //ds_list_add(components, frame);
 
 action = "idle";
-weapon = "placeholder";
+
 faction = "Enemy";
 
 weapPosX = x;
@@ -50,10 +50,13 @@ function ChangeHitbox(_newSequence) {
 function ChangeAnimation(animString, resetIndex = true) {
 	var newSprite = asset_get_index("spr" + animString);
 	var newSeq = asset_get_index("sq" + animString);
-	ChangeHitbox(newSeq);
-	sprite_index = newSprite;
-	if (resetIndex)
+	if (newSeq != -1 )
+		ChangeHitbox(newSeq);
+	if (newSprite != -1 ) {
+		sprite_index = newSprite;
+		if (resetIndex)
 		image_index = 0;
+	}
 }
 
 ChangeAnimation(animString);
@@ -153,3 +156,30 @@ function GetAnimationName() {
 	
 	return faction + "_" + action + "_" + weapon;
 }
+
+
+function FireWeapon(_x, _y, _object ) {
+	
+	instance_create_layer(_x, _y, "Instances", _object, {creator:id, image_angle: aimDir});
+		
+}
+
+if (!ds_map_exists(global.functionMap, FireWeapon))
+	global.functionMap[? "FireWeapon"] = method(undefined, FireWeapon);
+	
+	
+function GetTargetDirection(target) {
+	var aimDir = 0;
+	if instance_exists(target) {
+		aimDir = point_direction(x, y, target.x, target.y);
+	}
+	return aimDir;
+}
+
+function CorrectFlippedDirection(_aimDir){
+	if (sign(image_xscale) == -1) {
+		_aimDir = 180 + _aimDir;
+	}
+	return _aimDir;
+}
+

@@ -33,3 +33,6 @@ if (roomMenu)
 	if keyboard_check_pressed(ord("3"))
 		GoToStartRoom();
 }
+
+if keyboard_check_pressed(vk_f2)
+	global.debug = !global.debug;

@@ -1,3 +1,7 @@
+var _elementID = event_data[? "element_id"];
+if (layer_instance_get_instance(_elementID) != id)
+	exit;
+
 var _string = event_data[? "message"];
 switch(_string)
 {

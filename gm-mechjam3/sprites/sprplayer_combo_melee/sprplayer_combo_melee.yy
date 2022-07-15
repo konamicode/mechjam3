@@ -113,8 +113,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Mechs",
+    "path": "folders/Sprites/Mechs.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprPlayer_combo_melee",

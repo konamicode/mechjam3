@@ -85,8 +85,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Weapons",
+    "path": "folders/Sprites/Weapons.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprWeap_attack_beamrifle",

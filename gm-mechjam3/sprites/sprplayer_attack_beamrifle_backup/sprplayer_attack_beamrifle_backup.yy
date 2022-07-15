@@ -113,8 +113,8 @@
     "resourceType": "GMNineSliceData",
   },
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Mechs",
+    "path": "folders/Sprites/Mechs.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprPlayer_attack_beamrifle_backup",

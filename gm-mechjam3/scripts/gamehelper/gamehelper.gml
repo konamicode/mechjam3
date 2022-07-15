@@ -4,3 +4,4 @@ function Init(){
 	randomize();
 	global.debug = false;
 }
+
