@@ -18,8 +18,16 @@ function EndCombat(result) {
 		global.missionStatus = enmMissionStatus.succeed;
 	else
 	{
-		AttemptToAddRival(ds_list_find_index(enemyList, 0), result);
 		global.missionStatus = enmMissionStatus.incomplete;
+		for(i = 0; i < ds_list_size(enemyList); i++)
+		{
+			if(ds_list_find_value(enemyList, i).hasPilot == true)
+			{
+				AttemptToAddRival(ds_list_find_index(enemyList, 0), result);
+				break;
+			}
+		}
+		
 	}
 	SetAlarm(0, 90);
 

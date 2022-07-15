@@ -4,7 +4,10 @@ if (actorState == state.dead) {
 	instance_destroy();
 	if (!isPlayer)
 	{
-		objCombatManager.AttemptToAddRival(self, true);
+		if(hasPilot == true)
+		{
+			objCombatManager.AttemptToAddRival(self, true);
+		}
 		objCombatManager.RemoveEnemy(id);
 	}
 	exit;

@@ -1,6 +1,7 @@
 // Inherit the parent event
 event_inherited();
 animationHitboxData = undefined;
+hasPilot = true;
 
 if (frame != noone) {
 	sprite_index = frame;

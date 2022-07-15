@@ -1,5 +1,6 @@
 // Inherit the parent event
 event_inherited();
+hasPilot = false;
 
 RefillHP();
 
