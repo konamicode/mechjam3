@@ -1,15 +1,15 @@
 event_inherited();
 
 if (actorState == state.dead) {
-	instance_destroy();
 	if (!isPlayer)
 	{
-		if(hasPilot == true)
+		if(hasPilot == true and name == noone)
 		{
 			objCombatManager.AttemptToAddRival(self, true);
 		}
 		objCombatManager.RemoveEnemy(id);
 	}
+	instance_destroy();
 	exit;
 }
 

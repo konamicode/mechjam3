@@ -2,6 +2,7 @@
 event_inherited();
 animationHitboxData = undefined;
 hasPilot = true;
+name = noone;
 
 if (frame != noone) {
 	sprite_index = frame;

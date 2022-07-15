@@ -63,6 +63,27 @@ function CreatePlayer(_x, _y, playerData) {
 
 }
 
+function SpawnRivalFromData(_x, _y, rivalData)
+{
+	var rival = new Mech();
+	rival.maxHp = rivalData.maxHp;
+	rival.hp = rival.maxHp;
+	rival.maxStamina = rivalData.maxStamina;
+	rival.stamina = rival.maxStamina;
+	rival.moveSpeed = rivalData.moveSpeed;
+	rival.meleePower = rivalData.meleePower;
+	rival.rangedPower = rivalData.rangedPower;
+	rival.name = rivalData.name;
+	
+	//TODO: Plug in the other instances in rivalData
+	
+	var inst = CreateMechObject(rival, _x, _y, objMech);
+	var _comp = rival.AddComponent(componentType.weakpoint, "head", inst);
+	ds_list_add(inst.components, _comp);
+	
+	return inst;
+}
+
 function GenerateRivalData(mech, initialResult)
 {
 	rivalData = {
