@@ -1,0 +1,29 @@
+[
+    {
+        "personality": 0,
+        "context": 0,
+        "prequisites": 0,
+        "prerequisiteparamters": 0,
+        "disqualifiers": 0,
+        "disqualifierparameters": 0,
+        "text": "Tch! Who the hell are you?"
+    },
+    {
+        "personality": 0,
+        "context": 1,
+        "prequisites": 0,
+        "prerequisiteparamters": 0,
+        "disqualifiers": 0,
+        "disqualifierparameters": 0,
+        "text": "No! I never lose!"
+    },
+    {
+        "personality": 0,
+        "context": 2,
+        "prequisites": 0,
+        "prerequisiteparamters": 0,
+        "disqualifiers": 0,
+        "disqualifierparameters": 0,
+        "text": "That's what you get for messing with me."
+    }
+]
