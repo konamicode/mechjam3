@@ -27,7 +27,8 @@ enum enmPersonality {
 	arrogant = 0,
 	honorable,
 	loyal,
-	fighter
+	fighter,
+	length
 }
 
 enum enmContext {

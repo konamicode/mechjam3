@@ -89,6 +89,7 @@ function SpawnRivalFromData(_x, _y, rivalData)
 	rival.meleePower = rivalData.meleePower;
 	rival.rangedPower = rivalData.rangedPower;
 	rival.name = rivalData.name;
+	rival.personality = rivalData.personality;
 	
 	//TODO: Plug in the other instances in rivalData
 	
@@ -115,6 +116,7 @@ function GenerateRivalData(mech, initialResult)
 		defenses : mech.defenses,
 	
 		battleRecord : ds_list_create(),
+		personality : irandom(enmPersonality.length),
 	
 		name : GenerateRivalName()
 	}

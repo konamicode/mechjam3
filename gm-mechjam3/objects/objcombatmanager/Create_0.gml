@@ -30,7 +30,12 @@ function EndCombat(result) {
 			{
 				if(ds_list_find_value(enemyList, i).hasPilot == true)
 				{
-					AttemptToAddRival(ds_list_find_index(enemyList, 0), result);
+					if(AttemptToAddRival(ds_list_find_index(enemyList, 0), result))
+					{
+						var rival = ds_list_find_value(rivalList, ds_list_size(rivalList)-1);
+						var rivalComment = objManager.dialogData.GetDialog(rival.personality, 2);
+						show_debug_message(rivalComment);
+					}
 					break;
 				}
 			}
@@ -64,7 +69,9 @@ function AttemptToAddRival(mech, result)
 	if(random(1) < odds)
 	{
 		ds_list_add(rivalList, GenerateRivalData(mech, result));
+		return true;
 	}
+	return false;
 }
 
 BuildWeapons();

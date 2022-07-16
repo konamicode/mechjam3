@@ -19,8 +19,7 @@ if (room == rmCombat)
 		} 
 		else
 		{
-			//You win!	
-			show_debug_message("You win!");
+			//You win!
 			if (!changeRoom) {
 				EndCombat(true);
 				changeRoom = true;
