@@ -1,17 +1,14 @@
 {
   "spriteId": {
-    "name": "sprFX_beamBlast",
-    "path": "sprites/sprFX_beamBlast/sprFX_beamBlast.yy",
+    "name": "sprMissile",
+    "path": "sprites/sprMissile/sprMissile.yy",
   },
   "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "objAttack",
-    "path": "objects/objAttack/objAttack.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -26,15 +23,13 @@
   "physicsShapePoints": [],
   "eventList": [],
   "properties": [],
-  "overriddenProperties": [
-    {"propertyId":{"name":"attackType","path":"objects/objAttack/objAttack.yy",},"objectId":{"name":"objAttack","path":"objects/objAttack/objAttack.yy",},"value":"attackType.line","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-  ],
+  "overriddenProperties": [],
   "parent": {
     "name": "Attacks",
     "path": "folders/Objects/Combat/Attacks.yy",
   },
   "resourceVersion": "1.0",
-  "name": "objBeam",
+  "name": "objMissile",
   "tags": [],
   "resourceType": "GMObject",
 }

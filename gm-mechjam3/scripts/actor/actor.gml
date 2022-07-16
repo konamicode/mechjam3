@@ -4,7 +4,6 @@
 enum enmWeaponType {
 	bullet,
 	beam,
-	beamDrone,
 	melee,
 	rocket,
 	missile
@@ -21,11 +20,7 @@ function RefillHP() {
 }
 
 
-function FireWeapon(_x, _y, _object ) {
-	
-	instance_create_layer(_x, _y, "Instances", _object);
-		
-}
+
 
 
 
