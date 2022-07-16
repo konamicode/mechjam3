@@ -50,9 +50,11 @@ function CreateMechObject(mechStruct, _x, _y, obj = objMech, _layer="Instances")
 
 function AddEnemy(_x, _y, _frame, enemyType, _weapons = [] ) {
 	var enemy = new Mech(_frame);
-	for (var i = 0; i < array_length(_weapons); i++)
-	{
-		enemy.AddWeapon(_weapons[i]);
+	if (array_length(_weapons) > 0) {
+		for (var i = 0; i < array_length(_weapons); i++)
+		{
+			enemy.AddWeapon(_weapons[i]);
+		}
 	}
 	var inst = CreateMechObject(enemy, _x, _y, enemyType);
 	var _comp = enemy.AddComponent(componentType.weakpoint, "head", inst);

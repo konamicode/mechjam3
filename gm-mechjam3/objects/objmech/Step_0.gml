@@ -30,4 +30,7 @@ if (!isPlayer)
 	}
 	
 		
+	if (weapon == "placeholder") {
+		show_debug_message("WtF");	
+	}
 }

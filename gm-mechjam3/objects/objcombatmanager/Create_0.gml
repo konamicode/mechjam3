@@ -8,6 +8,9 @@ spawnedRival = noone;
 rivalSpawnChance = 1;
 
 
+seqRivalAppears = noone;
+
+
 function RemoveEnemy(_id) {
 	var _index = ds_list_find_index(enemyList, _id);
 	if (_index != -1 )  {

@@ -16,7 +16,7 @@ function BuildWeapons(weaponData = "none") {
 	} else {
 		Beam = new Weapon("beam", objBeam);
 		Beam.range = {minDist: 100, maxDist: screenWidth};
-		Vulcan = new Weapon("bullet", objBullet);
+		Vulcan = new Weapon("bullet", objBullet, 5, 2, 0.2, {minDist:0, maxDist: 250});
 		Melee = new Weapon("melee");
 		Rocket = new Weapon("rocket", objRocket);
 		Rocket.range = {minDist: 100, maxDist: 500}

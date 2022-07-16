@@ -23,9 +23,11 @@ if (isPlayer) {
 	frame = "Player";
 	weaponName = "beamrifle";
 } else {
-	weapon = weapons[| 0];
-	weaponName = weapon.label;
-	show_debug_message("something else");
+	if (ds_list_size(weapons) > 0) {
+		weapon = weapons[| 0];
+		weaponName = weapon.label;
+	} else
+		weaponName = "melee";
 }
 
 
