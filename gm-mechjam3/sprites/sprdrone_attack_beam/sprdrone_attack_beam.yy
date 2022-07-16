@@ -1,6 +1,6 @@
 {
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 0,
   "type": 0,
   "origin": 9,
   "preMultiplyAlpha": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprEnemy_attack_beamdrone/sprEnemy_attack_beamdrone.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprEnemy_attack_beamdrone/sprEnemy_attack_beamdrone.yy",},"LayerId":{"name":"865f266a-a1e4-4c60-8b2f-2ac8f258f089","path":"sprites/sprEnemy_attack_beamdrone/sprEnemy_attack_beamdrone.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEnemy_attack_beamdrone","path":"sprites/sprEnemy_attack_beamdrone/sprEnemy_attack_beamdrone.yy",},"resourceVersion":"1.0","name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_attack_beam/sprDrone_attack_beam.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_attack_beam/sprDrone_attack_beam.yy",},"LayerId":{"name":"865f266a-a1e4-4c60-8b2f-2ac8f258f089","path":"sprites/sprDrone_attack_beam/sprDrone_attack_beam.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprDrone_attack_beam","path":"sprites/sprDrone_attack_beam/sprDrone_attack_beam.yy",},"resourceVersion":"1.0","name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprEnemy_attack_beamdrone","path":"sprites/sprEnemy_attack_beamdrone/sprEnemy_attack_beamdrone.yy",},
+    "spriteId": {"name":"sprDrone_attack_beam","path":"sprites/sprDrone_attack_beam/sprDrone_attack_beam.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -45,7 +45,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"05a18ac4-5c89-4797-8568-399161115d7a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprEnemy_attack_beamdrone/sprEnemy_attack_beamdrone.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"05a18ac4-5c89-4797-8568-399161115d7a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_attack_beam/sprDrone_attack_beam.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -62,9 +62,9 @@
     "yorigin": 7,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprEnemy_attack_beamdrone","path":"sprites/sprEnemy_attack_beamdrone/sprEnemy_attack_beamdrone.yy",},
+    "parent": {"name":"sprDrone_attack_beam","path":"sprites/sprDrone_attack_beam/sprDrone_attack_beam.yy",},
     "resourceVersion": "1.4",
-    "name": "sprEnemy_attack_beamdrone",
+    "name": "sprDrone_attack_beam",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -73,11 +73,11 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Weapons",
+    "path": "folders/Sprites/Weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sprEnemy_attack_beamdrone",
+  "name": "sprDrone_attack_beam",
   "tags": [],
   "resourceType": "GMSprite",
 }

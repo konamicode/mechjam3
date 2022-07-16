@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprEnemy_idle_beamdrone",
-    "path": "sprites/sprEnemy_idle_beamdrone/sprEnemy_idle_beamdrone.yy",
+    "name": "sprDrone_idle_beam",
+    "path": "sprites/sprDrone_idle_beam/sprDrone_idle_beam.yy",
   },
   "solid": false,
   "visible": true,
@@ -34,7 +34,7 @@
   ],
   "properties": [
     {"varType":1,"value":"2","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"fireRate","tags":[],"resourceType":"GMObjectProperty",},
-    {"varType":1,"value":"20","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"maxHP","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":1,"value":"20","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"maxHp","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [
     {"propertyId":{"name":"weapon","path":"objects/objMech/objMech.yy",},"objectId":{"name":"objMech","path":"objects/objMech/objMech.yy",},"value":"\"beamdrone\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},

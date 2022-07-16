@@ -7,7 +7,7 @@ if (canDamage) {
 	
 	switch(attackType ) {
 		case collision.image:
-		
+			_collider = ImageCollision(x, y, objMech);
 		break;
 		
 		case collision.line: {
@@ -50,7 +50,7 @@ if (canDamage) {
 	
 	if (_collider != noone) {
 
-		DoDamage(_collider, dmg);
+		CollisionEvent(_collider);
 		canDamage = false;
 	}
 	//if valid, do damage, and disable canDamage

@@ -7,4 +7,4 @@ if (sprite_index == sprPlayer_attack_beamrifle)
 }
 
 if (sprite_index == sprPlayer_attack_melee)
-	ChangeAnimation(faction + "_idle_beamrifle");
+	ChangeAnimation(frame + "_idle_beamrifle");

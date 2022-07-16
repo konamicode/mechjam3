@@ -6,7 +6,7 @@ function PlayerData() constructor {
 	
 	meleeAttackPower = 10;
 	rngAttackPower = 10;
-	maxHP = 100;
+	maxHp = 100;
 	maxStamina = 50;
 	moveSpeed = 6.0;
 	
@@ -22,7 +22,7 @@ function PlayerData() constructor {
 		{
 			case enmBuffTypes.HP:
 			{
-				maxHP = floor(maxHP * 1.1);
+				maxHp = floor(maxHp * 1.1);
 				break;
 			}
 			case enmBuffTypes.Speed:

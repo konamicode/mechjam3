@@ -63,3 +63,5 @@ function AttemptToAddRival(mech, result)
 		ds_list_add(rivalList, GenerateRivalData(mech, result));
 	}
 }
+
+BuildWeapons();

@@ -27,7 +27,7 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"attackType","path":"objects/objAttack/objAttack.yy",},"objectId":{"name":"objAttack","path":"objects/objAttack/objAttack.yy",},"value":"attackType.line","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"attackType","path":"objects/objAttack/objAttack.yy",},"objectId":{"name":"objAttack","path":"objects/objAttack/objAttack.yy",},"value":"collision.line","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Attacks",

@@ -16,7 +16,7 @@ function RefillEnergy() {
 
 
 function RefillHP() {
-	hp = maxHP;
+	hp = maxHp;
 }
 
 

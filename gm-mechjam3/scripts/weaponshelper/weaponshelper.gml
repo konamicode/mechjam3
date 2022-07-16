@@ -1,8 +1,9 @@
-function Weapon(_attackObj = objAttack, _baseDmg = 1, _enCost = 1, _fireRate = 10) constructor {
+function Weapon(_label = "Name", _attackObj = objAttack, _baseDmg = 1, _enCost = 1, _fireRate = 10) constructor {
 	energyCost = _enCost;
 	baseDamage = _baseDmg;
 	attack = _attackObj;
 	fireRate = _fireRate;
+	label = _label;
 }
 
 function BuildWeapons(weaponData = "none") {
@@ -10,11 +11,11 @@ function BuildWeapons(weaponData = "none") {
 	if (weaponData != "none") {
 		
 	} else {
-		Beam = new Weapon(objBeam);
-		Vulcan = new Weapon(objBullet);
-		Melee = new Weapon();
-		Rocket = new Weapon(objRocket);
-		Missile = new Weapon(objMissile);
+		Beam = new Weapon("beam", objBeam);
+		Vulcan = new Weapon("bullet", objBullet);
+		Melee = new Weapon("melee");
+		Rocket = new Weapon("rocket", objRocket);
+	//	Missile = new Weapon("missile", objMissile);
 	}
 		
 }

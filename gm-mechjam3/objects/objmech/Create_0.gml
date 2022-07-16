@@ -4,9 +4,7 @@ animationHitboxData = undefined;
 hasPilot = true;
 name = noone;
 
-if (frame != noone) {
-	sprite_index = frame;
-}
+
 
 ////frame = instance_create_layer(x, y, "Instances", objComponent, { sprite_index : frame, creator: id } );
 
@@ -16,16 +14,22 @@ components = ds_list_create();
 
 action = "idle";
 
-faction = "Enemy";
+
 
 weapPosX = x;
 weapPosY = y;
 
 if (isPlayer) {
-	faction = "Player";
-	weapon = "beamrifle";
+	frame = "Player";
+	weaponName = "beamrifle";
+} else {
+	weapon = weapons[| 0];
+	weaponName = weapon.label;
+	show_debug_message("something else");
 }
-animString = faction + "_" + action + "_" + weapon;	
+
+
+animString = frame + "_" + action + "_" + weaponName;	
 
 updateHitboxFromSequence = false;
 
@@ -71,7 +75,7 @@ function CheckAddFallback(map) {
 }
 
 function DrawWeapon() {
-	var animTag = "weapon_" + action + "_" + weapon;
+	var animTag = "weapon_" + action + "_" + weaponName;
 
 	var animFrame;
 	if (ds_map_exists(animationHitboxData, animTag)) {
@@ -137,7 +141,7 @@ function DrawWeapon() {
 			}
 		} 	
 		
-		var weaponSprite = asset_get_index("sprWeap_" + action + "_" + weapon);
+		var weaponSprite = asset_get_index("sprWeap_" + action + "_" + weaponName);
 		weapPosX = framePosX;
 		weapPosY = framePosY;
 		if (weaponSprite != -1 ) {
@@ -156,7 +160,7 @@ function DrawWeapon() {
 
 function GetAnimationName() {
 	
-	return faction + "_" + action + "_" + weapon;
+	return frame + "_" + action + "_" + weaponName;
 }
 
 

@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 
-function Mech(_frame = noone ) constructor {
+function Mech(_frame = "Enemy" ) constructor {
 
 	frame = _frame;
 	weapons = ds_list_create();
@@ -30,6 +30,15 @@ function Mech(_frame = noone ) constructor {
 		//}
 		return comp;
 	}
+	
+	function AddWeapon(weapon) {
+		ds_list_add(weapons, weapon);
+	}
+	
+	function CopyWeapons(weaponList)
+	{
+		ds_list_copy(weapons, weaponList);
+	}
 }
 
 
@@ -39,8 +48,12 @@ function CreateMechObject(mechStruct, _x, _y, obj = objMech, _layer="Instances")
 }
 
 
-function AddEnemy(_x, _y, enemyType=objMech) {
-	var enemy = new Mech();
+function AddEnemy(_x, _y, _frame, enemyType, _weapons = [] ) {
+	var enemy = new Mech(_frame);
+	for (var i = 0; i < array_length(_weapons); i++)
+	{
+		enemy.AddWeapon(_weapons[i]);
+	}
 	var inst = CreateMechObject(enemy, _x, _y, enemyType);
 	var _comp = enemy.AddComponent(componentType.weakpoint, "head", inst);
 	ds_list_add(inst.components, _comp);
@@ -49,7 +62,7 @@ function AddEnemy(_x, _y, enemyType=objMech) {
 
 function CreatePlayer(_x, _y, playerData) {
 	var player = new Mech();
-	player.maxHp = playerData.maxHP;
+	player.maxHp = playerData.maxHp;
 	player.hp = player.maxHp;
 	player.maxStamina = playerData.maxStamina;
 	player.stamina = player.maxStamina;
@@ -111,10 +124,13 @@ function GenerateRivalData(mech, initialResult)
 
 function GenerateRivalName()
 {
+	
 	firstNames = [
 		"Steve",
 		"Fey",
-		"James"
+		"James",
+		"Branch Forsythe",
+		"Quattro Formaggio",
 	];
 	lastNames = [
 		"Rynders",

@@ -17,7 +17,7 @@ for (var i = 0; i < ds_list_size(commands); i++)
 	var _y = _params[1];
 	_x = lengthdir_x(_x, aimDir);
 	_y = lengthdir_y(_x, aimDir);
-	_command(x + _x, y + _y, objBeam);
+	_command(x + _x, y + _y, weapon.attack);
 
 
 }

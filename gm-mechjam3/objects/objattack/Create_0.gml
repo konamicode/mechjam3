@@ -6,7 +6,7 @@ enum collision {
 
 lineWidth = sprite_width;
 
-function DoDamage(inst, dmg) {
+function ApplyDamage(inst) {
 	var _dmg = dmg;
 	with(inst)
 	{
@@ -17,10 +17,19 @@ function DoDamage(inst, dmg) {
 	
 }
 
+function VerifyCollider(_collider) {
+	if instance_exists(_collider) && instance_exists(creator) {
+		if (_collider != creator.id)
+			return true;
+		else return false;
+	}
+	else return false;
+}
+
 function BeamCollision(x, y, length, dir, obj ) {
 	//show_debug_message(length);
 	var collider = collision_line(x, y, x + lengthdir_x(length, dir), y + lengthdir_y(length, dir), obj, true, true);
-	if (collider = creator.id) {
+	if !VerifyCollider(collider) {
 		collider = noone;
 	}
 	//show_debug_message(collider);
@@ -28,8 +37,13 @@ function BeamCollision(x, y, length, dir, obj ) {
 }
 
 function ImageCollision(x, y, obj) {
-	var collider  = instance_place(x, y, obj);
-	return collider;
+	if place_meeting(x, y, obj) {
+		var collider  = instance_place(x, y, obj);
+		if !VerifyCollider(collider) {
+			collider = noone;
+		}
+		return collider;
+	} else return noone;
 }
 
 function DrawBeam() {
@@ -42,4 +56,9 @@ function DrawBeam() {
 	gpu_set_blendmode(bm_normal);	
 	
 	draw_line_color(x, y, x + lengthdir_x(lineWidth, image_angle), y + lengthdir_y(lineWidth, image_angle), c_lime, c_lime);
+}
+
+function CollisionEvent(_collider) {
+	show_debug_message("Collide!");
+	ApplyDamage(_collider, dmg);
 }
