@@ -22,3 +22,31 @@ enum componentType {
 	weapon,
 	defenses
 }
+
+enum enmPersonality {
+	arrogant = 0,
+	honorable,
+	loyal,
+	fighter
+}
+
+enum enmContext {
+	rivalSpawned = 0,
+	rivalSpawnedPlayerVictory,
+	rivalSpawnedPlayerDefeat,
+	rivalArrives,
+	playerBeatsRival,
+	rivalBeatsPlayer,
+	startFinalBattle,
+	playerWinsFinalBattle,
+	playerLosesFinalBattle
+}
+
+enum enmPrequisites {
+	none = 0,
+	minWinStreak,
+	maxWinStreak,
+	minLossStreak,
+	maxLossStreak,
+	hasBeatenPlayer,
+}

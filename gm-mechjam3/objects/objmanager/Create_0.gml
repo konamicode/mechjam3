@@ -17,6 +17,7 @@ function GoToStartRoom() {
 }
 
 gameData = new GameData();
+dialogData = new DialogHelper();
 
 startMenu = new Menu();
 startMenu.AddItem("Start", DoNothing);
