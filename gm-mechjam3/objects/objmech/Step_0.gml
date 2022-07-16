@@ -20,4 +20,14 @@ if (!isPlayer)
 	if (_dir != 0)
 		image_xscale = _dir;
 		
+	if between(DistanceToTarget(objPlayer), weapon.range.minDist, weapon.range.maxDist){
+		action = "attack";
+	}
+	else
+	{
+		action = "idle";
+		MoveWithinRange(weapon.range.minDist, objPlayer);
+	}
+	
+		
 }

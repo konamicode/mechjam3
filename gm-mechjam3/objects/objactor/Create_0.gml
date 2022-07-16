@@ -32,4 +32,19 @@ moveSpeed = 6.0;
 
 hitFlash = false;
 
+function DistanceToTarget(_target) {
+	if instance_exists(_target)
+		return point_distance(x, y, _target.x, _target.y);
+	else 
+		return undefined;
+}
 
+function MoveWithinRange(_range, _target) {
+	var _hor = sign(_target.x - x);
+	var _ver = sign(_target.y - y);
+	var _len = point_distance(0, 0, _hor, _ver);
+	if (_len > 0) {
+	    x += moveSpeed * _hor / _len;
+	    y += moveSpeed * _ver / _len;
+	}
+}
