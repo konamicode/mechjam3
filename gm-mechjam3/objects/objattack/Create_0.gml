@@ -55,7 +55,8 @@ function DrawBeam() {
 	
 	gpu_set_blendmode(bm_normal);	
 	
-	draw_line_color(x, y, x + lengthdir_x(lineWidth, image_angle), y + lengthdir_y(lineWidth, image_angle), c_lime, c_lime);
+	if global.debug
+		draw_line_color(x, y, x + lengthdir_x(lineWidth, image_angle), y + lengthdir_y(lineWidth, image_angle), c_lime, c_lime);
 }
 
 function CollisionEvent(_collider) {

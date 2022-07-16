@@ -51,6 +51,7 @@ if (canDamage) {
 	if (_collider != noone) {
 
 		CollisionEvent(_collider);
+		//event_perform(ev_user0, 0);
 		canDamage = false;
 	}
 	//if valid, do damage, and disable canDamage
