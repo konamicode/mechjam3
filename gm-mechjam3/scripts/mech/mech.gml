@@ -71,9 +71,11 @@ function CreatePlayer(_x, _y, playerData) {
 	player.moveSpeed = playerData.moveSpeed;
 	player.meleePower = playerData.meleeAttackPower;
 	player.rangedPower = playerData.rngAttackPower;
-	
+
 	var inst = CreateMechObject(player, _x, _y, objPlayer );
 	var _comp = player.AddComponent(componentType.weakpoint, "head", inst);
+	player.AddWeapon(Beam);
+	player.AddWeapon(Melee);
 	ds_list_add(inst.components, _comp);
 
 }

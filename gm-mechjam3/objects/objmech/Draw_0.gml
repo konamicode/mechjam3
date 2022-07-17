@@ -5,9 +5,9 @@ draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, ima
 draw_set_color(c);	
 
 if global.debug {
-	draw_healthbar(x - (maxHp * 2), y + sprite_height + 2, x + (maxHp * 2), y + sprite_height + 6, (hp/maxHp * 100), c_black, c_red, c_green, 0, false, true);
+	draw_healthbar(x - (maxHp ), y + sprite_height + 2, x + (maxHp), y + sprite_height + 6, (hp/maxHp * 100), c_black, c_red, c_green, 0, false, true);
 	var _aim = aimDir;
-	if (weapon.label == "melee") {
+	if (weapon.type == weaponType.melee) {
 		_aim = point_direction(0, 0, image_xscale, 0);
 	}
 

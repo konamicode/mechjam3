@@ -1,12 +1,13 @@
 
 
-function Weapon(_label = "Name", _attackObj = objAttack, _baseDmg = 1, _enCost = 1, _fireRate = 10, _range = {minDist: 0, maxDist: 200}) constructor {
+function Weapon(_label = "Name", _attackObj = objAttack, _baseDmg = 1, _enCost = 1, _fireRate = 10, _type = weaponType.ranged, _range = {minDist: 0, maxDist: 200}) constructor {
 	energyCost = _enCost;
 	baseDamage = _baseDmg;
 	attack = _attackObj;
 	fireRate = _fireRate;
 	range = _range;
 	label = _label;
+	type = _type;
 }
 
 function BuildWeapons(weaponData = "none") {
@@ -16,8 +17,8 @@ function BuildWeapons(weaponData = "none") {
 	} else {
 		Beam = new Weapon("beam", objBeam);
 		Beam.range = {minDist: 100, maxDist: screenWidth};
-		Vulcan = new Weapon("bullet", objBullet, 5, 2, 0.2, {minDist:0, maxDist: 250});
-		Melee = new Weapon("melee", noone, 10, 10, 1.5, {minDist: 0, maxDist: 100});
+		Vulcan = new Weapon("bullet", objBullet, 5, 2, 0.2, weaponType.ranged, {minDist:0, maxDist: 250});
+		Melee = new Weapon("melee", noone, 10, 10, 1.5, weaponType.melee, {minDist: 0, maxDist: 100});
 		Rocket = new Weapon("rocket", objRocket);
 		Rocket.range = {minDist: 100, maxDist: 500}
 	//	Missile = new Weapon("missile", objMissile);

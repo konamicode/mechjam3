@@ -29,7 +29,8 @@ switch(_string)
 			var _x = lengthdir_x(_offx, aimDir);
 			var _y = lengthdir_y(_offx, aimDir);
 			show_debug_message(string(aimDir) + ": x: " + string(_offx) + ", " + string(_x) + " |y : " + string(_offy) + ", " + string(_y));
-			instance_create_layer(x + weapPosX + _x , y + weapPosY + _y , "Instances", objAttack, { aimed: aiming, attackType : collision.line, sprite_index: sprFX_beamBlast, image_angle : aimDir, creator : id, dmg: 45}) ;
+			var _dmg = CalculateDamage();
+			instance_create_layer(x + weapPosX + _x , y + weapPosY + _y , "Instances", objAttack, { aimed: aiming, attackType : collision.line, sprite_index: sprFX_beamBlast, image_angle : aimDir, creator : id, dmg: _dmg}) ;
 
 			//fx.shotParent = _shot;
 			//_shot.moveDir = _aimDir;

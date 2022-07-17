@@ -167,8 +167,8 @@ function GetAnimationName() {
 
 
 function FireWeapon(_x, _y, _object ) {
-	
-	instance_create_layer(_x, _y, "Instances", _object, {creator:id, image_angle: aimDir});
+	var _dmg = CalculateDamage();
+	instance_create_layer(_x, _y, "Instances", _object, {creator:id, image_angle: aimDir, dmg: _dmg});
 		
 }
 
@@ -201,7 +201,7 @@ function SelectWeapon() {
 function CalculateDamage() {
 	var _finalDamage = weapon.baseDamage;
 	
-	if(weapon.label == "melee")
+	if(weapon.type == weaponType.melee)
 	{
 		_finalDamage *= meleePower;
 	}

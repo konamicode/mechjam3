@@ -51,3 +51,8 @@ enum enmPrequisites {
 	maxLossStreak,
 	hasBeatenPlayer,
 }
+
+enum weaponTypes {
+	ranged,
+	melee
+}
