@@ -7,6 +7,7 @@ maxDensity = 0.9;
 
 mapData = [];
 tileMap = [];
+traversalArray = [];
 
 playerStartX = 0;
 playerStartY = 0;
@@ -22,6 +23,7 @@ function GenerateMap()
 	for(i = 0; i < height; i++)
 	{
 		mapData[i] = [width];
+		traversalArray[i] = [width];
 	}
 	
 	for(j = 0; j < height; j++)
@@ -30,6 +32,7 @@ function GenerateMap()
 		{
 			mapData[j][k] = new mapTileData();
 			mapData[j][k].buff = irandom(enmBuffTypes.Length-1);
+			traversalArray[j][k] = 0;
 		}
 	}
 	
@@ -52,8 +55,95 @@ function GenerateMap()
 		
 		if(mapData[xLoc][yLoc].isLiberated == false and mapData[xLoc][yLoc].isPresent == true)
 		{
-			mapData[xLoc][yLoc].isPresent = false;
-			exclusionCount = exclusionCount - 1;
+			traversalArray[xLoc][yLoc] = -1;
+			if(ValidateMap() == true)
+			{
+				mapData[xLoc][yLoc].isPresent = false;
+				exclusionCount = exclusionCount - 1;
+			}
+			else
+			{
+				traversalArray[xLoc][yLoc] = 0;
+			}
+		}
+	}
+}
+
+function ValidateMap()
+{
+	isValid = true;
+	
+	//Run fill algorithm
+	for(i = 0; i < height; i++)
+	{
+		for(j = 0; j < width; j++)
+		{
+			if(traversalArray[i][j] == 0)
+			{
+				CanReachAdjacentCell(i, j);
+				break;
+			}
+		}
+	}
+	
+	//Check for unreached cells and clean up reached cells
+	for(k = 0; k < height; k++)
+	{
+		for(l = 0; l < width; l++)
+		{
+			if(traversalArray[k][l] == 0)
+			{
+				isValid = false;
+			}
+			else if(traversalArray[k][l] == 1)
+			{
+				traversalArray[k][l] = 0;
+			}
+		}
+	}
+	
+	return isValid;
+}
+
+function CanReachAdjacentCell(i, j)
+{
+	//North
+	if(i > 0)
+	{
+		if(traversalArray[i-1][j] == 0)
+		{
+			traversalArray[i-1][j] = 1;
+			CanReachAdjacentCell(i-1, j);
+		}
+	}
+	
+	//South
+	if(i < height-1)
+	{
+		if(traversalArray[i+1][j] == 0)
+		{
+			traversalArray[i+1][j] = 1;
+			CanReachAdjacentCell(i+1, j);
+		}
+	}
+	
+	//West
+	if(j > 0)
+	{
+		if(traversalArray[i][j-1] == 0)
+		{
+			traversalArray[i][j-1] = 1;
+			CanReachAdjacentCell(i, j-1);
+		}
+	}
+	
+	//East
+	if(j < width-1)
+	{
+		if(traversalArray[i][j+1] == 0)
+		{
+			traversalArray[i][j+1] = 1;
+			CanReachAdjacentCell(i, j+1);
 		}
 	}
 }
