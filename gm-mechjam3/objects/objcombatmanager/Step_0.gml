@@ -27,6 +27,10 @@ if (room == rmCombat)
 		{
 			//You win!
 			if (!changeRoom) {
+				if (spawnRival == true and spawnedRival == noone)
+				{
+					LevelRival(spawnedRival);
+				}
 				EndCombat(true);
 				changeRoom = true;
 			}
@@ -34,6 +38,10 @@ if (room == rmCombat)
 		
 	} else if !instance_exists(objPlayer) {
 		if (!changeRoom) {
+			if (spawnRival == true and spawnedRival == noone)
+			{
+				LevelRival(spawnedRival);
+			}
 			EndCombat(false);	
 			changeRoom = true; 
 		}

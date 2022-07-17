@@ -57,6 +57,19 @@ function EnemyData() constructor {
 	level = 1;
 	meleeWeaponLvl = 1;
 	rngWeaponLvl = 1;
+	
+	function UpgradeEnemy()
+	{
+		level = level+1;
+		
+		/*Player Upgrades as reference:
+		HP: 10%
+		Speed: 5%
+		Stamina: 10%
+		Melee Damage: 10%
+		Ranged Damage: 10%
+		*/
+	}
 }
 
 function GameData() constructor {

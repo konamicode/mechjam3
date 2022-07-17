@@ -121,6 +121,8 @@ function GenerateRivalData(mech, initialResult)
 		name : GenerateRivalName()
 	}
 	
+	LevelRival(rivalData);
+	
 	ds_list_copy(rivalData.weapons, mech.weapons);
 	ds_list_copy(rivalData.weakpoints, mech.weakpoints);
 	ds_list_copy(rivalData.defenses, mech.defenses);
@@ -128,6 +130,57 @@ function GenerateRivalData(mech, initialResult)
 	ds_list_add(rivalData.battleRecord, initialResult);	//true = player won, false = rival won
 	
 	return rivalData;
+}
+
+function LevelRival(rivalData)
+{
+	/*Player Upgrades as reference:
+	HP: 10%
+	Stamina: 10%
+	Melee Damage: 10%
+	Ranged Damage: 10%
+	Speed: 5%
+	*/
+	
+	switch(rivalData.personality)
+	{
+		case enmPersonality.arrogant:
+		{
+			rivalData.maxHp *= 1.05;
+			rivalData.maxStamina *= 1.05;
+			rivalData.meleePower *= 1.1;
+			rivalData.rangedPower *= 1.05;
+			rivalData.moveSpeed *= 1.025;
+			break;
+		}
+		case enmPersonality.fighter:
+		{
+			rivalData.maxHp *= 1.05;
+			rivalData.maxStamina *= 1.05;
+			rivalData.meleePower *= 1.05;
+			rivalData.rangedPower *= 1.05;
+			rivalData.moveSpeed *= 1.05;
+			break;
+		}
+		case enmPersonality.honorable:
+		{
+			rivalData.maxHp *= 1.1;
+			rivalData.maxStamina *= 1.05;
+			rivalData.meleePower *= 1.05;
+			rivalData.rangedPower *= 1.05;
+			rivalData.moveSpeed *= 1.025;
+			break;
+		}
+		case enmPersonality.loyal:
+		{
+			rivalData.maxHp *= 1.05;
+			rivalData.maxStamina *= 1.1;
+			rivalData.meleePower *= 1.05;
+			rivalData.rangedPower *= 1.05;
+			rivalData.moveSpeed *= 1.025;
+			break;
+		}
+	}
 }
 
 function GenerateRivalName()
