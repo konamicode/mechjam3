@@ -20,7 +20,7 @@ gameData = new GameData();
 dialogData = new DialogHelper();
 
 startMenu = new Menu();
-startMenu.AddItem("Start", DoNothing);
+startMenu.AddItem("Start", GoToMapRoom);
 //startMenu.AddItem("New Game, 
 //startMenu.AddItem("Continue, 
 startMenu.AddItem("Options", DoNothing);
