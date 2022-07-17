@@ -8,7 +8,7 @@ if (room = rmCombat) {
 	
 	if !layer_sequence_exists("Instances",seqRivalAppears)
 	{
-		seqRivalAppears = layer_sequence_create("Instances", 640, 180, sqRivalAppears);
+		seqRivalAppears = layer_sequence_create("Instances", 320, 180, sqRivalAppears);
 		layer_sequence_pause(seqRivalAppears);
 	}
 	
