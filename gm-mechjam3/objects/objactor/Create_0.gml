@@ -29,7 +29,7 @@ aim_y = 0;
 
 moveSpeed = 6.0;
 
-
+canAttack = true;
 hitFlash = false;
 
 function DistanceToTarget(_target) {

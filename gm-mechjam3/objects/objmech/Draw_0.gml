@@ -6,11 +6,17 @@ draw_set_color(c);
 
 if global.debug {
 	draw_healthbar(x - (maxHp * 2), y + sprite_height + 2, x + (maxHp * 2), y + sprite_height + 6, (hp/maxHp * 100), c_black, c_red, c_green, 0, false, true);
-	draw_line_colour(x + lengthdir_x(weapon.range.minDist, aimDir), 
-		y + lengthdir_y(weapon.range.minDist, aimDir), 
-		x + lengthdir_x(weapon.range.maxDist, aimDir), 
-		y + lengthdir_y(weapon.range.maxDist, aimDir), 
+	var _aim = aimDir;
+	if (weapon.label == "melee") {
+		_aim = point_direction(0, 0, image_xscale, 0);
+	}
+
+	draw_line_colour(x + lengthdir_x(weapon.range.minDist, _aim), 
+		y + lengthdir_y(weapon.range.minDist, _aim), 
+		x + lengthdir_x(weapon.range.maxDist, _aim), 
+		y + lengthdir_y(weapon.range.maxDist, _aim), 
 		c_blue, c_blue);
+	draw_text(x, y - sprite_yoffset - 10, string(action) + ":" + string(alarm_get(1)));
 
 
 }

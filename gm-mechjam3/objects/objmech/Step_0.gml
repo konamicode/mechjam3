@@ -28,7 +28,12 @@ else {
 			image_xscale = _dir;
 		
 		if between(DistanceToTarget(objPlayer), weapon.range.minDist, weapon.range.maxDist){
-			action = "attack";
+			if (canAttack) {
+				action = "attack";
+				alarm[1] = weapon.fireRate * room_speed;
+				canAttack = false;
+				ChangeAnimation(GetAnimationName());
+			}
 		}
 		else
 		{
