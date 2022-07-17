@@ -191,3 +191,8 @@ function CorrectFlippedDirection(_aimDir){
 	return _aimDir;
 }
 
+function SelectWeapon() {
+	var _index = irandom(ds_list_size(weapons)-1);
+	weapon = weapons[| _index];
+	
+}

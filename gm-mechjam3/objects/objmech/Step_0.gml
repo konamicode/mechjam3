@@ -33,6 +33,7 @@ else {
 		else
 		{
 			action = "idle";
+			//SelectWeapon();
 			MoveWithinRange(weapon.range.minDist, objPlayer);
 		}
 	}
