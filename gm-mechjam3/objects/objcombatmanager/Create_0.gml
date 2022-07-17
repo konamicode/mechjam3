@@ -46,8 +46,8 @@ function EndCombat(result) {
 	}
 	if(spawnedRival != noone)
 	{
-		
 		ds_list_add(ds_map_find_value(rivalMap, spawnedRival.name).battleRecord, result);
+		spawnedRival = noone;
 	}
 	SetAlarm(0, 90);
 
@@ -57,7 +57,7 @@ function StartCombat() {
 	
 	if(ds_map_size(rivalMap) > 0)
 	{
-		if(random(1) < rivalSpawnChance)
+		if(random(1) <= rivalSpawnChance)
 		{
 			spawnRival = true;
 		}
