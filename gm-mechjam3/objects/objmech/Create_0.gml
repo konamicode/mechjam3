@@ -201,6 +201,14 @@ function SelectWeapon() {
 function CalculateDamage() {
 	var _finalDamage = weapon.baseDamage;
 	
+	if(weapon.label == "melee")
+	{
+		_finalDamage *= meleePower;
+	}
+	else
+	{
+		_finalDamage *= rangedPower;
+	}
 	
-	return _finalDamage;
+	return floor(_finalDamage);
 }
