@@ -196,3 +196,11 @@ function SelectWeapon() {
 	weapon = weapons[| _index];
 	
 }
+
+
+function CalculateDamage() {
+	var _finalDamage = weapon.baseDamage;
+	
+	
+	return _finalDamage;
+}
