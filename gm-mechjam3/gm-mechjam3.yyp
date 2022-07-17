@@ -168,6 +168,7 @@
     {"id":{"name":"__input_exception_handler","path":"scripts/__input_exception_handler/__input_exception_handler.yy",},"order":5,},
     {"id":{"name":"objMapManager","path":"objects/objMapManager/objMapManager.yy",},"order":1,},
     {"id":{"name":"input_source_share","path":"scripts/input_source_share/input_source_share.yy",},"order":9,},
+    {"id":{"name":"rmSequenceTest","path":"rooms/rmSequenceTest/rmSequenceTest.yy",},"order":4,},
     {"id":{"name":"sprPlayer_idle_melee","path":"sprites/sprPlayer_idle_melee/sprPlayer_idle_melee.yy",},"order":6,},
     {"id":{"name":"WeaponsHelper","path":"scripts/WeaponsHelper/WeaponsHelper.yy",},"order":10,},
     {"id":{"name":"__input_config_profiles_and_default_bindings","path":"scripts/__input_config_profiles_and_default_bindings/__input_config_profiles_and_default_bindings.yy",},"order":5,},
@@ -326,6 +327,7 @@
     {"roomId":{"name":"rmMenu","path":"rooms/rmMenu/rmMenu.yy",},},
     {"roomId":{"name":"rmMap","path":"rooms/rmMap/rmMap.yy",},},
     {"roomId":{"name":"rmCombat","path":"rooms/rmCombat/rmCombat.yy",},},
+    {"roomId":{"name":"rmSequenceTest","path":"rooms/rmSequenceTest/rmSequenceTest.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

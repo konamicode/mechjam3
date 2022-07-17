@@ -2,8 +2,10 @@
 if (room == rmCombat)
 {
 	if layer_sequence_is_finished(seqRivalAppears) {
-		layer_sequence_pause(seqRivalAppears);
 		layer_sequence_headpos(seqRivalAppears, 0);
+		spawnedRival = GetRandomRival();
+		ds_list_add(enemyList, SpawnRivalFromData(400, 160, spawnedRival));		
+		layer_sequence_destroy(seqRivalAppears);
 	}
 	
 	//Check for level complete
@@ -13,9 +15,14 @@ if (room == rmCombat)
 			if(random(1) < rivalSpawnChance)
 			{
 				//spawnedRival = ds_list_find_value(rivalList, ds_list_size(rivalList)-1);
-				spawnedRival = GetRandomRival();
-				ds_list_add(enemyList, SpawnRivalFromData(400, 160, spawnedRival));
-				layer_sequence_play(seqRivalAppears);
+				//moving to layer sequence complete
+				//spawnedRival = GetRandomRival();
+				//ds_list_add(enemyList, SpawnRivalFromData(400, 160, spawnedRival));
+				var _finished = layer_sequence_is_finished(seqRivalAppears);
+				var _paused = layer_sequence_is_paused(seqRivalAppears);
+				if !_finished && _paused
+					layer_sequence_play(seqRivalAppears);
+
 			}			
 		} 
 		else

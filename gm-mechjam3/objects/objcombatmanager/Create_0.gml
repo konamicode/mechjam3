@@ -8,7 +8,9 @@ spawnedRival = noone;
 rivalSpawnChance = 1;
 
 
-seqRivalAppears = noone;
+seqRivalAppears = -1;
+
+
 
 
 function RemoveEnemy(_id) {
@@ -80,9 +82,9 @@ function AttemptToAddRival(mech, result)
 BuildWeapons();
 
 function GetRandomRival() {
-	var _array = ds_map_keys_to_array(objManager.rivalMap);
+	var _array = ds_map_keys_to_array(objCombatManager.rivalMap);
 	var _key = _array[irandom(array_length(_array) - 1)];
 	show_debug_message("Selecting Rival: " + string(_key));
-	return objManager.rivalMap[? _key];
+	return objCombatManager.rivalMap[? _key];
 }
 

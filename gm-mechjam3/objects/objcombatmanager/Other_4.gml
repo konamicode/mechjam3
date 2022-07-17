@@ -6,8 +6,10 @@ if (room = rmCombat) {
 	ds_list_add(enemyList, AddEnemy(540, 160, "Enemy", objMech, [Melee]));
 	CreatePlayer(87, 108, objManager.gameData.player);
 	
-	if seqRivalAppears == noone {
-		seqRivalAppears = layer_sequence_create(layer_get_id("Sequences"), screenWidth/2, screenHeight/2, sqRivalAppears);
-		layer_sequence_pause(seqRivalAppears);	
+	if !layer_sequence_exists("Instances",seqRivalAppears)
+	{
+		seqRivalAppears = layer_sequence_create("Instances", 640, 180, sqRivalAppears);
+		layer_sequence_pause(seqRivalAppears);
 	}
+	
 }
