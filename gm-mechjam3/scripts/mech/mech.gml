@@ -132,19 +132,28 @@ function GenerateRivalData(mech, initialResult)
 
 function GenerateRivalName()
 {
-	
+	specialNames = [
+		"Branch Forsythe",
+		"Quattro Formaggi"
+	]
 	firstNames = [
 		"Steve",
 		"Fey",
 		"James",
-		"Branch Forsythe",
-		"Quattro Formaggio",
+
 	];
 	lastNames = [
 		"Rynders",
 		"Harkness",
 		"Youngman"
 	];
-	
-	return firstNames[irandom(2)]+" "+lastNames[irandom(2)];
+	var randomName = "";
+	var nameExists = true;
+	while(nameExists) {
+		var _s = specialNames[irandom(array_length(specialNames) - 1)];
+		var _combined = firstNames[irandom(2)]+" "+lastNames[irandom(2)];
+		randomName = choose( _s, _combined );
+		nameExists = ds_map_exists(rivalMap, randomName);
+	}
+	return randomName;
 }

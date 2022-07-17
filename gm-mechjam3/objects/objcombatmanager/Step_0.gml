@@ -12,7 +12,8 @@ if (room == rmCombat)
 		{
 			if(random(1) < rivalSpawnChance)
 			{
-				spawnedRival = ds_list_find_value(rivalList, ds_list_size(rivalList)-1);
+				//spawnedRival = ds_list_find_value(rivalList, ds_list_size(rivalList)-1);
+				spawnedRival = GetRandomRival();
 				ds_list_add(enemyList, SpawnRivalFromData(400, 160, spawnedRival));
 				layer_sequence_play(seqRivalAppears);
 			}			

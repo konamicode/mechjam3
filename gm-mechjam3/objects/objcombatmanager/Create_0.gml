@@ -1,7 +1,7 @@
 enemyList = ds_list_create();
 nextRoom = noone;
 changeRoom = false;
-rivalList = ds_list_create();
+rivalMap = ds_map_create();
 maxRivalCount = 10;
 spawnRival = false;
 spawnedRival = noone;
@@ -32,7 +32,8 @@ function EndCombat(result) {
 				{
 					if(AttemptToAddRival(ds_list_find_index(enemyList, 0), result))
 					{
-						var rival = ds_list_find_value(rivalList, ds_list_size(rivalList)-1);
+						//var rival = ds_list_find_value(rivalList, ds_list_size(rivalList)-1);
+						var rival = ds_map_find_last(rivalMap);
 						var rivalComment = objManager.dialogData.GetDialog(rival.personality, 2);
 						show_debug_message(rivalComment);
 					}
@@ -43,7 +44,8 @@ function EndCombat(result) {
 	}
 	if(spawnedRival != noone)
 	{
-		ds_list_add(ds_list_find_value(rivalList, spawnedRival).battleRecord, result);
+		
+		ds_list_add(ds_map_find_value(rivalMap, spawnedRival.name).battleRecord, result);
 	}
 	SetAlarm(0, 90);
 
@@ -51,7 +53,7 @@ function EndCombat(result) {
 
 function StartCombat() {
 	
-	if(ds_list_size(rivalList) > 0)
+	if(ds_map_size(rivalMap) > 0)
 	{
 		if(random(1) < rivalSpawnChance)
 		{
@@ -65,13 +67,22 @@ function StartCombat() {
 function AttemptToAddRival(mech, result)
 {
 	//Roll to see if we want to promote the unit to a rival
-	var odds = 1 - (ds_list_size(rivalList)/maxRivalCount);
+	var odds = 1 - (ds_map_size(rivalMap)/maxRivalCount);
 	if(random(1) < odds)
 	{
-		ds_list_add(rivalList, GenerateRivalData(mech, result));
-		return true;
+		var rival = GenerateRivalData(mech, result)
+		ds_map_add(rivalMap, rival.name, rival);
+		return rival.name;
 	}
-	return false;
+	return noone;
 }
 
 BuildWeapons();
+
+function GetRandomRival() {
+	var _array = ds_map_keys_to_array(objManager.rivalMap);
+	var _key = _array[irandom(array_length(_array) - 1)];
+	show_debug_message("Selecting Rival: " + string(_key));
+	return objManager.rivalMap[? _key];
+}
+

@@ -62,6 +62,6 @@ function EnemyData() constructor {
 function GameData() constructor {
 	map = [];
 	player = new PlayerData();
-	rivals = [];
+	rivals = ds_map_create();
 }
 
