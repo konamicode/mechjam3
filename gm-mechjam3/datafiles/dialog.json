@@ -27,6 +27,15 @@
         "text": "That's what you get for messing with me."
     },
     {
+        "personality": 0,
+        "context": 3,
+        "prequisites": 0,
+        "prerequisiteparamters": 0,
+        "disqualifiers": 0,
+        "disqualifierparameters": 0,
+        "text": "Let's settle this!"
+    },
+    {
         "personality": 1,
         "context": 0,
         "prequisites": 0,
@@ -52,6 +61,15 @@
         "disqualifiers": 0,
         "disqualifierparameters": 0,
         "text": "Practice harder to become a great pilot."
+    },
+    {
+        "personality": 1,
+        "context": 3,
+        "prequisites": 0,
+        "prerequisiteparamters": 0,
+        "disqualifiers": 0,
+        "disqualifierparameters": 0,
+        "text": "Show me what you've learned."
     },
     {
         "personality": 2,
@@ -81,6 +99,15 @@
         "text": "Ever thus unto traitors."
     },
     {
+        "personality": 2,
+        "context": 3,
+        "prequisites": 0,
+        "prerequisiteparamters": 0,
+        "disqualifiers": 0,
+        "disqualifierparameters": 0,
+        "text": "Your petty rebellion ends here."
+    },
+    {
         "personality": 3,
         "context": 0,
         "prequisites": 0,
@@ -106,5 +133,14 @@
         "disqualifiers": 0,
         "disqualifierparameters": 0,
         "text": "Train hard for the next time we fight!"
+    },
+    {
+        "personality": 3,
+        "context": 3,
+        "prequisites": 0,
+        "prerequisiteparamters": 0,
+        "disqualifiers": 0,
+        "disqualifierparameters": 0,
+        "text": "Time for another dance!"
     }
 ]

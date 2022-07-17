@@ -6,6 +6,8 @@ if (room == rmCombat)
 		spawnedRival = GetRandomRival();
 		ds_list_add(enemyList, SpawnRivalFromData(400, 160, spawnedRival));		
 		layer_sequence_destroy(seqRivalAppears);
+		var dialog = objManager.dialogData.GetDialog(spawnedRival.personality, 3);
+		show_debug_message(dialog);
 	}
 	
 	//Check for level complete
@@ -14,10 +16,6 @@ if (room == rmCombat)
 		{
 			if(random(1) < rivalSpawnChance)
 			{
-				//spawnedRival = ds_list_find_value(rivalList, ds_list_size(rivalList)-1);
-				//moving to layer sequence complete
-				//spawnedRival = GetRandomRival();
-				//ds_list_add(enemyList, SpawnRivalFromData(400, 160, spawnedRival));
 				var _finished = layer_sequence_is_finished(seqRivalAppears);
 				var _paused = layer_sequence_is_paused(seqRivalAppears);
 				if !_finished && _paused
