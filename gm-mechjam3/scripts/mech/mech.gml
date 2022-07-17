@@ -92,11 +92,11 @@ function SpawnRivalFromData(_x, _y, rivalData)
 	rival.personality = rivalData.personality;
 	
 	//TODO: Plug in the other instances in rivalData
-	
+	rival.weapons = rivalData.weapons;
 	var inst = CreateMechObject(rival, _x, _y, objMech);
 	var _comp = rival.AddComponent(componentType.weakpoint, "head", inst);
 	ds_list_add(inst.components, _comp);
-	
+
 	return inst;
 }
 
@@ -111,15 +111,19 @@ function GenerateRivalData(mech, initialResult)
 		moveSpeed : mech.moveSpeed,
 		
 		frame : mech.frame,
-		weapons : mech.weapons,
-		weakpoints : mech.weakpoints,
-		defenses : mech.defenses,
+		weapons : ds_list_create(),
+		weakpoints : ds_list_create(),
+		defenses : ds_list_create(),
 	
 		battleRecord : ds_list_create(),
 		personality : irandom(enmPersonality.length),
 	
 		name : GenerateRivalName()
 	}
+	
+	ds_list_copy(rivalData.weapons, mech.weapons);
+	ds_list_copy(rivalData.weakpoints, mech.weakpoints);
+	ds_list_copy(rivalData.defenses, mech.defenses);
 	
 	ds_list_add(rivalData.battleRecord, initialResult);	//true = player won, false = rival won
 	

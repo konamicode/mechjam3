@@ -1,1 +1,1 @@
-GetSequenceHitboxData(sequence)
+//GetSequenceHitboxData(sequence)

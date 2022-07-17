@@ -15,27 +15,23 @@ if (actorState == state.dead) {
 		objCombatManager.RemoveEnemy(id);
 	}
 	instance_destroy();
-	exit;
-}
-
-if (!isPlayer)
-{
-
-	var _dir = sign(objPlayer.x - x);
-	if (_dir != 0)
-		image_xscale = _dir;
-		
-	if between(DistanceToTarget(objPlayer), weapon.range.minDist, weapon.range.maxDist){
-		action = "attack";
-	}
-	else
-	{
-		action = "idle";
-		MoveWithinRange(weapon.range.minDist, objPlayer);
-	}
 	
+}
+else {
+	if (!isPlayer)
+	{
+
+		var _dir = sign(objPlayer.x - x);
+		if (_dir != 0)
+			image_xscale = _dir;
 		
-	if (weapon == "placeholder") {
-		show_debug_message("WtF");	
+		if between(DistanceToTarget(objPlayer), weapon.range.minDist, weapon.range.maxDist){
+			action = "attack";
+		}
+		else
+		{
+			action = "idle";
+			MoveWithinRange(weapon.range.minDist, objPlayer);
+		}
 	}
 }
