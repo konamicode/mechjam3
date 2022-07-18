@@ -168,7 +168,15 @@ function GetAnimationName() {
 
 function FireWeapon(_x, _y, _object ) {
 	var _dmg = CalculateDamage();
-	instance_create_layer(_x, _y, "Instances", _object, {creator:id, image_angle: aimDir, dmg: _dmg});
+	if is_string(_object)
+	{
+		var _string = _object;
+		_object = asset_get_index(_string);
+		if (_object < -1 )
+			_object = noone;
+	}
+	if _object != noone
+		instance_create_layer(_x, _y, "Instances", _object, {creator:id, image_angle: aimDir, dmg: _dmg});
 		
 }
 

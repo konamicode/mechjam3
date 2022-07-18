@@ -24,28 +24,24 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_attack_beam/sprDrone_attack_beam.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_attack_beam/sprDrone_attack_beam.yy",},"LayerId":{"name":"865f266a-a1e4-4c60-8b2f-2ac8f258f089","path":"sprites/sprDrone_attack_beam/sprDrone_attack_beam.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprDrone_attack_beam","path":"sprites/sprDrone_attack_beam/sprDrone_attack_beam.yy",},"resourceVersion":"1.0","name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_idle_beamrifle/sprDrone_idle_beamrifle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_idle_beamrifle/sprDrone_idle_beamrifle.yy",},"LayerId":{"name":"865f266a-a1e4-4c60-8b2f-2ac8f258f089","path":"sprites/sprDrone_idle_beamrifle/sprDrone_idle_beamrifle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprDrone_idle_beamrifle","path":"sprites/sprDrone_idle_beamrifle/sprDrone_idle_beamrifle.yy",},"resourceVersion":"1.0","name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprDrone_attack_beam","path":"sprites/sprDrone_attack_beam/sprDrone_attack_beam.yy",},
+    "spriteId": {"name":"sprDrone_idle_beamrifle","path":"sprites/sprDrone_idle_beamrifle/sprDrone_idle_beamrifle.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 1.0,
+    "playbackSpeed": 30.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[
-        {"id":"379d54b6-46b1-46aa-b164-e785133feaa2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Events":[
-                "FireWeapon:14_-1",
-              ],"resourceVersion":"1.0","resourceType":"MessageEventKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<MessageEventKeyframe>",},
-      ],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"05a18ac4-5c89-4797-8568-399161115d7a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_attack_beam/sprDrone_attack_beam.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"09c6a219-5917-4d6d-9eba-bc8336ef74a4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_idle_beamrifle/sprDrone_idle_beamrifle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -62,9 +58,9 @@
     "yorigin": 7,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprDrone_attack_beam","path":"sprites/sprDrone_attack_beam/sprDrone_attack_beam.yy",},
+    "parent": {"name":"sprDrone_idle_beamrifle","path":"sprites/sprDrone_idle_beamrifle/sprDrone_idle_beamrifle.yy",},
     "resourceVersion": "1.4",
-    "name": "sprDrone_attack_beam",
+    "name": "sprDrone_idle_beamrifle",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -77,7 +73,7 @@
     "path": "folders/Sprites/Weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sprDrone_attack_beam",
+  "name": "sprDrone_idle_beamrifle",
   "tags": [],
   "resourceType": "GMSprite",
 }
