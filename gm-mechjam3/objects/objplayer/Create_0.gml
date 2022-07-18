@@ -10,7 +10,7 @@ quickshotTime = 0;
 
 aiming = false;
 aimCounter = 0;
-canFire = true;
+canAttack = true;
 
 function GetAimDirection() {
 	var dir = undefined;

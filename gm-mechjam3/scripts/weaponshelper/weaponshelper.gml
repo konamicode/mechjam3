@@ -28,8 +28,8 @@ function LoadWeapons(weaponData = "none") {
 		for (var i = 0; i < array_length(jsonData); i++)
 		{
 			var struct = jsonData[i];
-			var _weapon =  new Weapon(string_lower(struct.label), struct.attack, struct.basedmg, struct.cost, struct.firerate, struct.type);
-			weaponMap[? string_lower(struct.label)] = _weapon;
+			var _weapon =  new Weapon(struct.label, struct.attack, struct.baseDmg, struct.cost, struct.fireRate, struct.type);
+			weaponMap[? struct.label] = _weapon;
 		
 		}
 

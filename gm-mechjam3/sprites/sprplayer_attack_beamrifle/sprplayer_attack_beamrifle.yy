@@ -55,8 +55,8 @@
     "volume": 1.0,
     "length": 5.0,
     "events": {"Keyframes":[
-        {"id":"1afd33f6-c3a3-4f07-85e3-ed2176d894d7","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Events":[
-                "67_0",
+        {"id":"e54e72f4-f29b-47d4-b1cf-adba3aa18308","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Events":[
+                "FireWeapon:67_0",
               ],"resourceVersion":"1.0","resourceType":"MessageEventKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<MessageEventKeyframe>",},
       ],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},

@@ -89,3 +89,49 @@ function GetRandomRival() {
 
 weaponMap = ds_map_create();
 weaponMap = LoadWeapons("weapons.json");
+
+function LoadEnemyCatalog() {
+	var enemyList = ds_list_create();
+	var catalogFile = file_text_open_read("enemyCatalogue.json");
+		
+	var jsonStr = "";
+	while(!file_text_eof(catalogFile))
+	{
+		jsonStr += file_text_read_string(catalogFile);
+		file_text_readln(catalogFile);
+	}
+	file_text_close(catalogFile);
+	var enemyData = json_parse(jsonStr);
+	if ( array_length(enemyData) > 0) {
+		for (var i = 0; i < array_length(enemyData); i++) {	
+			ds_list_add(enemyList, enemyData[i]);
+		}
+		return enemyList;
+	}
+	else
+		ds_list_destroy(enemyList);
+		return undefined;
+
+}
+
+enemyCatalog = ds_list_create();
+enemyCatalog = LoadEnemyCatalog();
+
+function GetEnemiesForLevel() {
+	var _enemyPool = ds_list_create();
+	var _catalogSize = ds_list_size(enemyCatalog);
+	for (var i = 0; i < _catalogSize; i++) {
+		var _minLevel = enemyCatalog[| i].minLevel;
+		var _maxLevel = enemyCatalog[| i].maxLevel;
+		if(between(objManager.gameData.player.buffLevel, _minLevel, _maxLevel, true))
+		{
+			ds_list_add(_enemyPool, enemyCatalog[| i]);	
+		}
+	}
+	if ( ds_list_size(_enemyPool) > 0)
+		return _enemyPool;
+	else
+		ds_list_destroy(_enemyPool);
+		return undefined;
+}
+

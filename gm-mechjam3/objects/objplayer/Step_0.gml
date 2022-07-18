@@ -53,11 +53,12 @@ if (actorState == state.dead) {
 	} else
 		image_xscale = 1;
 	
-	if input_check_pressed("shoot") && canFire {
+	if input_check_pressed("shoot") && canAttack {
 		action = "attack";
+		alarm[1] = weapon.fireRate * room_speed;
+		canAttack = false;
 		var _sprite = GetAnimationName();
 		ChangeAnimation(_sprite);
-		canFire = false;
 	}
 	
 	if input_check_pressed("action") {

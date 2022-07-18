@@ -14,6 +14,9 @@ DrawWeapon();
 draw_self();
 draw_set_color(c_white);
 
+if (global.debug) {
+	draw_text(x, y - sprite_yoffset - 10, string(action) + ":" + string(alarm_get(1)));
+}
 
 
 if (head) {

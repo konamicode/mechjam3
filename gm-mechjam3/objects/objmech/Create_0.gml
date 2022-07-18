@@ -162,7 +162,7 @@ function DrawWeapon() {
 
 function GetAnimationName() {
 	
-	return frame + "_" + action + "_" + weaponName;
+	return frame + "_" + action + "_" + string_lower(weaponName);
 }
 
 

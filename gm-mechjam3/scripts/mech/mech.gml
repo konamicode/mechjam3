@@ -47,10 +47,35 @@ function CreateMechObject(mechStruct, _x, _y, obj = objMech, _layer="Instances")
 	return inst;
 }
 
+function AddEnemyFromCatalog(_x, _y, mechStruct){
+	var enemy = new Mech();
 
-function AddEnemy(_x, _y, _frame, enemyType, _weapons = [] ) {
+	enemy.maxHp = mechStruct.maxHP;
+	enemy.hp = mechStruct.maxHP;
+	enemy.maxStamina = mechStruct.maxStamina;
+	enemy.stamina = mechStruct.maxStamina;
+	enemy.moveSpeed = mechStruct.moveSpeed;
+	enemy.AddWeapon(mechStruct.weapon);
+	enemy.body = mechStruct.body;
+	var inst;
+	if (enemy.body == "Mech") {
+		inst = CreateMechObject(enemy, _x, _y, objMech);
+		var _comp = enemy.AddComponent(componentType.weakpoint, "head", inst);
+		ds_list_add(inst.components, _comp);
+	} else 
+	{
+		inst = CreateMechObject(enemy, _x, _y, objDrone);
+	}
+				
+
+	return inst;
+
+}
+
+function AddEnemyFromData(_x, _y, _frame = "Mech", enemyType = "objMech", _weapons = [] ) {
+	//this function should ideally become redundant as we move entirely out of hardcoded/non-Data enemies
 	var enemy = new Mech(_frame);
-	if (array_length(_weapons) > 0) {
+	if (array_length(mechStruct.weapons) > 0) {
 		for (var i = 0; i < array_length(_weapons); i++)
 		{
 			enemy.AddWeapon(_weapons[i]);
@@ -71,8 +96,8 @@ function CreatePlayer(_x, _y, playerData) {
 	player.moveSpeed = playerData.moveSpeed;
 	player.meleePower = playerData.meleeAttackPower;
 	player.rangedPower = playerData.rngAttackPower;
-	player.AddWeapon("beamrifle");
-	player.AddWeapon("beamsaber");
+	player.AddWeapon("beamRifle");
+	player.AddWeapon("beamSaber");
 	//for (var i = 0; i < array_length(player.subWeapons); i++ ) {
 			
 	//}

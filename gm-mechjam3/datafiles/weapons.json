@@ -1,56 +1,56 @@
 [
     {
         "label": "beamGun",
-        "basedmg": 10,
-        "firerate": 2,
+        "baseDmg": 10,
+        "fireRate": 2,
         "attack": "objBeam",
         "type": "1",
         "cost": 5
     },
     {
         "label": "beamRifle",
-        "basedmg": 20,
-        "firerate": 3,
+        "baseDmg": 20,
+        "fireRate": 3,
         "attack": "objBeam",
         "type": "1",
         "cost": 5
     },
     {
         "label": "beamCannon",
-        "basedmg": 50,
-        "firerate": 5,
+        "baseDmg": 50,
+        "fireRate": 5,
         "attack": "objBeam",
         "type": "1",
         "cost": 5
     },
     {
         "label": "beamSaber",
-        "basedmg": 50,
-        "firerate": 2,
+        "baseDmg": 50,
+        "fireRate": 2,
         "attack": "objMelee",
         "type": "0",
         "cost": 5
     },
     {
         "label": "beamAxe",
-        "basedmg": 80,
-        "firerate": 4,
+        "baseDmg": 80,
+        "fireRate": 4,
         "attack": "objMelee",
         "type": "0",
         "cost": 5
     },
     {
         "label": "bazooka",
-        "basedmg": 30,
-        "firerate": 4,
+        "baseDmg": 30,
+        "fireRate": 4,
         "attack": "objRocket",
         "type": "1",
         "cost": 5
     },
     {
         "label": "vulcans",
-        "basedmg": 5,
-        "firerate": 0.5,
+        "baseDmg": 5,
+        "fireRate": 0.5,
         "attack": "objBullet",
         "type": "1",
         "cost": 5
