@@ -48,7 +48,7 @@
         {"resourceVersion":"1.0","resourceType":"LockedModifier",},
       ],},
     {"keyframes":{"Keyframes":[
-          {"id":"fd31a274-431a-43f5-9653-10f0b8e45ecf","Key":0.0,"Length":30.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"sprPlayer_attack_beamrifle","path":"sprites/sprPlayer_attack_beamrifle/sprPlayer_attack_beamrifle.yy",},"resourceVersion":"1.0","resourceType":"AssetSpriteKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<AssetSpriteKeyframe>",},
+          {"id":"fd31a274-431a-43f5-9653-10f0b8e45ecf","Key":0.0,"Length":30.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"sprPlayer_attack_beamRifle","path":"sprites/sprPlayer_attack_beamRifle/sprPlayer_attack_beamRifle.yy",},"resourceVersion":"1.0","resourceType":"AssetSpriteKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<AssetSpriteKeyframe>",},
         ],"resourceVersion":"1.0","resourceType":"KeyframeStore<AssetSpriteKeyframe>",},"trackColour":4282966770,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[
         {"keyframes":{"Keyframes":[
               {"id":"6d63e193-1770-48f4-b61a-87a598ec7b55","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":true,"Channels":{"0":{"EmbeddedAnimCurve":null,"RealValue":0.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},"1":{"EmbeddedAnimCurve":null,"RealValue":0.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},
@@ -74,7 +74,7 @@
         {"resourceVersion":"1.0","resourceType":"LockedModifier",},
       ],},
     {"keyframes":{"Keyframes":[
-          {"id":"8888abe9-0df7-4680-9655-c8c9ad6d4597","Key":0.0,"Length":30.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"sprWeap_attack_beamrifle","path":"sprites/sprWeap_attack_beamrifle/sprWeap_attack_beamrifle.yy",},"resourceVersion":"1.0","resourceType":"AssetSpriteKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<AssetSpriteKeyframe>",},
+          {"id":"8888abe9-0df7-4680-9655-c8c9ad6d4597","Key":0.0,"Length":30.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"sprWeap_attack_beamRifle","path":"sprites/sprWeap_attack_beamRifle/sprWeap_attack_beamRifle.yy",},"resourceVersion":"1.0","resourceType":"AssetSpriteKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<AssetSpriteKeyframe>",},
         ],"resourceVersion":"1.0","resourceType":"KeyframeStore<AssetSpriteKeyframe>",},"trackColour":4294068400,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[
         {"keyframes":{"Keyframes":[
               {"id":"f2affbff-30a2-4732-b439-aebdd6b5dcd6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":true,"Channels":{"0":{"EmbeddedAnimCurve":null,"RealValue":0.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},"1":{"EmbeddedAnimCurve":null,"RealValue":0.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},
@@ -112,7 +112,7 @@
     "path": "folders/Sequences.yy",
   },
   "resourceVersion": "1.4",
-  "name": "sqPlayer_attack_beamrifle",
+  "name": "sqPlayer_attack_beamRifle",
   "tags": [],
   "resourceType": "GMSequence",
 }

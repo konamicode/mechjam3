@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"58d3de7e-1123-4d77-8d9b-e4420039586e","path":"sprites/sprPlayer_idle_beamrifle_backup/sprPlayer_idle_beamrifle_backup.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"58d3de7e-1123-4d77-8d9b-e4420039586e","path":"sprites/sprPlayer_idle_beamrifle_backup/sprPlayer_idle_beamrifle_backup.yy",},"LayerId":{"name":"03fbe9be-fc34-47db-9342-86fe11022a41","path":"sprites/sprPlayer_idle_beamrifle_backup/sprPlayer_idle_beamrifle_backup.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprPlayer_idle_beamrifle_backup","path":"sprites/sprPlayer_idle_beamrifle_backup/sprPlayer_idle_beamrifle_backup.yy",},"resourceVersion":"1.0","name":"58d3de7e-1123-4d77-8d9b-e4420039586e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"58d3de7e-1123-4d77-8d9b-e4420039586e","path":"sprites/sprPlayer_idle_beamRifle_backup/sprPlayer_idle_beamRifle_backup.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"58d3de7e-1123-4d77-8d9b-e4420039586e","path":"sprites/sprPlayer_idle_beamRifle_backup/sprPlayer_idle_beamRifle_backup.yy",},"LayerId":{"name":"03fbe9be-fc34-47db-9342-86fe11022a41","path":"sprites/sprPlayer_idle_beamRifle_backup/sprPlayer_idle_beamRifle_backup.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprPlayer_idle_beamRifle_backup","path":"sprites/sprPlayer_idle_beamRifle_backup/sprPlayer_idle_beamRifle_backup.yy",},"resourceVersion":"1.0","name":"58d3de7e-1123-4d77-8d9b-e4420039586e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprPlayer_idle_beamrifle_backup","path":"sprites/sprPlayer_idle_beamrifle_backup/sprPlayer_idle_beamrifle_backup.yy",},
+    "spriteId": {"name":"sprPlayer_idle_beamRifle_backup","path":"sprites/sprPlayer_idle_beamRifle_backup/sprPlayer_idle_beamRifle_backup.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"09c87f4e-16cd-46d1-b1ed-a7227d3e523f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"58d3de7e-1123-4d77-8d9b-e4420039586e","path":"sprites/sprPlayer_idle_beamrifle_backup/sprPlayer_idle_beamrifle_backup.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"09c87f4e-16cd-46d1-b1ed-a7227d3e523f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"58d3de7e-1123-4d77-8d9b-e4420039586e","path":"sprites/sprPlayer_idle_beamRifle_backup/sprPlayer_idle_beamRifle_backup.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 33,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprPlayer_idle_beamrifle_backup","path":"sprites/sprPlayer_idle_beamrifle_backup/sprPlayer_idle_beamrifle_backup.yy",},
+    "parent": {"name":"sprPlayer_idle_beamRifle_backup","path":"sprites/sprPlayer_idle_beamRifle_backup/sprPlayer_idle_beamRifle_backup.yy",},
     "resourceVersion": "1.4",
-    "name": "sprPlayer_idle_beamrifle_backup",
+    "name": "sprPlayer_idle_beamRifle_backup",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Mechs.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sprPlayer_idle_beamrifle_backup",
+  "name": "sprPlayer_idle_beamRifle_backup",
   "tags": [],
   "resourceType": "GMSprite",
 }

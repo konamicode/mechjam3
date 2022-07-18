@@ -24,27 +24,27 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a24fa172-f8a0-4f35-8077-905ba0c664d8","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a24fa172-f8a0-4f35-8077-905ba0c664d8","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"LayerId":{"name":"cbad4429-a84c-4913-81e5-d2969afa0259","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEnemy_attack_beamsaber","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"resourceVersion":"1.0","name":"a24fa172-f8a0-4f35-8077-905ba0c664d8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4a351bd2-e8c2-47d7-bf63-f1af2a593d42","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4a351bd2-e8c2-47d7-bf63-f1af2a593d42","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"LayerId":{"name":"cbad4429-a84c-4913-81e5-d2969afa0259","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEnemy_attack_beamsaber","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"resourceVersion":"1.0","name":"4a351bd2-e8c2-47d7-bf63-f1af2a593d42","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"380128b2-87d2-47b0-ba1f-952515ff03c7","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"380128b2-87d2-47b0-ba1f-952515ff03c7","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"LayerId":{"name":"cbad4429-a84c-4913-81e5-d2969afa0259","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEnemy_attack_beamsaber","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"resourceVersion":"1.0","name":"380128b2-87d2-47b0-ba1f-952515ff03c7","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"27071ccb-c681-4833-90a8-8b56d09e45fe","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"27071ccb-c681-4833-90a8-8b56d09e45fe","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"LayerId":{"name":"cbad4429-a84c-4913-81e5-d2969afa0259","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEnemy_attack_beamsaber","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"resourceVersion":"1.0","name":"27071ccb-c681-4833-90a8-8b56d09e45fe","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"edd50b4c-2e21-4f36-9cef-cebfc54732a9","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"edd50b4c-2e21-4f36-9cef-cebfc54732a9","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"LayerId":{"name":"cbad4429-a84c-4913-81e5-d2969afa0259","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEnemy_attack_beamsaber","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"resourceVersion":"1.0","name":"edd50b4c-2e21-4f36-9cef-cebfc54732a9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fd559928-f83d-4e37-a7f4-416bf5ec92af","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fd559928-f83d-4e37-a7f4-416bf5ec92af","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"LayerId":{"name":"cbad4429-a84c-4913-81e5-d2969afa0259","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEnemy_attack_beamsaber","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"resourceVersion":"1.0","name":"fd559928-f83d-4e37-a7f4-416bf5ec92af","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"a24fa172-f8a0-4f35-8077-905ba0c664d8","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a24fa172-f8a0-4f35-8077-905ba0c664d8","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"LayerId":{"name":"cbad4429-a84c-4913-81e5-d2969afa0259","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprEnemy_attack_beamSaber","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","name":"a24fa172-f8a0-4f35-8077-905ba0c664d8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"4a351bd2-e8c2-47d7-bf63-f1af2a593d42","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"4a351bd2-e8c2-47d7-bf63-f1af2a593d42","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"LayerId":{"name":"cbad4429-a84c-4913-81e5-d2969afa0259","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprEnemy_attack_beamSaber","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","name":"4a351bd2-e8c2-47d7-bf63-f1af2a593d42","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"380128b2-87d2-47b0-ba1f-952515ff03c7","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"380128b2-87d2-47b0-ba1f-952515ff03c7","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"LayerId":{"name":"cbad4429-a84c-4913-81e5-d2969afa0259","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprEnemy_attack_beamSaber","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","name":"380128b2-87d2-47b0-ba1f-952515ff03c7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"27071ccb-c681-4833-90a8-8b56d09e45fe","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"27071ccb-c681-4833-90a8-8b56d09e45fe","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"LayerId":{"name":"cbad4429-a84c-4913-81e5-d2969afa0259","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprEnemy_attack_beamSaber","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","name":"27071ccb-c681-4833-90a8-8b56d09e45fe","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"edd50b4c-2e21-4f36-9cef-cebfc54732a9","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"edd50b4c-2e21-4f36-9cef-cebfc54732a9","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"LayerId":{"name":"cbad4429-a84c-4913-81e5-d2969afa0259","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprEnemy_attack_beamSaber","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","name":"edd50b4c-2e21-4f36-9cef-cebfc54732a9","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"fd559928-f83d-4e37-a7f4-416bf5ec92af","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"fd559928-f83d-4e37-a7f4-416bf5ec92af","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"LayerId":{"name":"cbad4429-a84c-4913-81e5-d2969afa0259","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprEnemy_attack_beamSaber","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","name":"fd559928-f83d-4e37-a7f4-416bf5ec92af","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprEnemy_attack_beamsaber","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},
+    "spriteId": {"name":"sprEnemy_attack_beamSaber","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -63,12 +63,12 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"fc1885c6-8da6-497d-862f-d20dd552fbdf","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a24fa172-f8a0-4f35-8077-905ba0c664d8","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"4c1ea6b6-9f16-42bd-baae-27229ceab97e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4a351bd2-e8c2-47d7-bf63-f1af2a593d42","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"d7d5ac5a-a8d1-4795-80a9-0083c2476b4e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"380128b2-87d2-47b0-ba1f-952515ff03c7","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"46a43177-6692-4aa8-ab0b-93a06c02ad4b","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"27071ccb-c681-4833-90a8-8b56d09e45fe","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"1ef67da9-0fec-4cfa-847b-f5f6c70b6f12","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"edd50b4c-2e21-4f36-9cef-cebfc54732a9","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"93fe0aec-b7cb-426f-aa8a-affe91d62a58","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fd559928-f83d-4e37-a7f4-416bf5ec92af","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"fc1885c6-8da6-497d-862f-d20dd552fbdf","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a24fa172-f8a0-4f35-8077-905ba0c664d8","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4c1ea6b6-9f16-42bd-baae-27229ceab97e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4a351bd2-e8c2-47d7-bf63-f1af2a593d42","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"d7d5ac5a-a8d1-4795-80a9-0083c2476b4e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"380128b2-87d2-47b0-ba1f-952515ff03c7","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"46a43177-6692-4aa8-ab0b-93a06c02ad4b","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"27071ccb-c681-4833-90a8-8b56d09e45fe","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1ef67da9-0fec-4cfa-847b-f5f6c70b6f12","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"edd50b4c-2e21-4f36-9cef-cebfc54732a9","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"93fe0aec-b7cb-426f-aa8a-affe91d62a58","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fd559928-f83d-4e37-a7f4-416bf5ec92af","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -85,9 +85,9 @@
     "yorigin": 43,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprEnemy_attack_beamsaber","path":"sprites/sprEnemy_attack_beamsaber/sprEnemy_attack_beamsaber.yy",},
+    "parent": {"name":"sprEnemy_attack_beamSaber","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},
     "resourceVersion": "1.4",
-    "name": "sprEnemy_attack_beamsaber",
+    "name": "sprEnemy_attack_beamSaber",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -100,7 +100,7 @@
     "path": "folders/Sprites/Placeholder.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sprEnemy_attack_beamsaber",
+  "name": "sprEnemy_attack_beamSaber",
   "tags": [],
   "resourceType": "GMSprite",
 }

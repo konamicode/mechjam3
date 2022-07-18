@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprPlayer_idle_beamrifle",
-    "path": "sprites/sprPlayer_idle_beamrifle/sprPlayer_idle_beamrifle.yy",
+    "name": "sprPlayer_idle_beamRifle",
+    "path": "sprites/sprPlayer_idle_beamRifle/sprPlayer_idle_beamRifle.yy",
   },
   "solid": false,
   "visible": true,

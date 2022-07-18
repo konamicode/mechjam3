@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_idle_beamgun/sprDrone_idle_beamgun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_idle_beamgun/sprDrone_idle_beamgun.yy",},"LayerId":{"name":"865f266a-a1e4-4c60-8b2f-2ac8f258f089","path":"sprites/sprDrone_idle_beamgun/sprDrone_idle_beamgun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprDrone_idle_beamgun","path":"sprites/sprDrone_idle_beamgun/sprDrone_idle_beamgun.yy",},"resourceVersion":"1.0","name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_idle_beamGun/sprDrone_idle_beamGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_idle_beamGun/sprDrone_idle_beamGun.yy",},"LayerId":{"name":"865f266a-a1e4-4c60-8b2f-2ac8f258f089","path":"sprites/sprDrone_idle_beamGun/sprDrone_idle_beamGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprDrone_idle_beamGun","path":"sprites/sprDrone_idle_beamGun/sprDrone_idle_beamGun.yy",},"resourceVersion":"1.0","name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprDrone_idle_beamgun","path":"sprites/sprDrone_idle_beamgun/sprDrone_idle_beamgun.yy",},
+    "spriteId": {"name":"sprDrone_idle_beamGun","path":"sprites/sprDrone_idle_beamGun/sprDrone_idle_beamGun.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"89840f6f-24dd-45e2-a658-7b5fe8681f23","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_idle_beamgun/sprDrone_idle_beamgun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"89840f6f-24dd-45e2-a658-7b5fe8681f23","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_idle_beamGun/sprDrone_idle_beamGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 7,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprDrone_idle_beamgun","path":"sprites/sprDrone_idle_beamgun/sprDrone_idle_beamgun.yy",},
+    "parent": {"name":"sprDrone_idle_beamGun","path":"sprites/sprDrone_idle_beamGun/sprDrone_idle_beamGun.yy",},
     "resourceVersion": "1.4",
-    "name": "sprDrone_idle_beamgun",
+    "name": "sprDrone_idle_beamGun",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sprDrone_idle_beamgun",
+  "name": "sprDrone_idle_beamGun",
   "tags": [],
   "resourceType": "GMSprite",
 }

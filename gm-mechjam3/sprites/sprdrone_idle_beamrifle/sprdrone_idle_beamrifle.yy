@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_idle_beamrifle/sprDrone_idle_beamrifle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_idle_beamrifle/sprDrone_idle_beamrifle.yy",},"LayerId":{"name":"865f266a-a1e4-4c60-8b2f-2ac8f258f089","path":"sprites/sprDrone_idle_beamrifle/sprDrone_idle_beamrifle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprDrone_idle_beamrifle","path":"sprites/sprDrone_idle_beamrifle/sprDrone_idle_beamrifle.yy",},"resourceVersion":"1.0","name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_idle_beamRifle/sprDrone_idle_beamRifle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_idle_beamRifle/sprDrone_idle_beamRifle.yy",},"LayerId":{"name":"865f266a-a1e4-4c60-8b2f-2ac8f258f089","path":"sprites/sprDrone_idle_beamRifle/sprDrone_idle_beamRifle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprDrone_idle_beamRifle","path":"sprites/sprDrone_idle_beamRifle/sprDrone_idle_beamRifle.yy",},"resourceVersion":"1.0","name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprDrone_idle_beamrifle","path":"sprites/sprDrone_idle_beamrifle/sprDrone_idle_beamrifle.yy",},
+    "spriteId": {"name":"sprDrone_idle_beamRifle","path":"sprites/sprDrone_idle_beamRifle/sprDrone_idle_beamRifle.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"09c6a219-5917-4d6d-9eba-bc8336ef74a4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_idle_beamrifle/sprDrone_idle_beamrifle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"09c6a219-5917-4d6d-9eba-bc8336ef74a4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_idle_beamRifle/sprDrone_idle_beamRifle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 7,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprDrone_idle_beamrifle","path":"sprites/sprDrone_idle_beamrifle/sprDrone_idle_beamrifle.yy",},
+    "parent": {"name":"sprDrone_idle_beamRifle","path":"sprites/sprDrone_idle_beamRifle/sprDrone_idle_beamRifle.yy",},
     "resourceVersion": "1.4",
-    "name": "sprDrone_idle_beamrifle",
+    "name": "sprDrone_idle_beamRifle",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Weapons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sprDrone_idle_beamrifle",
+  "name": "sprDrone_idle_beamRifle",
   "tags": [],
   "resourceType": "GMSprite",
 }
