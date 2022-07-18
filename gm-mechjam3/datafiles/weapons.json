@@ -2,22 +2,26 @@
     {
         "label": "beamGun",
         "baseDmg": 10,
+        "fireRate": 1,
+        "attack": "objBeam",
+        "type": "1",
+        "cost": 5,
+        "animSet": "beamrifle",
+        "position": "weapon",
+        "clipSize": 1,
+        "burstRate": 0
+    },
+    {
+        "label": "beamRifle",
+        "baseDmg": 20,
         "fireRate": 2,
         "attack": "objBeam",
         "type": "1",
         "cost": 5,
         "animSet": "beamrifle",
-        "position": "weapon"
-    },
-    {
-        "label": "beamRifle",
-        "baseDmg": 20,
-        "fireRate": 3,
-        "attack": "objBeam",
-        "type": "1",
-        "cost": 5,
-        "animSet": "beamrifle",
-        "position": "weapon"
+        "position": "weapon",
+        "clipSize": 1,
+        "burstRate": 0
     },
     {
         "label": "beamCannon",
@@ -27,7 +31,9 @@
         "type": "1",
         "cost": 5,
         "animSet": "beamrifle",
-        "position": "weapon"
+        "position": "weapon",
+        "clipSize": 1,
+        "burstRate": 0
     },
     {
         "label": "beamSaber",
@@ -36,8 +42,12 @@
         "attack": "objMelee",
         "type": "0",
         "cost": 5,
+        "minDist": 0,
+        "maxDist": 30,
         "animSet": "beamsaber",
-        "position": "weapon"
+        "position": "weapon",
+        "clipSize": 1,
+        "burstRate": 0
     },
     {
         "label": "beamAxe",
@@ -47,7 +57,9 @@
         "type": "0",
         "cost": 5,
         "animSet": "beamsaber",
-        "position": "weapon"
+        "position": "weapon",
+        "clipSize": 1,
+        "burstRate": 0
     },
     {
         "label": "bazooka",
@@ -57,16 +69,22 @@
         "type": "1",
         "cost": 5,
         "animSet": "beamrifle",
-        "position": "weapon"
+        "position": "weapon",
+        "clipSize": 1,
+        "burstRate": 0
     },
     {
         "label": "vulcans",
-        "baseDmg": 5,
-        "fireRate": 0.1,
+        "baseDmg": 1,
+        "fireRate": 3,
         "attack": "objBullet",
         "type": "1",
         "cost": 5,
+        "minDist": 0,
+        "maxDist": 60,
         "animSet": "none",
-        "position": "head"
+        "position": "head",
+        "clipSize": 5,
+        "burstRate": 0.1
     }
 ]

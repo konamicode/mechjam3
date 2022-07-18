@@ -96,7 +96,7 @@ function CreatePlayer(_x, _y, playerData) {
 	player.moveSpeed = playerData.moveSpeed;
 	player.meleePower = playerData.meleeAttackPower;
 	player.rangedPower = playerData.rngAttackPower;
-	player.AddWeapon("beamRifle");
+	player.AddWeapon("vulcans");
 	player.AddWeapon("beamSaber");
 	//for (var i = 0; i < array_length(player.subWeapons); i++ ) {
 			

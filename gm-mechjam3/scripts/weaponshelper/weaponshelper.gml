@@ -1,7 +1,7 @@
 
 
-function Weapon(_label = "Name", _attackObj = objAttack, _baseDmg = 1, _enCost = 1, _fireRate = 10, _type = weaponType.ranged, _animSet = _animSet, _position = "weapon", _range = {minDist: 0, maxDist: 200}) constructor {
-	energyCost = _enCost;
+function Weapon(_label = "Name", _attackObj = objAttack, _baseDmg = 1, _enCost = 1, _fireRate = 10, _type = weaponType.ranged, _animSet = _animSet, _position = "weapon", _clipSize = 1, _burstRate = 0, _range = {minDist: 0, maxDist: 200}) constructor {
+	cost = _enCost;
 	baseDamage = _baseDmg;
 	attack = _attackObj;
 	fireRate = _fireRate;
@@ -10,6 +10,8 @@ function Weapon(_label = "Name", _attackObj = objAttack, _baseDmg = 1, _enCost =
 	type = _type;
 	animSet = _animSet;
 	position = _position;
+	clipSize = _clipSize;
+	burstRate = _burstRate;
 }
 
 function LoadWeapons(weaponData = "none") {
@@ -30,7 +32,7 @@ function LoadWeapons(weaponData = "none") {
 		for (var i = 0; i < array_length(jsonData); i++)
 		{
 			var struct = jsonData[i];
-			var _weapon =  new Weapon(struct.label, struct.attack, struct.baseDmg, struct.cost, struct.fireRate, struct.type, struct.animSet, struct.position);
+			var _weapon =  new Weapon(struct.label, struct.attack, struct.baseDmg, struct.cost, struct.fireRate, struct.type, struct.animSet, struct.position, struct.clipSize, struct.burstRate);
 			weaponMap[? struct.label] = _weapon;
 		
 		}

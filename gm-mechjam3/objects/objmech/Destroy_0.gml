@@ -10,3 +10,5 @@ for ( var i = 0; i < ds_list_size(components); i++)
 }
 
 Cleanup();
+
+ds_list_destroy(weapons);

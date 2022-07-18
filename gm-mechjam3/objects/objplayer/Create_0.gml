@@ -28,5 +28,5 @@ function GetAimDirection() {
 	return dir;
 }
 
-weapon = weapons[| 0];
+//weapon = weapons[| 0];
 
