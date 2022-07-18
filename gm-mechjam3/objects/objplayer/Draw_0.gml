@@ -38,14 +38,14 @@ if (head) {
 	}
 	
 
-	var coneStartAX = head.x + lengthdir_x(8, aimDir + _coneWidth);;
-	var coneStartAY = head.y + lengthdir_y(8, aimDir + _coneWidth);;
-	var coneStartBX = head.x + lengthdir_x(8, aimDir - _coneWidth);;
-	var coneStartBY = head.y + lengthdir_y(8, aimDir - _coneWidth);;
-	var coneEndAX = head.x + lengthdir_x(_len, aimDir + _coneWidth);
-	var coneEndAY = head.y + lengthdir_y(_len, aimDir +	_coneWidth);
-	var coneEndBX = head.x + lengthdir_x(_len, aimDir - _coneWidth);
-	var coneEndBY = head.y + lengthdir_y(_len, aimDir -	_coneWidth);
+	var coneStartAX = x + weapPosX + lengthdir_x(8, aimDir + _coneWidth);;
+	var coneStartAY = y + weapPosY + lengthdir_y(8, aimDir + _coneWidth);;
+	var coneStartBX = x + weapPosX + lengthdir_x(8, aimDir - _coneWidth);;
+	var coneStartBY = y + weapPosY + lengthdir_y(8, aimDir - _coneWidth);;
+	var coneEndAX = x + weapPosX + lengthdir_x(_len, aimDir + _coneWidth);
+	var coneEndAY = y + weapPosY + lengthdir_y(_len, aimDir +	_coneWidth);
+	var coneEndBX = x + weapPosX + lengthdir_x(_len, aimDir - _coneWidth);
+	var coneEndBY = y + weapPosY + lengthdir_y(_len, aimDir -	_coneWidth);
 
 	
 	draw_primitive_begin(pr_trianglelist);
