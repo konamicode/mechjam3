@@ -2,7 +2,7 @@
 width = 9;
 height = 6;
 
-minDensity = 0.7;
+minDensity = 0.8;
 maxDensity = 0.9;
 
 mapData = [];
