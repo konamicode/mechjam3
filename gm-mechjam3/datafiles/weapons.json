@@ -27,7 +27,7 @@
         "label": "beamSaber",
         "basedmg": 50,
         "firerate": 2,
-        "attack": "objAttack",
+        "attack": "objMelee",
         "type": "0",
         "cost": 5
     },
@@ -35,7 +35,7 @@
         "label": "beamAxe",
         "basedmg": 80,
         "firerate": 4,
-        "attack": "objAttack",
+        "attack": "objMelee",
         "type": "0",
         "cost": 5
     },

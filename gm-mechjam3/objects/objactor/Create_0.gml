@@ -32,6 +32,8 @@ moveSpeed = 6.0;
 canAttack = true;
 hitFlash = false;
 
+meleeCollider = noone;
+
 function DistanceToTarget(_target) {
 	if instance_exists(_target)
 		return point_distance(x, y, _target.x, _target.y);
@@ -48,3 +50,6 @@ function MoveWithinRange(_range, _target) {
 	    y += moveSpeed * _ver / _len;
 	}
 }
+
+
+

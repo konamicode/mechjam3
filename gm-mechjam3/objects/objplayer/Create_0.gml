@@ -1,7 +1,7 @@
 // Inherit the parent event
 
 frame = sprPlayer_idle_beamrifle;
-frame = sprPlayer_attack_melee;
+//frame = sprPlayer_attack_melee;
 
 event_inherited();
 

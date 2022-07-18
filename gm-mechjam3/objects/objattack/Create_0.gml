@@ -28,21 +28,30 @@ function VerifyCollider(_collider) {
 
 function BeamCollision(x, y, length, dir, obj ) {
 	//show_debug_message(length);
-	var collider = collision_line(x, y, x + lengthdir_x(length, dir), y + lengthdir_y(length, dir), obj, true, true);
-	if !VerifyCollider(collider) {
-		collider = noone;
+	var _collider = collision_line(x, y, x + lengthdir_x(length, dir), y + lengthdir_y(length, dir), obj, true, true);
+	if !VerifyCollider(_collider) {
+		_collider = noone;
 	}
 	//show_debug_message(collider);
-	return collider;
+	return _collider;
+}
+
+function BoxCollision(x, y, _left, _top, _right, _bottom, obj) {
+	var _collider = collision_rectangle(x - _left, y - _top, x + _right, y + _bottom, obj, true, true);
+	if !VerifyCollider(_collider) {
+		_collider = noone;	
+	}
+	return _collider;
+
 }
 
 function ImageCollision(x, y, obj) {
 	if place_meeting(x, y, obj) {
-		var collider  = instance_place(x, y, obj);
-		if !VerifyCollider(collider) {
-			collider = noone;
+		var _collider  = instance_place(x, y, obj);
+		if !VerifyCollider(_collider) {
+			_collider = noone;
 		}
-		return collider;
+		return _collider;
 	} else return noone;
 }
 

@@ -116,7 +116,41 @@ function GetSequenceHitboxData(sequence) {
 				wpHitboxData = StripKeyframeData(wpKeys);
 				animationHitboxData[? ident] = wpHitboxData;
 			break;
-			case "weapon":
+			case "attack":
+				var attackAnimData = ds_map_create();
+				var attackTracks = variable_struct_get(struct, "tracks");
+				var attackKeys = array_create(3);
+				for (var j = 0; j < array_length(attackTracks); j++) {
+					var attackTrackStruct = attackTracks[j];
+					var name = variable_struct_get(attackTrackStruct, "name");
+					switch(name) {
+						case "scale":
+	//						scaleTrack = [];
+							var scaleKeys = [];
+							//scaleTrack = variable_struct_get(wpTrackStruct, "tracks");
+							scaleKeys = variable_struct_get(attackTrackStruct, "keyframes");							
+							attackKeys[1] = scaleKeys;
+						break;
+						case "position":
+							//posTrack = [];
+							var posKeys = [];					
+							//posTrack = variable_struct_get(wpTrackStruct, "tracks");
+							posKeys = variable_struct_get(attackTrackStruct, "keyframes");
+							attackKeys[0] = posKeys;
+						break;
+						case "rotation":
+							//rotTrack = [];
+							var rotKeys = [];					
+							//rotTrack = variable_struct_get(wpTrackStruct, "tracks");
+							rotKeys = variable_struct_get(attackTrackStruct, "keyframes");		
+							attackKeys[2] = rotKeys;
+						break;
+					}
+				}
+				attackHitboxData = StripKeyframeData(attackKeys);
+				animationHitboxData[? ident] = attackHitboxData;
+			break;				
+			case "weapon": 
 				var weaponAnimData = ds_map_create();
 				var weaponTracks = variable_struct_get(struct, "tracks");
 				var weapKeys = array_create(3);

@@ -30,7 +30,7 @@ switch(_string)
 			var _y = lengthdir_y(_offx, aimDir);
 			show_debug_message(string(aimDir) + ": x: " + string(_offx) + ", " + string(_x) + " |y : " + string(_offy) + ", " + string(_y));
 			var _dmg = CalculateDamage();
-			instance_create_layer(x + weapPosX + _x , y + weapPosY + _y , "Instances", objAttack, { aimed: aiming, attackType : collision.line, sprite_index: sprFX_beamBlast, image_angle : aimDir, creator : id, dmg: _dmg}) ;
+			instance_create_layer(x + weapPosX + _x , y + weapPosY + _y , "Attacks", objAttack, { aimed: aiming, attackType : collision.line, sprite_index: sprFX_beamBlast, image_angle : aimDir, creator : id, dmg: _dmg}) ;
 
 			//fx.shotParent = _shot;
 			//_shot.moveDir = _aimDir;

@@ -11,5 +11,7 @@ switch(room) {
 
 roomMenu.DrawMenu(room_width/4, 8);
 
-if global.debug
+if global.debug {
+	draw_set_halign(fa_center);
 	draw_text(screenWidth/2, screenHeight - 20, "Debug On");
+}

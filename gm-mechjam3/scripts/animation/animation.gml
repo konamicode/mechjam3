@@ -7,17 +7,18 @@ function SplitAnimationMessage(_string) {
 	if (array_length(_commands) > 0 ) {
 		for ( var i = 0; i < array_length(_commands); i++) {
 			var _command;
-			var _params;
+			var _params = "";
 			var _data = string_parse(_commands[i], ":");
 			if (_data[0] != "") {
 				_command = _data[0];	
 			} else {
 				//do something safely
 			}
-			if (_data[1] != "") {
+			if (array_length(_data) - 1) > 0 {
 				_params = string_parse(_data[1], "_");
 			}
 			_commandList[| i] = [_command, _params];
+		
 		}		
 	}
 	

@@ -58,6 +58,6 @@ function LoadWeapons(weaponData = "none") {
 
 function FireWeapon(_x, _y, _object ) {
 	
-	instance_create_layer(_x, _y, "Instances", _object);
+	instance_create_layer(_x, _y, "Attacks", _object);
 		
 }

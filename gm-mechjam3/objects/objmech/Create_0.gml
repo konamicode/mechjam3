@@ -205,6 +205,58 @@ function SelectWeapon() {
 	
 }
 
+function ColliderOn(_x, _y) {
+	
+	//Get Collider info from hitbox data in sequence
+	attackHitboxData = noone;
+	var _object = weapon.attack;
+	var _posX = 0, _posY = 10, _left = 10, _top = 10, _right = 10, _bottom = 10;
+	
+	if ds_map_exists(animationHitboxData, weapon.label)
+		attackHitboxData = animationHitboxData[? weapon.label];
+	
+	if (attackHitboxData != noone) {
+		show_debug_message(attackHitboxData);
+		var _frameIdx = ds_map_find_first(attackHitboxData);
+		var _attack = attackHitboxData[? _frameIdx];
+		_posX = _attack[1] * (image_xscale);
+		_posY = _attack[2];
+		_left = _attack[3];
+		_right = _attack[3];
+		_top = _attack[4];
+		_bottom = _attack[4];
+		
+	}
+
+	
+	var _dmg = CalculateDamage();
+	if is_string(_object)
+	{
+		var _string = _object;
+		_object = asset_get_index(_string);
+		if (_object < -1 )
+			_object = noone;
+	}
+	if _object != noone
+	{
+		meleeCollider = instance_create_layer(_x + _posX, _y + _posY, "Attacks", _object, {creator:id, dmg: _dmg, left: _left, top: _top, right: _right, bottom: _bottom});	
+	}
+	
+}
+
+function ColliderOff() {
+	if (meleeCollider != noone)
+	{
+		instance_destroy(meleeCollider);
+		meleeCollider = noone;
+	}
+}
+
+if (!ds_map_exists(global.functionMap, ColliderOn))
+	global.functionMap[? "ColliderOn"] = method(undefined, ColliderOn);
+
+if (!ds_map_exists(global.functionMap, ColliderOff))
+	global.functionMap[? "ColliderOff"] = method(undefined, ColliderOff);
 
 function CalculateDamage() {
 	var _finalDamage = weapon.baseDamage;
