@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprDrone_idle_beamrifle",
-    "path": "sprites/sprDrone_idle_beamrifle/sprDrone_idle_beamrifle.yy",
+    "name": "sprDrone_idle_beamRifle",
+    "path": "sprites/sprDrone_idle_beamRifle/sprDrone_idle_beamRifle.yy",
   },
   "solid": false,
   "visible": true,

@@ -20,10 +20,11 @@ weapPosX = x;
 weapPosY = y;
 
 if (isPlayer) {
-	frame = "Player";
+	faction = "Player";
 	//weaponName = "beamrifle";
-	
 } 
+else
+	faction = "Enemy";
 
 if (ds_list_size(weapons) > 0) {
 	weapon = weapons[| 0];
@@ -38,7 +39,7 @@ if (ds_list_size(weapons) > 0) {
 
 ammoCounter = weapon.clipSize;
 
-animString = frame + "_" + action + "_" + weaponName;	
+animString = faction + "_" + action + "_" + weaponName;	
 
 updateHitboxFromSequence = false;
 
@@ -56,8 +57,11 @@ function GetHeadComponent() {
 head = GetHeadComponent();
 
 function GetAnimationName() {
-	
-	return frame + "_" + action + "_" + string_lower(weaponName);
+
+	if (weapon.animSet == "none") 
+		return faction + "_" + action + "_" + fallbackWeaponName ;
+	else
+	return faction + "_" + action + "_" + weaponName;
 }
 
 
@@ -70,7 +74,7 @@ function ChangeHitbox(_newSequence) {
 
 function ChangeAnimation(animString, resetIndex = true) {
 	if (weapon.animSet == "none") 
-		animString = frame + "_" + action + "_" + string_lower(fallbackWeaponName) ;
+		animString = frame + "_" + action + "_" + fallbackWeaponName ;
 	
 	var newSprite = asset_get_index("spr" + animString);
 	var newSeq = asset_get_index("sq" + animString);
@@ -95,85 +99,93 @@ function CheckAddFallback(map) {
 }
 
 function DrawWeapon() {
-	var animTag = "weapon_" + action + "_" + string_lower(weaponName);
+	var animTag;
+	if (weapon.animSet == "none") 
+		animTag = "weapon_" + action + "_" + string_lower(fallbackWeaponName );
+		
+	else
+		animTag = "weapon_"  + action + "_" + string_lower(weaponName);
 
 	var animFrame;
-	if animationHitboxData != undefined {		
-		if (ds_map_exists(animationHitboxData, animTag)) {
-		//let's draw us a weapon	
-		
-			var framePosX = 0, framePosY = 0, frameScaleX = 10, frameScaleY = 10, frameRot = 0;
-			//var oldFramePosX = 0, oldFramePosY = 0, oldFrameScaleX = 10, oldFrameScaleY = 10, oldFrameRot = 0;
-			var map = animationHitboxData[? animTag];
+	
+	if animationHitboxData == undefined
+		return;
 
-			animFrame = GetHitboxAnimFrame(animationHitboxData, sprite_index, image_index);
-			//if (isPlayer)
-			//	show_debug_message(string(image_index) + ": " + string(frameIndex));
-			var frameData = map[? frameIndex];
+	if (ds_map_exists(animationHitboxData, animTag)) {
+	//let's draw us a weapon	
+		var framePosX = 0, framePosY = 0, frameScaleX = 10, frameScaleY = 10, frameRot = 0;
+		var map = animationHitboxData[? animTag];
 		
-
-			if ds_map_exists(map, frameIndex) {
-				if (frameData != undefined) {
-					//var frameData = map[? 0];
-					if (frameData[1] != undefined) {
-						framePosX = frameData[1]; 
-						CheckAddFallback(map);
-						map[? "fallback"][@ 1] = framePosX;
-					} else framePosX = map[? "fallback"][@ 1];
-					if (frameData[2] != undefined){
-						framePosY = frameData[2];
-						CheckAddFallback(map);
-						map[? "fallback"][@ 2] = framePosY;
-					} else framePosY = map[? "fallback"][@ 2];
-					if (frameData[3] != undefined) {
-						frameScaleX = frameData[3];
-						CheckAddFallback(map);
-						map[? "fallback"][@ 3] = frameScaleX;	
-					} else frameScaleX = map[? "fallback"][@ 3];
-					if (frameData[4] != undefined) {
-						frameScaleY = frameData[4];	
-						CheckAddFallback(map);
-						map[? "fallback"][@ 4] = frameScaleY;
-					} else frameScaleY = map[? "fallback"][@ 4];
-					if (frameData[5] != undefined)	{	
-						frameRot = frameData[5];
-						CheckAddFallback(map);
-						if (sign(image_xscale) == -1) {
-							frameRot = 180 - frameData[5];
-						}
-						map[? "fallback"][@ 5] = frameRot;
-					} else { 
-						frameRot = map[? "fallback"][@ 5];
-					}
-				}	
-						
-			} else
-			{
-				if ds_map_exists(map, "fallback") {
-					framePosX = map[? "fallback"][ 1];
-					framePosY = map[? "fallback"][ 2];
-					frameScaleX = map[? "fallback"][ 3];
-					frameScaleY = map[? "fallback"][ 4];
-					frameRot = map[? "fallback"][ 5];
-				}
-			} 	
+		var seqSpeed = animationHitboxData[? "seqFps"];
+		var spriteSpeed = sprite_get_speed(sprite_index);
+		var sprMultiplier = seqSpeed / spriteSpeed;
+		//show_debug_message(sprMultiplier);
+		var frameIndex = (floor(image_index) * sprMultiplier);
 		
-			var weaponSprite = asset_get_index("sprWeap_" + action + "_" + weaponName);
-			weapPosX = framePosX;
-			weapPosY = framePosY;
-			if (weaponSprite != -1 ) {
-				var _aimDir = aimDir;
+		animFrame = frameIndex;		
+		//animFrame = GetHitboxAnimFrame(animationHitboxData, sprite_index, image_index);
+		var frameData = map[? animFrame];
+		
+		if (frameData != undefined) {
+			//var frameData = map[? 0];
+			if (frameData[1] != undefined) {
+				framePosX = frameData[1]; 
+				CheckAddFallback(map);
+				map[? "fallback"][@ 1] = framePosX;
+			} else framePosX = map[? "fallback"][@ 1];
+			if (frameData[2] != undefined){
+				framePosY = frameData[2];
+				CheckAddFallback(map);
+				map[? "fallback"][@ 2] = framePosY;
+			} else framePosY = map[? "fallback"][@ 2];
+			if (frameData[3] != undefined) {
+				frameScaleX = frameData[3];
+				CheckAddFallback(map);
+				map[? "fallback"][@ 3] = frameScaleX;	
+			} else frameScaleX = map[? "fallback"][@ 3];
+			if (frameData[4] != undefined) {
+				frameScaleY = frameData[4];	
+				CheckAddFallback(map);
+				map[? "fallback"][@ 4] = frameScaleY;
+			} else frameScaleY = map[? "fallback"][@ 4];
+			if (frameData[5] != undefined)	{	
+				frameRot = frameData[5];
+				CheckAddFallback(map);
 				if (sign(image_xscale) == -1) {
-					_aimDir = 180 + aimDir;
+					frameRot = 180 - frameData[5];
 				}
-				draw_sprite_ext(weaponSprite, image_index, x + (sign(image_xscale) * framePosX), y + framePosY, image_xscale, image_yscale, action = "attack" ? _aimDir : image_angle , image_blend, image_alpha);			
+				map[? "fallback"][@ 5] = frameRot;
+			} else { 
+				frameRot = map[? "fallback"][@ 5];
+			}						
+		} else
+		{
+			if ds_map_exists(map, "fallback") {
+				framePosX = map[? "fallback"][ 1];
+				framePosY = map[? "fallback"][ 2];
+				frameScaleX = map[? "fallback"][ 3];
+				frameScaleY = map[? "fallback"][ 4];
+				frameRot = map[? "fallback"][ 5];
 			}
-		}	
-		else {
-			weapPosX = x;
-			weapPosY = y;
+		} 	
+		
+		var weaponSprite = asset_get_index("sprWeap_" + action + "_" + weaponName);
+		weapPosX = framePosX;
+		weapPosY = framePosY;
+		if (weaponSprite != -1 ) {
+			var _aimDir = aimDir;
+			if (sign(image_xscale) == -1) {
+				_aimDir = 180 + aimDir;
+			}
+			draw_sprite_ext(weaponSprite, image_index, x + (sign(image_xscale) * framePosX), y + framePosY, image_xscale, image_yscale, action = "attack" ? _aimDir : image_angle , image_blend, image_alpha);			
 		}
-	}
+	}	
+	
+	else {
+		weapPosX = x;
+		weapPosY = y;
+	}	
+
 }
 
 

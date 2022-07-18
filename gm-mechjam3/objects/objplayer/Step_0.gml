@@ -95,6 +95,8 @@ if (actorState == state.dead) {
 		
 	}
 	
+	
+	
 	if input_check_pressed("action") {
 		ChangeAnimation(frame + "_attack_melee");
 	}

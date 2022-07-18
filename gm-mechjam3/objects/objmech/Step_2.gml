@@ -10,7 +10,7 @@ for ( var i = 0; i < ds_list_size(components); i++) {
 		//var spriteSpeed = sprite_get_speed(sprite_index);
 		//var sprMultiplier = seqSpeed / spriteSpeed;
 		//var frameIndex = floor(image_index * sprMultiplier);
-		frameIndex = GetHitboxAnimFrame(animationHitboxData, sprite_index, image_index);
+		var frameIndex = GetHitboxAnimFrame(animationHitboxData, sprite_index, image_index);
 		//if (isPlayer)
 		//	show_debug_message(string(image_index) + ": " + string(frameIndex));
 		var frameData = map[? frameIndex];

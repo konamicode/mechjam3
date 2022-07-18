@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"dcf712ca-5fa6-40fd-adad-7be299480d6f","path":"sprites/sprEnemy_idle_beamsaber/sprEnemy_idle_beamsaber.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dcf712ca-5fa6-40fd-adad-7be299480d6f","path":"sprites/sprEnemy_idle_beamsaber/sprEnemy_idle_beamsaber.yy",},"LayerId":{"name":"a25f2ef6-a885-4c7d-bb5d-97ae4e78dcb2","path":"sprites/sprEnemy_idle_beamsaber/sprEnemy_idle_beamsaber.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprEnemy_idle_beamsaber","path":"sprites/sprEnemy_idle_beamsaber/sprEnemy_idle_beamsaber.yy",},"resourceVersion":"1.0","name":"dcf712ca-5fa6-40fd-adad-7be299480d6f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"dcf712ca-5fa6-40fd-adad-7be299480d6f","path":"sprites/sprEnemy_idle_beamSaber/sprEnemy_idle_beamSaber.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"dcf712ca-5fa6-40fd-adad-7be299480d6f","path":"sprites/sprEnemy_idle_beamSaber/sprEnemy_idle_beamSaber.yy",},"LayerId":{"name":"a25f2ef6-a885-4c7d-bb5d-97ae4e78dcb2","path":"sprites/sprEnemy_idle_beamSaber/sprEnemy_idle_beamSaber.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprEnemy_idle_beamSaber","path":"sprites/sprEnemy_idle_beamSaber/sprEnemy_idle_beamSaber.yy",},"resourceVersion":"1.0","name":"dcf712ca-5fa6-40fd-adad-7be299480d6f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprEnemy_idle_beamsaber","path":"sprites/sprEnemy_idle_beamsaber/sprEnemy_idle_beamsaber.yy",},
+    "spriteId": {"name":"sprEnemy_idle_beamSaber","path":"sprites/sprEnemy_idle_beamSaber/sprEnemy_idle_beamSaber.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"a4fefb29-f8da-43a1-bc75-4b5828b4f660","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dcf712ca-5fa6-40fd-adad-7be299480d6f","path":"sprites/sprEnemy_idle_beamsaber/sprEnemy_idle_beamsaber.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a4fefb29-f8da-43a1-bc75-4b5828b4f660","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dcf712ca-5fa6-40fd-adad-7be299480d6f","path":"sprites/sprEnemy_idle_beamSaber/sprEnemy_idle_beamSaber.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 41,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprEnemy_idle_beamsaber","path":"sprites/sprEnemy_idle_beamsaber/sprEnemy_idle_beamsaber.yy",},
+    "parent": {"name":"sprEnemy_idle_beamSaber","path":"sprites/sprEnemy_idle_beamSaber/sprEnemy_idle_beamSaber.yy",},
     "resourceVersion": "1.4",
-    "name": "sprEnemy_idle_beamsaber",
+    "name": "sprEnemy_idle_beamSaber",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -97,7 +97,7 @@
     "path": "folders/Sprites/Placeholder.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sprEnemy_idle_beamsaber",
+  "name": "sprEnemy_idle_beamSaber",
   "tags": [],
   "resourceType": "GMSprite",
 }

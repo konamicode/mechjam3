@@ -57,7 +57,7 @@
             ],"resourceVersion":"1.0","resourceType":"KeyframeStore<RealKeyframe>",},"trackColour":4294068324,"inheritsTrackColour":true,"builtinName":15,"traits":0,"interpolation":0,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","name":"scale","tags":[],"resourceType":"GMRealTrack","modifiers":[],},
       ],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","name":"wp_head","tags":[],"resourceType":"GMGraphicTrack","modifiers":[],},
     {"keyframes":{"Keyframes":[
-          {"id":"5042e358-b948-4b70-a5a4-d81d170fd0bc","Key":0.0,"Length":12.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"sprPlayer_attack_beamsaber","path":"sprites/sprPlayer_attack_beamsaber/sprPlayer_attack_beamsaber.yy",},"resourceVersion":"1.0","resourceType":"AssetSpriteKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<AssetSpriteKeyframe>",},
+          {"id":"5042e358-b948-4b70-a5a4-d81d170fd0bc","Key":0.0,"Length":12.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"sprPlayer_attack_beamSaber","path":"sprites/sprPlayer_attack_beamSaber/sprPlayer_attack_beamSaber.yy",},"resourceVersion":"1.0","resourceType":"AssetSpriteKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<AssetSpriteKeyframe>",},
         ],"resourceVersion":"1.0","resourceType":"KeyframeStore<AssetSpriteKeyframe>",},"trackColour":4282947314,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[
         {"keyframes":{"Keyframes":[
               {"id":"0f68ca1b-24b0-40de-b0a6-d372f6f657c0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":true,"Channels":{"0":{"EmbeddedAnimCurve":null,"RealValue":0.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},"1":{"EmbeddedAnimCurve":null,"RealValue":0.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},
@@ -92,7 +92,7 @@
     "path": "folders/Sequences.yy",
   },
   "resourceVersion": "1.4",
-  "name": "sqPlayer_attack_beamsaber",
+  "name": "sqPlayer_attack_beamSaber",
   "tags": [],
   "resourceType": "GMSequence",
 }
