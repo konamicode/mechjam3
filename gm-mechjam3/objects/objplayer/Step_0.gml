@@ -12,14 +12,19 @@ if (actorState == state.dead) {
 
 	var _hor = _right - _left;
 	var _ver = _down - _up;
-
-
+	
 	var _hor = _right - _left;
 	var _ver = _down - _up;
 	var _len = point_distance(0, 0, _hor, _ver);
 	if (_len > 0) {
-	    x += moveSpeed * _hor / _len;
-	    y += moveSpeed * _ver / _len;
+		if((_hor > 0 and x < room_width) or (_hor < 0 and x > 0))
+		{
+			x += moveSpeed * _hor / _len;
+		}
+		if((_ver > 0 and y < room_height) or (_ver < 0 and y > 0))
+		{
+			y += moveSpeed * _ver / _len;
+		}
 	}
 	
 	if input_check_pressed("aim") {
