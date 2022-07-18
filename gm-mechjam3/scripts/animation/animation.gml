@@ -28,3 +28,13 @@ function SplitAnimationMessage(_string) {
 		ds_list_destroy(_commandList);
 		return undefined; }
 }
+
+function GetHitboxAnimFrame (hitboxData, _sprite, _frame) {
+		var seqSpeed = hitboxData[? "seqFps"];
+		var spriteSpeed = sprite_get_speed(_sprite);
+		var sprMultiplier = seqSpeed / spriteSpeed;
+		//show_debug_message(sprMultiplier);
+		var frameIndex = floor(_frame * sprMultiplier);
+		animFrame = frameIndex;	
+		return animFrame;
+}

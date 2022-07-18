@@ -5,11 +5,12 @@ for ( var i = 0; i < ds_list_size(components); i++) {
 		var framePosX = 0, framePosY = 0, frameScaleX = 10, frameScaleY = 10, frameRot = 0;
 		//var oldFramePosX = 0, oldFramePosY = 0, oldFrameScaleX = 10, oldFrameScaleY = 10, oldFrameRot = 0;
 		var map = animationHitboxData[? comp.label];
-		var seqSpeed = animationHitboxData[? "seqFps"];
-		var spriteSpeed = sprite_get_speed(sprite_index);
-		var sprMultiplier = seqSpeed / spriteSpeed;
-		//show_debug_message(sprMultiplier);
-		var frameIndex = floor(image_index * sprMultiplier);
+		
+		//var seqSpeed = animationHitboxData[? "seqFps"];
+		//var spriteSpeed = sprite_get_speed(sprite_index);
+		//var sprMultiplier = seqSpeed / spriteSpeed;
+		//var frameIndex = floor(image_index * sprMultiplier);
+		frameIndex = GetHitboxAnimFrame(animationHitboxData, sprite_index, image_index);
 		//if (isPlayer)
 		//	show_debug_message(string(image_index) + ": " + string(frameIndex));
 		var frameData = map[? frameIndex];

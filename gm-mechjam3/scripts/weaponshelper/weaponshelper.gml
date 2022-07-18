@@ -1,6 +1,6 @@
 
 
-function Weapon(_label = "Name", _attackObj = objAttack, _baseDmg = 1, _enCost = 1, _fireRate = 10, _type = weaponType.ranged, _range = {minDist: 0, maxDist: 200}) constructor {
+function Weapon(_label = "Name", _attackObj = objAttack, _baseDmg = 1, _enCost = 1, _fireRate = 10, _type = weaponType.ranged, _animSet = _animSet, _position = "weapon", _range = {minDist: 0, maxDist: 200}) constructor {
 	energyCost = _enCost;
 	baseDamage = _baseDmg;
 	attack = _attackObj;
@@ -8,6 +8,8 @@ function Weapon(_label = "Name", _attackObj = objAttack, _baseDmg = 1, _enCost =
 	range = _range;
 	label = _label;
 	type = _type;
+	animSet = _animSet;
+	position = _position;
 }
 
 function LoadWeapons(weaponData = "none") {
@@ -28,7 +30,7 @@ function LoadWeapons(weaponData = "none") {
 		for (var i = 0; i < array_length(jsonData); i++)
 		{
 			var struct = jsonData[i];
-			var _weapon =  new Weapon(struct.label, struct.attack, struct.baseDmg, struct.cost, struct.fireRate, struct.type);
+			var _weapon =  new Weapon(struct.label, struct.attack, struct.baseDmg, struct.cost, struct.fireRate, struct.type, struct.animSet, struct.position);
 			weaponMap[? struct.label] = _weapon;
 		
 		}
@@ -55,9 +57,3 @@ function LoadWeapons(weaponData = "none") {
 		return undefined;
 }
 
-
-function FireWeapon(_x, _y, _object ) {
-	
-	instance_create_layer(_x, _y, "Attacks", _object);
-		
-}

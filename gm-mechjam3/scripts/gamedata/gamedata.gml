@@ -76,5 +76,16 @@ function GameData() constructor {
 	map = [];
 	player = new PlayerData();
 	rivals = ds_map_create();
+	
+	
+	function Clear() {
+		map = [];
+		ds_map_clear(rivals);
+	}
+	
+	function CleanUp()
+	{
+		ds_map_destroy(rivals);	
+	}
 }
 

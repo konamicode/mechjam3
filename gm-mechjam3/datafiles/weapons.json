@@ -5,7 +5,9 @@
         "fireRate": 2,
         "attack": "objBeam",
         "type": "1",
-        "cost": 5
+        "cost": 5,
+        "animSet": "beamrifle",
+        "position": "weapon"
     },
     {
         "label": "beamRifle",
@@ -13,7 +15,9 @@
         "fireRate": 3,
         "attack": "objBeam",
         "type": "1",
-        "cost": 5
+        "cost": 5,
+        "animSet": "beamrifle",
+        "position": "weapon"
     },
     {
         "label": "beamCannon",
@@ -21,7 +25,9 @@
         "fireRate": 5,
         "attack": "objBeam",
         "type": "1",
-        "cost": 5
+        "cost": 5,
+        "animSet": "beamrifle",
+        "position": "weapon"
     },
     {
         "label": "beamSaber",
@@ -29,7 +35,9 @@
         "fireRate": 2,
         "attack": "objMelee",
         "type": "0",
-        "cost": 5
+        "cost": 5,
+        "animSet": "beamsaber",
+        "position": "weapon"
     },
     {
         "label": "beamAxe",
@@ -37,7 +45,9 @@
         "fireRate": 4,
         "attack": "objMelee",
         "type": "0",
-        "cost": 5
+        "cost": 5,
+        "animSet": "beamsaber",
+        "position": "weapon"
     },
     {
         "label": "bazooka",
@@ -45,14 +55,18 @@
         "fireRate": 4,
         "attack": "objRocket",
         "type": "1",
-        "cost": 5
+        "cost": 5,
+        "animSet": "beamrifle",
+        "position": "weapon"
     },
     {
         "label": "vulcans",
         "baseDmg": 5,
-        "fireRate": 0.5,
+        "fireRate": 0.1,
         "attack": "objBullet",
         "type": "1",
-        "cost": 5
+        "cost": 5,
+        "animSet": "none",
+        "position": "head"
     }
 ]

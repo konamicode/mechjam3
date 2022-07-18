@@ -58,7 +58,25 @@ if (actorState == state.dead) {
 		alarm[1] = weapon.fireRate * room_speed;
 		canAttack = false;
 		var _sprite = GetAnimationName();
-		ChangeAnimation(_sprite);
+		if (weapon.animSet != "none") {
+			ChangeAnimation(_sprite);
+		} else {
+			image_index = 0;
+			var _x, _y;
+			try {
+				var _component = animationHitboxData[? weapon.position];
+				var _frame = GetHitboxAnimFrame(animationHitboxData, sprite_index, image_index);
+				var _frameData = _component[? _frame];
+				_x = _frameData[1];
+				_y = _frameData[2];
+			}
+			catch(_exception) {
+				_x = 0;
+				_y = 0;
+
+			}
+			FireWeapon(x + _x,  y + _y, weapon.attack, {image_angle:GetAimDirection()});
+		}
 	}
 	
 	if input_check_pressed("action") {

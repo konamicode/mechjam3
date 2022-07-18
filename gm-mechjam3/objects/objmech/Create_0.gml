@@ -92,12 +92,8 @@ function DrawWeapon() {
 		var framePosX = 0, framePosY = 0, frameScaleX = 10, frameScaleY = 10, frameRot = 0;
 		//var oldFramePosX = 0, oldFramePosY = 0, oldFrameScaleX = 10, oldFrameScaleY = 10, oldFrameRot = 0;
 		var map = animationHitboxData[? animTag];
-		var seqSpeed = animationHitboxData[? "seqFps"];
-		var spriteSpeed = sprite_get_speed(sprite_index);
-		var sprMultiplier = seqSpeed / spriteSpeed;
-		//show_debug_message(sprMultiplier);
-		var frameIndex = floor(image_index * sprMultiplier);
-		animFrame = frameIndex;
+
+		animFrame = GetHitboxAnimFrame(animationHitboxData, sprite_index, image_index);
 		//if (isPlayer)
 		//	show_debug_message(string(image_index) + ": " + string(frameIndex));
 		var frameData = map[? frameIndex];
@@ -179,7 +175,7 @@ function FireWeapon(_x, _y, _object ) {
 			_object = noone;
 	}
 	if _object != noone
-		instance_create_layer(_x, _y, "Instances", _object, {creator:id, image_angle: aimDir, dmg: _dmg});
+		instance_create_layer(_x, _y, "Attacks", _object, {creator:id, image_angle: aimDir, dmg: _dmg});
 		
 }
 
