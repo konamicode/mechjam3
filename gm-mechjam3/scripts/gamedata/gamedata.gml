@@ -4,8 +4,8 @@
 function PlayerData() constructor {
 	subWeapons = [];
 	
-	meleeAttackPower = 10;
-	rngAttackPower = 10;
+	meleeAttackPower = 1;
+	rngAttackPower = 1;
 	maxHp = 100;
 	maxStamina = 50;
 	moveSpeed = 6.0;
