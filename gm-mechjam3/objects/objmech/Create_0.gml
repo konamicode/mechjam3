@@ -236,9 +236,9 @@ function ColliderOn(_x, _y) {
 	attackHitboxData = noone;
 	var _object = weapon.attack;
 	var _posX = 0, _posY = 10, _left = 10, _top = 10, _right = 10, _bottom = 10;
-	
-	if ds_map_exists(animationHitboxData, weapon.label)
-		attackHitboxData = animationHitboxData[? weapon.label];
+	var _weapon = string_lower(weapon.label);
+	if ds_map_exists(animationHitboxData, _weapon)
+		attackHitboxData = animationHitboxData[? _weapon];
 	
 	if (attackHitboxData != noone) {
 		show_debug_message(attackHitboxData);
