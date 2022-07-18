@@ -10,7 +10,7 @@ if (actorState == state.dead) {
 			{
 				//var rival = ds_list_find_value(objCombatManager.rivalList, ds_list_size(objCombatManager.rivalList)-1);
 				var rival = objCombatManager.rivalMap[? rivalName];
-				var rivalComment = objManager.dialogData.GetDialog(rival.personality, 2);
+				var rivalComment = objManager.dialogData.GetDialog(rival.personality, enmContext.rivalSpawnedPlayerVictory);
 				show_debug_message(rivalComment);
 			}
 		}

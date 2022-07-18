@@ -1,0 +1,62 @@
+[
+    {
+        "name": "beamDroneMk1",
+        "maxhp": 20,
+        "maxstamina": 20,
+        "weapon": "beamGun",
+        "movespeed": 4,
+        "minlevel": 0,
+        "maxlevel": 20,
+        "body": "drone"
+    },
+    {
+        "name": "beamDroneMk2",
+        "maxhp": 20,
+        "maxstamina": 30,
+        "weapon": "beamRifle",
+        "movespeed": 4,
+        "minlevel": 5,
+        "maxlevel": 15,
+        "body": "drone"
+    },
+    {
+        "name": "slasherMechMk1",
+        "maxhp": 50,
+        "maxstamina": 50,
+        "weapon": "beamSaber",
+        "movespeed": 3,
+        "minlevel": 0,
+        "maxlevel": 10,
+        "body": "mech"
+    },
+    {
+        "name": "shooterMechMk1",
+        "maxhp": 50,
+        "maxstamina": 50,
+        "weapon": "vulcans",
+        "movespeed": 3,
+        "minlevel": 0,
+        "maxlevel": 10,
+        "body": "mech"
+    },
+    {
+        "name": "sniperMechMk1",
+        "maxhp": 50,
+        "maxstamina": 50,
+        "weapon": "beamGun",
+        "movespeed": 3,
+        "minlevel": 0,
+        "maxlevel": 10,
+        "body": "mech"
+    },
+    {
+        "name": "blasterMechMk1",
+        "maxhp": 50,
+        "maxstamina": 50,
+        "weapon": "bazooka",
+        "movespeed": 3,
+        "minlevel": 0,
+        "maxlevel": 10,
+        "body": "mech"
+    }
+]

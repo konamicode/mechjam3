@@ -36,7 +36,7 @@ function EndCombat(result) {
 					{
 						//var rival = ds_list_find_value(rivalList, ds_list_size(rivalList)-1);
 						var rival = ds_map_find_last(rivalMap);
-						var rivalComment = objManager.dialogData.GetDialog(rival.personality, 2);
+						var rivalComment = objManager.dialogData.GetDialog(rival.personality, enmContext.rivalSpawnedPlayerDefeat);
 						show_debug_message(rivalComment);
 					}
 					break;
@@ -79,7 +79,6 @@ function AttemptToAddRival(mech, result)
 	return noone;
 }
 
-BuildWeapons();
 
 function GetRandomRival() {
 	var _array = ds_map_keys_to_array(objCombatManager.rivalMap);
@@ -88,3 +87,5 @@ function GetRandomRival() {
 	return objCombatManager.rivalMap[? _key];
 }
 
+weaponMap = ds_map_create();
+weaponMap = LoadWeapons("weapons.json");

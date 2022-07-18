@@ -76,7 +76,7 @@
     "path": "folders/Sequences.yy",
   },
   "resourceVersion": "1.4",
-  "name": "sqPlayer_attack_melee",
+  "name": "sqPlayer_attack_beamsaber",
   "tags": [],
   "resourceType": "GMSequence",
 }

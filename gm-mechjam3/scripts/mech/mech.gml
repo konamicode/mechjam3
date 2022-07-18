@@ -32,7 +32,7 @@ function Mech(_frame = "Enemy" ) constructor {
 	}
 	
 	function AddWeapon(weapon) {
-		ds_list_add(weapons, weapon);
+		ds_list_add(weapons, objCombatManager.weaponMap[? weapon]);
 	}
 	
 	function CopyWeapons(weaponList)
@@ -71,11 +71,13 @@ function CreatePlayer(_x, _y, playerData) {
 	player.moveSpeed = playerData.moveSpeed;
 	player.meleePower = playerData.meleeAttackPower;
 	player.rangedPower = playerData.rngAttackPower;
-
+	player.AddWeapon("beamrifle");
+	player.AddWeapon("beamsaber");
+	//for (var i = 0; i < array_length(player.subWeapons); i++ ) {
+			
+	//}
 	var inst = CreateMechObject(player, _x, _y, objPlayer );
 	var _comp = player.AddComponent(componentType.weakpoint, "head", inst);
-	player.AddWeapon(Beam);
-	player.AddWeapon(Melee);
 	ds_list_add(inst.components, _comp);
 
 }

@@ -32,9 +32,9 @@ enum enmPersonality {
 }
 
 enum enmContext {
-	rivalSpawned = 0,
 	rivalSpawnedPlayerVictory,
 	rivalSpawnedPlayerDefeat,
+	rivalSpawned,	
 	rivalArrives,
 	playerBeatsRival,
 	rivalBeatsPlayer,
@@ -52,7 +52,7 @@ enum enmPrequisites {
 	hasBeatenPlayer,
 }
 
-enum weaponTypes {
-	ranged,
-	melee
+enum weaponType {
+	melee, 
+	ranged
 }

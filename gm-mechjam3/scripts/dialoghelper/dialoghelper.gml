@@ -14,7 +14,7 @@ function DialogHelper() constructor
 			jsonStr += file_text_read_string(dialogFile);
 			file_text_readln(dialogFile);
 		}
-		
+		file_text_close(dialogFile);
 		return json_parse(jsonStr);
 	}
 

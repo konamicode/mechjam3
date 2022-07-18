@@ -6,7 +6,7 @@ if (room == rmCombat)
 		spawnedRival = GetRandomRival();
 		ds_list_add(enemyList, SpawnRivalFromData(400, 160, spawnedRival));		
 		layer_sequence_destroy(seqRivalAppears);
-		var dialog = objManager.dialogData.GetDialog(spawnedRival.personality, 3);
+		var dialog = objManager.dialogData.GetDialog(spawnedRival.personality, enmContext.rivalArrives);
 		show_debug_message(dialog);
 	}
 	
