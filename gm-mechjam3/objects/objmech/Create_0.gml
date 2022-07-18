@@ -48,6 +48,12 @@ function GetHeadComponent() {
 
 head = GetHeadComponent();
 
+function GetAnimationName() {
+	
+	return frame + "_" + action + "_" + string_lower(weaponName);
+}
+
+
 function ChangeHitbox(_newSequence) {
 	animationHitboxData = ds_map_create();
 	animationHitboxData = GetSequenceHitboxData(_newSequence);
@@ -67,7 +73,7 @@ function ChangeAnimation(animString, resetIndex = true) {
 	}
 }
 
-ChangeAnimation(animString);
+ChangeAnimation(GetAnimationName());
 
 function CheckAddFallback(map) {
 	if !ds_map_exists(map, "fallback") {
@@ -77,7 +83,7 @@ function CheckAddFallback(map) {
 }
 
 function DrawWeapon() {
-	var animTag = "weapon_" + action + "_" + weaponName;
+	var animTag = "weapon_" + action + "_" + string_lower(weaponName);
 
 	var animFrame;
 	if (ds_map_exists(animationHitboxData, animTag)) {
@@ -160,10 +166,7 @@ function DrawWeapon() {
 	}
 }
 
-function GetAnimationName() {
-	
-	return frame + "_" + action + "_" + string_lower(weaponName);
-}
+
 
 
 function FireWeapon(_x, _y, _object ) {

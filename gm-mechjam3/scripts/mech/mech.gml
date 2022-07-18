@@ -58,7 +58,7 @@ function AddEnemyFromCatalog(_x, _y, mechStruct){
 	enemy.AddWeapon(mechStruct.weapon);
 	enemy.body = mechStruct.body;
 	var inst;
-	if (enemy.body == "Mech") {
+	if (enemy.body == "mech") {
 		inst = CreateMechObject(enemy, _x, _y, objMech);
 		var _comp = enemy.AddComponent(componentType.weakpoint, "head", inst);
 		ds_list_add(inst.components, _comp);
