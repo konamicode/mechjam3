@@ -44,7 +44,7 @@ if (canDamage) {
 		break;
 		
 		case collision.box:
-		
+			_collider = BoxCollision(x, y, x - left, y - top, x + right, y + bottom, objMech);
 		break;
 	}
 	
