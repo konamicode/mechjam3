@@ -123,11 +123,11 @@ function MoveDown(mapInfo)
 	}
 }
 
-function MoveToNewLocation(_x, _y)
+function MoveToNewLocation()
 {
 	var tileMap = objMapManager.tileMap;
-	x = tileMap[_y][_x].x;
-	y = tileMap[_y][_x].y;
-	objMapManager.playerStartX = _x;
-	objMapManager.playerStartY = _y;
+	x = tileMap[mapY][mapX].x;
+	y = tileMap[mapY][mapX].y;
+	objMapManager.playerStartX = mapX;
+	objMapManager.playerStartY = mapY;
 }
