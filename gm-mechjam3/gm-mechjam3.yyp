@@ -106,6 +106,7 @@
     {"id":{"name":"input_profile_create","path":"scripts/input_profile_create/input_profile_create.yy",},"order":1,},
     {"id":{"name":"__input_mouse_button","path":"scripts/__input_mouse_button/__input_mouse_button.yy",},"order":22,},
     {"id":{"name":"__input_gamepad_set_blacklist","path":"scripts/__input_gamepad_set_blacklist/__input_gamepad_set_blacklist.yy",},"order":9,},
+    {"id":{"name":"sprHexArrow","path":"sprites/sprHexArrow/sprHexArrow.yy",},"order":7,},
     {"id":{"name":"input_check_repeat","path":"scripts/input_check_repeat/input_check_repeat.yy",},"order":11,},
     {"id":{"name":"input_ignore_key_add","path":"scripts/input_ignore_key_add/input_ignore_key_add.yy",},"order":3,},
     {"id":{"name":"sprCamera","path":"sprites/sprCamera/sprCamera.yy",},"order":0,},

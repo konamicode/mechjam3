@@ -2,6 +2,9 @@
 mapX = 0;
 mapY = 0;
 
+
+
+
 function MoveLeft(mapInfo)
 {
 	if(mapX > 0)
@@ -12,7 +15,7 @@ function MoveLeft(mapInfo)
 				or mapInfo[mapY][mapX-1].isLiberated)
 			{
 				mapX = mapX - 1;
-				MoveToNewLocation();
+				//MoveToNewLocation();
 			}
 		}
 	}
@@ -28,7 +31,7 @@ function MoveRight(mapInfo)
 				or mapInfo[mapY][mapX+1].isLiberated)
 			{
 				mapX = mapX + 1;
-				MoveToNewLocation();
+				//MoveToNewLocation();
 			}
 		}
 	}
