@@ -8,6 +8,7 @@ if (room == rmCombat)
 		layer_sequence_destroy(seqRivalAppears);
 		var dialog = objManager.dialogData.GetDialog(spawnedRival.personality, enmContext.rivalArrives);
 		show_debug_message(dialog);
+		objMusicManager.RivalArrival();
 	}
 	
 	//Check for level complete
