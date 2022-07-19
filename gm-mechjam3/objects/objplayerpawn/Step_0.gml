@@ -37,26 +37,24 @@ if(input_check_released("up"))
 		case 0:
 			//move right ( x + 1)
 			MoveRight(objMapManager.mapData);
-			MoveToNewLocation();
+			MoveToNewLocation(mapX, mapY);
 		break;
 		case 120:
-			MoveLeft(objMapManager.mapData);
-			if(mapY > 0)
+			mapX -= 0.5;
+			if(mapY > 0) 
 			{			
-				if(objMapManager.mapData[mapY-1][mapX].isPresent and 
-					(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][mapX].isLiberated))
-				{
-						
+				if(objMapManager.mapData[mapY-1][floor(mapX)].isPresent and 
+					(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][floor(mapX)].isLiberated))
+				{	
+					
 					mapY = mapY - 1;
-
-
-				}
-				
+					
+				}				
 			}
-			MoveToNewLocation();
+			MoveToNewLocation(floor(mapX), mapY);
 		break;
 		case 60:
-			//MoveRight(objMapManager.mapData);
+			mapX += 0.5;
 			if(mapY > 0)
 			{			
 				if(objMapManager.mapData[mapY-1][mapX].isPresent and 
@@ -67,30 +65,31 @@ if(input_check_released("up"))
 				}
 				
 			}
-			MoveToNewLocation();
+			MoveToNewLocation(floor(mapX), mapY);
 		break;
 		case 180:
 			MoveLeft(objMapManager.mapData);
-			MoveToNewLocation();			
+			MoveToNewLocation(mapX, mapY);			
 		break;
 		case 300:
-
-			if(mapY < array_length(objMapManager.mapData[mapY])-1)
+ 			mapX += 0.5;
+			if (mapY < array_length(objMapManager.mapData[mapY])-1) 
 			{
 				if(objMapManager.mapData[mapY + 1][mapX].isPresent)
 				{
 					if(objMapManager.mapData[mapY][mapX].isLiberated
 						or objMapManager.mapData[mapY + 1][mapX].isLiberated)
 					{
-						MoveRight(objMapManager.mapData);
+						//MoveRight(objMapManager.mapData);
+						//mapX += 1;
 						mapY = mapY + 1;
 					}
 				}
 			}	
-			MoveToNewLocation();
+			MoveToNewLocation(floor(mapX), mapY);
 		break;
 		case 240:
-			//MoveLeft(objMapManager.mapData);		
+			mapX -= 0.5;	
 			if(mapY < array_length(objMapManager.mapData[mapY])-1)
 			{
 				if(objMapManager.mapData[mapY + 1][mapX].isPresent)
@@ -102,7 +101,7 @@ if(input_check_released("up"))
 					}
 				}
 			}		
-			MoveToNewLocation();			
+			MoveToNewLocation(floor(mapX), mapY);			
 		break;
 	}
 }
@@ -112,7 +111,7 @@ if(input_check_released("down"))
 
 	mapX =	objMapManager.playerLastX;
 	mapY = objMapManager.playerLastY;
-	MoveToNewLocation();
+	MoveToNewLocation(floor(mapX), mapY);
 	//UpdateLastLocation();
 	//MoveDown(objMapManager.mapData);
 }
