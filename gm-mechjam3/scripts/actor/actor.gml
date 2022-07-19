@@ -23,7 +23,8 @@ function Stun(actor, stunType) {
 	if (actor.actorState != state.stun)
 	{
 		actor.actorState = state.stun;
-		actor.alarm[0] = type;
+		actor.alarm[2] = stunType;
+		actor.statusEffectAnim = instance_create_layer(actor.x, actor.y, "FX", objStatusEffect, { sprite_index: sprStatus_stun, parentObj : actor});
 	}
 }
 

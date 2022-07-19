@@ -48,6 +48,7 @@
     {"id":{"name":"spr_RibbnTxtFour","path":"sprites/spr_RibbnTxtFour/spr_RibbnTxtFour.yy",},"order":13,},
     {"id":{"name":"objExplosion","path":"objects/objExplosion/objExplosion.yy",},"order":4,},
     {"id":{"name":"spr_Warning","path":"sprites/spr_Warning/spr_Warning.yy",},"order":0,},
+    {"id":{"name":"objStatusEffect","path":"objects/objStatusEffect/objStatusEffect.yy",},"order":6,},
     {"id":{"name":"input_check_long","path":"scripts/input_check_long/input_check_long.yy",},"order":4,},
     {"id":{"name":"sprDrone_idle_beamRifle","path":"sprites/sprDrone_idle_beamRifle/sprDrone_idle_beamRifle.yy",},"order":4,},
     {"id":{"name":"sqPlayer_attack_beamRifle","path":"sequences/sqPlayer_attack_beamRifle/sqPlayer_attack_beamRifle.yy",},"order":5,},

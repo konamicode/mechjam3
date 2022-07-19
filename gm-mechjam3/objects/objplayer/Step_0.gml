@@ -82,7 +82,7 @@ if (actorState == state.dead) {
 					_y = 0;
 
 				}
-				FireWeapon(x + _x,  y + _y, weapon.attack, {image_angle:GetAimDirection()});
+				FireWeapon(x + _x,  y + _y, weapon.attack, {image_angle:GetAimDirection(), aimed: aiming});
 			}
 		}
 		

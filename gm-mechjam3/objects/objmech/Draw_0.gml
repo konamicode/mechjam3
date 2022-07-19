@@ -18,7 +18,8 @@ if global.debug {
 		x + lengthdir_x(weapon.range.maxDist, _aim), 
 		y + lengthdir_y(weapon.range.maxDist, _aim), 
 		c_blue, c_blue);
-	draw_text(x, y - sprite_yoffset - 10, string(action) + ":" + string(alarm_get(1)));
+	draw_text(x, y - sprite_yoffset - 20, string(action) + ":" + string(alarm_get(1)));
+	draw_text(x, y - sprite_yoffset - 10, "stun :" + string(alarm_get(2)));
 
 
 }

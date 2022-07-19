@@ -133,7 +133,8 @@ function SpawnRivalFromData(_x, _y, rivalData)
 	//TODO: Plug in the other instances in rivalData
 	rival.weapons = rivalData.weapons;
 	var inst = CreateMechObject(rival, _x, _y, objMech);
-	var _comp = rival.AddComponent(componentType.weakpoint, "head", inst);
+	var _component = new Component(componentType.weakpoint, "head", inst, Stun, stunType.heavy); 	
+	var _comp = rival.AddComponent(_component);
 	ds_list_add(inst.components, _comp);
 
 	return inst;

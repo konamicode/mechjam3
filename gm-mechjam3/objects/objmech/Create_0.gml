@@ -201,7 +201,7 @@ function FireWeapon(_x, _y, _object ) {
 			_object = noone;
 	}
 	if _object != noone
-		instance_create_layer(_x, _y, "Attacks", _object, {creator:id, image_angle: aimDir, dmg: _dmg});
+		instance_create_layer(_x, _y, "Attacks", _object, {creator:id, image_angle: aimDir, aimed: aiming, dmg: _dmg});
 		
 }
 
@@ -308,15 +308,3 @@ function ChangeWeapon() {
 	ammoCounter = 0;	
 }
 
-function DrawStatusEffect(){
-	switch (actorState) {
-		case state.stun:
-			draw_sprite_ext(sprStatus_stun, image_index mod sprite_get_number(sprStatus_stun),
-			x, y, image_xscale, image_yscale, 0, image_blend, image_alpha);
-		
-		break;
-		
-		
-		
-	}
-}
