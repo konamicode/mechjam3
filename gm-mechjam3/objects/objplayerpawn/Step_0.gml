@@ -40,16 +40,16 @@ if(input_check_released("up"))
 			MoveToNewLocation();
 		break;
 		case 120:
-			if !(mapY mod 2)
-			{
-				MoveLeft(objMapManager.mapData);
-			}
+
 			if(mapY > 0) && ( mapX > 0)
 			{			
 				if(objMapManager.mapData[mapY-1][mapX-1].isPresent and 
 					(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][mapX-1].isLiberated))
 				{	
-					mapX -= 1;
+					if (mapY mod 2)
+					{
+						MoveLeft(objMapManager.mapData);
+					}
 					mapY = mapY - 1;
 					
 				}				
@@ -57,14 +57,14 @@ if(input_check_released("up"))
 			MoveToNewLocation();
 		break;
 		case 60:
-			if !(mapY mod 2)
-				MoveRight(objMapManager.mapData);
+
 			if(mapY > 0)
 			{			
 				if(objMapManager.mapData[mapY-1][mapX].isPresent and 
 					(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][mapX].isLiberated))
 				{
-						
+					if (mapY mod 2)
+						MoveRight(objMapManager.mapData);	
 					mapY = mapY - 1;					
 				}
 				
@@ -76,8 +76,6 @@ if(input_check_released("up"))
 			MoveToNewLocation();			
 		break;
 		case 300:
-			if (mapY mod 2)
-				MoveRight(objMapManager.mapData);
 			if ((mapY < array_length(objMapManager.mapData[mapY])-1) && (mapX < array_length(objMapManager.mapData[mapX])-1))
 			{
 				if(objMapManager.mapData[mapY + 1][mapX + 1].isPresent)
@@ -85,8 +83,8 @@ if(input_check_released("up"))
 					if(objMapManager.mapData[mapY][mapX].isLiberated
 						or objMapManager.mapData[mapY + 1][mapX].isLiberated)
 					{
-						//MoveRight(objMapManager.mapData);
-						//mapX += 1;
+						if (mapY mod 2)
+							MoveRight(objMapManager.mapData);
 						mapY = mapY + 1;
 					}
 				}
@@ -94,10 +92,7 @@ if(input_check_released("up"))
 			MoveToNewLocation();
 		break;
 		case 240:
-			if (mapY mod 2)
-			{
-				MoveLeft(objMapManager.mapData);
-			}	
+
 			if(mapY < array_length(objMapManager.mapData[mapY])-1)
 			{
 				if(objMapManager.mapData[mapY + 1][mapX].isPresent)
@@ -105,6 +100,8 @@ if(input_check_released("up"))
 					if(objMapManager.mapData[mapY][mapX].isLiberated
 						or objMapManager.mapData[mapY + 1][mapX].isLiberated)
 					{
+						if (mapY mod 2)
+							MoveRight(objMapManager.mapData);
 						mapY = mapY + 1;						
 					}
 				}
