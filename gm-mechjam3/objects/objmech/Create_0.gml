@@ -307,3 +307,16 @@ function DeductStamina(_cost) {
 function ChangeWeapon() {
 	ammoCounter = 0;	
 }
+
+function DrawStatusEffect(){
+	switch (actorState) {
+		case state.stun:
+			draw_sprite_ext(sprStatus_stun, image_index mod sprite_get_number(sprStatus_stun),
+			x, y, image_xscale, image_yscale, 0, image_blend, image_alpha);
+		
+		break;
+		
+		
+		
+	}
+}

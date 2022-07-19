@@ -1,6 +1,13 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
+function Component(_type, _label, _creator, _onDestroy=noone, _destroyParams=[]) constructor {
+	type = _type;
+	label = _label;
+	creator = _creator;
+	onDestroy = _onDestroy;
+	destroyParams = _destroyParams;
+}
 
 function Mech(_frame = "Enemy" ) constructor {
 
@@ -15,11 +22,11 @@ function Mech(_frame = "Enemy" ) constructor {
 		ds_list_destroy(defenses);		
 	}
 	
-	function AddComponent(type, label, creator) {
-		var comp = instance_create_layer(x, y, "Instances", objComponent, {creator: creator, type : type, label: label});
-		if label == "head"
+	function AddComponent(compStruct) {
+		var comp = instance_create_layer(x, y, "Instances", objComponent, compStruct);
+		if comp.label == "head"
 			creator.head = comp;
-		//switch(type) {
+		//switch(comp.type) {
 		//	case componentType.weakpoint :	
 				
 		//	break;
@@ -60,7 +67,8 @@ function AddEnemyFromCatalog(_x, _y, mechStruct){
 	var inst;
 	if (enemy.body == "mech") {
 		inst = CreateMechObject(enemy, _x, _y, objMech);
-		var _comp = enemy.AddComponent(componentType.weakpoint, "head", inst);
+		var _component = new Component(componentType.weakpoint, "head", inst, Stun, stunType.heavy); 
+		var _comp = enemy.AddComponent(_component);
 		ds_list_add(inst.components, _comp);
 	} else 
 	{
@@ -82,7 +90,8 @@ function AddEnemyFromData(_x, _y, _frame = "Mech", enemyType = "objMech", _weapo
 		}
 	}
 	var inst = CreateMechObject(enemy, _x, _y, enemyType);
-	var _comp = enemy.AddComponent(componentType.weakpoint, "head", inst);
+	var _component = new Component(componentType.weakpoint, "head", inst, Stun, stunType.heavy); 
+	var _comp = enemy.AddComponent(_component);
 	ds_list_add(inst.components, _comp);
 	return inst;
 }
@@ -102,7 +111,8 @@ function CreatePlayer(_x, _y, playerData) {
 			
 	//}
 	var inst = CreateMechObject(player, _x, _y, objPlayer );
-	var _comp = player.AddComponent(componentType.weakpoint, "head", inst);
+	var _component = new Component(componentType.weakpoint, "head", inst, Stun, stunType.heavy); 
+	var _comp = inst.AddComponent(_component);
 	ds_list_add(inst.components, _comp);
 
 }

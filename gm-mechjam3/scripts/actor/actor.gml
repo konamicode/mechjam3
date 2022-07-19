@@ -19,8 +19,12 @@ function RefillHP() {
 	hp = maxHp;
 }
 
-
-
-
+function Stun(actor, stunType) {
+	if (actor.actorState != state.stun)
+	{
+		actor.actorState = state.stun;
+		actor.alarm[0] = type;
+	}
+}
 
 

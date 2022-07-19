@@ -1,5 +1,10 @@
 ///Define the enums used in the project
 
+enum stunType {
+	light = 60, 
+	heavy = 180 
+}
+
 
 enum enmBuffTypes {
 	HP,
