@@ -30,6 +30,10 @@ if (actorState == state.dead) {
 	if input_check_pressed("aim") {
 		aiming = true;
 		//sprite_index = sprPlayer_idle_beamrifle;
+		weapon = weapons[| GetWeaponByName("beamRifle",weapons)];
+		weaponName = weapon.label;
+		ChangeAnimation(GetAnimationName());
+		
 	}
 	if aiming && input_check_released("aim") {
 		aiming = false;
@@ -57,6 +61,13 @@ if (actorState == state.dead) {
 		image_xscale = -1;	
 	} else
 		image_xscale = 1;
+	
+	
+	if (input_check("shoot") && weaponName != "beamRifle") {
+		weapon = weapons[| GetWeaponByName("beamRifle",weapons)];
+		weaponName = weapon.label;	
+		ChangeAnimation(GetAnimationName());
+	}
 	
 	if input_check("shoot") && canAttack  {
 		if (ammoCounter > 0) {
@@ -98,7 +109,13 @@ if (actorState == state.dead) {
 	
 	
 	if input_check_pressed("action") {
-		ChangeAnimation(frame + "_attack_melee");
+		action = "attack";
+		var idx = GetWeaponByName("beamSaber", weapons)
+		if (idx > 0) {
+			weapon = weapons[| idx];
+			weaponName = weapon.label;
+			ChangeAnimation(GetAnimationName());
+		}
 	}
 }
 

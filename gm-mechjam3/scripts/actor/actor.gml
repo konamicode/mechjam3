@@ -29,3 +29,15 @@ function Stun(actor, stunType) {
 }
 
 
+function GetWeaponByName(_name, _weapons) {
+
+	for ( var i = 0; i < ds_list_size(_weapons); i++) {
+		var currWeapon = _weapons[| i];
+		if (currWeapon.label == _name)
+		{
+			return i;
+		}
+	}
+	return -1;
+	
+}
