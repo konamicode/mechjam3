@@ -44,7 +44,7 @@ if(input_check_released("up"))
 			if(mapY > 0) && ( mapX > 0)
 			{			
 				if(objMapManager.mapData[mapY-1][mapX-1].isPresent and 
-					(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][mapX-1].isLiberated))
+					(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][mapX].isLiberated))
 				{	
 					if (mapY mod 2)
 					{
@@ -58,7 +58,7 @@ if(input_check_released("up"))
 		break;
 		case 60:
 
-			if(mapY > 0)
+			if(mapY > 0) && ( mapX > 0)
 			{			
 				if(objMapManager.mapData[mapY-1][mapX].isPresent and 
 					(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][mapX].isLiberated))
