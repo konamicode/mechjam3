@@ -13,7 +13,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "introstrum.wav",
-  "duration": 3.390113,
+  "duration": 3.169796,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
