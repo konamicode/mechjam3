@@ -16,8 +16,8 @@ action = "idle";
 ammoCounter = 0;
 
 
-weapPosX = x;
-weapPosY = y;
+weapPosX = 0;
+weapPosY = 0;
 
 //if (isPlayer) {
 //	faction = "Player";
@@ -191,8 +191,8 @@ function DrawWeapon() {
 	}	
 	
 	else {
-		weapPosX = x;
-		weapPosY = y;
+		weapPosX = 0;
+		weapPosY = 0;
 	}	
 
 }
