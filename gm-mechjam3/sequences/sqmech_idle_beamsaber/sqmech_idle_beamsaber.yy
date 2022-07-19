@@ -35,7 +35,7 @@
             ],"resourceVersion":"1.0","resourceType":"KeyframeStore<RealKeyframe>",},"trackColour":4294077000,"inheritsTrackColour":true,"builtinName":15,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","name":"scale","tags":[],"resourceType":"GMRealTrack","modifiers":[],},
       ],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","name":"wp_head","tags":[],"resourceType":"GMGraphicTrack","modifiers":[],},
     {"keyframes":{"Keyframes":[
-          {"id":"5cc032a9-b6bd-4e1b-b2a7-259e0b87bbbe","Key":0.0,"Length":2.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"sprEnemy_idle_beamSaber","path":"sprites/sprEnemy_idle_beamSaber/sprEnemy_idle_beamSaber.yy",},"resourceVersion":"1.0","resourceType":"AssetSpriteKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<AssetSpriteKeyframe>",},
+          {"id":"5cc032a9-b6bd-4e1b-b2a7-259e0b87bbbe","Key":0.0,"Length":2.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"sprMech_idle_beamSaber","path":"sprites/sprMech_idle_beamSaber/sprMech_idle_beamSaber.yy",},"resourceVersion":"1.0","resourceType":"AssetSpriteKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<AssetSpriteKeyframe>",},
         ],"resourceVersion":"1.0","resourceType":"KeyframeStore<AssetSpriteKeyframe>",},"trackColour":4294068342,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[
         {"keyframes":{"Keyframes":[
               {"id":"0710fb4d-2ede-4edc-bcbf-068e2ff32ea6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":true,"Channels":{"0":{"EmbeddedAnimCurve":null,"RealValue":0.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},"1":{"EmbeddedAnimCurve":null,"RealValue":0.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},
@@ -70,7 +70,7 @@
     "path": "folders/Sequences.yy",
   },
   "resourceVersion": "1.4",
-  "name": "sqEnemy_idle_beamSaber",
+  "name": "sqMech_idle_beamSaber",
   "tags": [],
   "resourceType": "GMSequence",
 }

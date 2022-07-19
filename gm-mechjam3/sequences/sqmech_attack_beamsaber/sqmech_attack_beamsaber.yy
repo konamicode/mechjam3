@@ -57,7 +57,7 @@
             ],"resourceVersion":"1.0","resourceType":"KeyframeStore<RealKeyframe>",},"trackColour":4294068324,"inheritsTrackColour":true,"builtinName":15,"traits":0,"interpolation":0,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","name":"scale","tags":[],"resourceType":"GMRealTrack","modifiers":[],},
       ],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","name":"wp_head","tags":[],"resourceType":"GMGraphicTrack","modifiers":[],},
     {"keyframes":{"Keyframes":[
-          {"id":"0591e7ae-293b-47e9-a8c9-fc551102041d","Key":0.0,"Length":12.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"sprEnemy_attack_beamSaber","path":"sprites/sprEnemy_attack_beamSaber/sprEnemy_attack_beamSaber.yy",},"resourceVersion":"1.0","resourceType":"AssetSpriteKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<AssetSpriteKeyframe>",},
+          {"id":"0591e7ae-293b-47e9-a8c9-fc551102041d","Key":0.0,"Length":12.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"sprMech_attack_beamSaber","path":"sprites/sprMech_attack_beamSaber/sprMech_attack_beamSaber.yy",},"resourceVersion":"1.0","resourceType":"AssetSpriteKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<AssetSpriteKeyframe>",},
         ],"resourceVersion":"1.0","resourceType":"KeyframeStore<AssetSpriteKeyframe>",},"trackColour":4292561138,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[
         {"keyframes":{"Keyframes":[
               {"id":"fb2a67c2-6366-4e2f-b6f2-5c5cd2b12279","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":true,"Channels":{"0":{"EmbeddedAnimCurve":null,"RealValue":0.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},"1":{"EmbeddedAnimCurve":null,"RealValue":0.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},
@@ -92,7 +92,7 @@
     "path": "folders/Sequences.yy",
   },
   "resourceVersion": "1.4",
-  "name": "sqEnemy_attack_beamSaber",
+  "name": "sqMech_attack_beamSaber",
   "tags": [],
   "resourceType": "GMSequence",
 }

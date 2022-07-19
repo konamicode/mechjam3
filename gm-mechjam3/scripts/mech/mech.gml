@@ -9,9 +9,9 @@ function Component(_type, _label, _creator, _onDestroy=noone, _destroyParams=[])
 	destroyParams = _destroyParams;
 }
 
-function Mech(_frame = "Enemy" ) constructor {
+function Mech(_body = "Enemy" ) constructor {
 
-	frame = _frame;
+	body = _body;
 	weapons = ds_list_create();
 	weakpoints = ds_list_create();
 	defenses = ds_list_create();
@@ -65,7 +65,7 @@ function AddEnemyFromCatalog(_x, _y, mechStruct){
 	enemy.AddWeapon(mechStruct.weapon);
 	enemy.body = mechStruct.body;
 	var inst;
-	if (enemy.body == "mech") {
+	if (enemy.body == "Mech") {
 		inst = CreateMechObject(enemy, _x, _y, objMech);
 		var _component = new Component(componentType.weakpoint, "head", inst, Stun, stunType.heavy); 
 		var _comp = enemy.AddComponent(_component);
@@ -97,7 +97,7 @@ function AddEnemyFromData(_x, _y, _frame = "Mech", enemyType = "objMech", _weapo
 }
 
 function CreatePlayer(_x, _y, playerData) {
-	var player = new Mech();
+	var player = new Mech("Player");
 	player.maxHp = playerData.maxHp;
 	player.hp = player.maxHp;
 	player.maxStamina = playerData.maxStamina;

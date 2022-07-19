@@ -8,7 +8,7 @@
         "minLevel": 0,
         "maxLevel": 10,
         "cost": 1,
-        "body": "drone"
+        "body": "Drone"
     },
     {
         "name": "beamDroneMk2",
@@ -19,7 +19,7 @@
         "minLevel": 5,
         "maxLevel": 15,
         "cost": 3,
-        "body": "drone"
+        "body": "Drone"
     },
     {
         "name": "beamDroneMk3",
@@ -29,7 +29,19 @@
         "moveSpeed": 4,
         "minLevel": 10,
         "maxLevel": 20,
-        "cost": 5
+        "cost": 5,
+        "body": "Drone"
+    },
+    {
+        "name": "bazookaDroneMk1",
+        "maxHP": 20,
+        "maxStamina": 20,
+        "weapon": "bazooka",
+        "moveSpeed": 4,
+        "minLevel": 1,
+        "maxLevel": 10,
+        "cost": 1,
+        "body": "Drone"
     },
     {
         "name": "slasherMechMk1",
@@ -37,10 +49,10 @@
         "maxStamina": 50,
         "weapon": "beamSaber",
         "moveSpeed": 3,
-        "minLevel": 0,
+        "minLevel": 1,
         "maxLevel": 10,
         "cost": 1,
-        "body": "mech"
+        "body": "Mech"
     },
     {
         "name": "shooterMechMk1",
@@ -48,10 +60,10 @@
         "maxStamina": 50,
         "weapon": "vulcans",
         "moveSpeed": 3,
-        "minLevel": 5,
+        "minLevel": 1,
         "maxLevel": 10,
-        "cost": 5,
-        "body": "mech"
+        "cost": 1,
+        "body": "Mech"
     },
     {
         "name": "sniperMechMk1",
@@ -62,7 +74,7 @@
         "minLevel": 5,
         "maxLevel": 10,
         "cost": 5,
-        "body": "mech"
+        "body": "Mech"
     },
     {
         "name": "blasterMechMk1",
@@ -73,6 +85,6 @@
         "minLevel": 5,
         "maxLevel": 10,
         "cost": 5,
-        "body": "mech"
+        "body": "Mech"
     }
 ]

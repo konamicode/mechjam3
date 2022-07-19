@@ -19,17 +19,22 @@ ammoCounter = 0;
 weapPosX = x;
 weapPosY = y;
 
-if (isPlayer) {
-	faction = "Player";
-	//weaponName = "beamrifle";
-} 
-else
-	faction = "Enemy";
-
+//if (isPlayer) {
+//	faction = "Player";
+//	//weaponName = "beamrifle";
+//} 
+//else {
+//	if body == "drone"
+//		faction = "Drone";
+//	else
+//		faction = "Enemy";
+//}
 if (ds_list_size(weapons) > 0) {
 	weapon = weapons[| 0];
 	weaponName = weapon.label;
-	fallbackWeaponName = "beamrifle";
+	if body == "Drone"
+		fallbackWeaponName = "beamGun";
+	else fallbackWeaponName =  "beamSaber";
 } else {
 	weaponName = "melee";
 	fallbackWeaponName = weaponName;
@@ -39,7 +44,7 @@ if (ds_list_size(weapons) > 0) {
 
 ammoCounter = weapon.clipSize;
 
-animString = faction + "_" + action + "_" + weaponName;	
+animString = body + "_" + action + "_" + weaponName;	
 
 updateHitboxFromSequence = false;
 
@@ -59,9 +64,9 @@ head = GetHeadComponent();
 function GetAnimationName() {
 
 	if (weapon.animSet == "none") 
-		return faction + "_" + action + "_" + fallbackWeaponName ;
+		return body + "_" + action + "_" + fallbackWeaponName ;
 	else
-	return faction + "_" + action + "_" + weaponName;
+	return body + "_" + action + "_" + weaponName;
 }
 
 
@@ -74,9 +79,13 @@ function ChangeHitbox(_newSequence) {
 
 function ChangeAnimation(animString, resetIndex = true) {
 	if (weapon.animSet == "none") 
-		animString = frame + "_" + action + "_" + fallbackWeaponName ;
+		animString = body + "_" + action + "_" + fallbackWeaponName ;
 	
 	var newSprite = asset_get_index("spr" + animString);
+	if newSprite == -1 {
+		animString = body + "_" + action + "_" + fallbackWeaponName ;
+		newSprite = asset_get_index("spr" + animString);
+	}
 	var newSeq = asset_get_index("sq" + animString);
 	if (newSeq != -1 )
 		ChangeHitbox(newSeq);

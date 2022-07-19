@@ -4,6 +4,7 @@ if (room = rmCombat) {
 	CreatePlayer(87, 108, objManager.gameData.player);
 	
 	var budget = objManager.gameData.player.buffLevel;
+	enemyPool = undefined;
 	enemyPool = ds_list_create();
 	enemyPool = GetEnemiesForLevel();
 	spawnList = ds_list_create();
@@ -28,9 +29,9 @@ if (room = rmCombat) {
 		}
 	}
 	else {
-		ds_list_add(enemyList, AddEnemyFromData(448, 128, "Drone", objDrone, ["beamgun"]));
+		ds_list_add(enemyList, AddEnemyFromData(448, 128, "Drone", objDrone, ["beamGun"]));
 		ds_list_add(enemyList, AddEnemyFromData(448, 288, "Drone", objDrone, ["bazooka"]));
-		ds_list_add(enemyList, AddEnemyFromData(540, 160, "Enemy", objMech, ["beamsaber"]));
+		ds_list_add(enemyList, AddEnemyFromData(540, 160, "Enemy", objMech, ["beamSaber"]));
 	}
 
 	
