@@ -48,7 +48,7 @@ if(input_check_released("up"))
 				if (mapY > 0) && (mapX < array_length(objMapManager.mapData[mapY]) -1)
 				{			
 					if(objMapManager.mapData[mapY-1][mapX + 1].isPresent and 
-						(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][map + 1].isLiberated))
+						(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][mapX + 1].isLiberated))
 					{	
 						mapX = mapX + 1;
 						mapY = mapY - 1;					
