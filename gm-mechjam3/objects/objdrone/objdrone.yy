@@ -31,9 +31,7 @@
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
-  "overriddenProperties": [
-    {"propertyId":{"name":"weapon","path":"objects/objMech/objMech.yy",},"objectId":{"name":"objMech","path":"objects/objMech/objMech.yy",},"value":"\"beamdrone\"","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-  ],
+  "overriddenProperties": [],
   "parent": {
     "name": "Combat",
     "path": "folders/Objects/Combat.yy",

@@ -3,21 +3,32 @@ event_inherited();
 if (actorState == state.dead) {
 	if (!isPlayer)
 	{
-		if(hasPilot == true and name == noone)
-		{
-			var rivalName = objCombatManager.AttemptToAddRival(self, true);
-			if( rivalName != noone)
+		if(hasPilot) {
+			if (name == "")
 			{
-				//var rival = ds_list_find_value(objCombatManager.rivalList, ds_list_size(objCombatManager.rivalList)-1);
-				var rival = objCombatManager.rivalMap[? rivalName];
-				objCombatManager.rivalComment = objManager.dialogData.GetDialog(rival.personality, enmContext.rivalSpawnedPlayerVictory);
+				var rivalName = objCombatManager.AttemptToAddRival(self, true);
+				if( rivalName != noone)
+				{
+					//var rival = ds_list_find_value(objCombatManager.rivalList, ds_list_size(objCombatManager.rivalList)-1);
+					var rival = objCombatManager.rivalMap[? rivalName];
+					objCombatManager.rivalDialogComment = objManager.dialogData.GetDialog(rival.personality, enmContext.rivalSpawnedPlayerVictory);
+					with (objCombatManager)
+					{
+						PlayDialogSeq();
+					}
+				}
+			} else
+			{
+				var rival = objCombatManager.rivalMap[? name];
+				objCombatManager.rivalDialogComment = objManager.dialogData.GetDialog(rival.personality, enmContext.playerBeatsRival);
 				with (objCombatManager)
 				{
-					PlayDialogSeq();
+					PlayDialogSeq();	
 				}
 			}
 		}
 		objCombatManager.RemoveEnemy(id);
+
 	}
 	instance_destroy();
 	
@@ -40,6 +51,7 @@ else {
 						alarm[1] = weapon.burstRate * room_speed;
 						canAttack = false;
 						ammoCounter -= 1;
+
 						var _sprite = GetAnimationName();
 						if (weapon.animSet != "none") {
 							ChangeAnimation(_sprite);
@@ -58,7 +70,9 @@ else {
 								_y = 0;
 
 							}
-							//FireWeapon(x + _x,  y + _y, weapon.attack, {image_angle:GetAimDirection(), aimed: aiming});
+							//fire vulcans?
+							
+							FireWeapon(x + _x,  y + _y, weapon.attack, {image_angle:GetTargetDirection(objPlayer), aimed: aiming});
 						}
 					}
 		

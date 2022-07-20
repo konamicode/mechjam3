@@ -10,7 +10,7 @@
     },
     {
         "personality": "0",
-        "context": "1",
+        "context": "0",
         "prequisites": 0,
         "prerequisiteParameters": 0,
         "disqualifiers": 0,
@@ -28,7 +28,7 @@
     },
     {
         "personality": "0",
-        "context": "0",
+        "context": "1",
         "prequisites": 0,
         "prerequisiteParameters": 0,
         "disqualifiers": 0,
@@ -64,7 +64,7 @@
     },
     {
         "personality": "1",
-        "context": "1",
+        "context": "0",
         "prequisites": 0,
         "prerequisiteParameters": 0,
         "disqualifiers": 0,
@@ -73,7 +73,7 @@
     },
     {
         "personality": "1",
-        "context": "1",
+        "context": "0",
         "prequisites": 0,
         "prerequisiteParameters": 0,
         "disqualifiers": 0,
@@ -109,7 +109,7 @@
     },
     {
         "personality": "2",
-        "context": "1",
+        "context": "0",
         "prequisites": 0,
         "prerequisiteParameters": 0,
         "disqualifiers": 0,
@@ -118,7 +118,7 @@
     },
     {
         "personality": "2",
-        "context": "0",
+        "context": "1",
         "prequisites": 0,
         "prerequisiteParameters": 0,
         "disqualifiers": 0,
@@ -154,7 +154,7 @@
     },
     {
         "personality": "3",
-        "context": "1",
+        "context": "0",
         "prequisites": 0,
         "prerequisiteParameters": 0,
         "disqualifiers": 0,
@@ -163,7 +163,7 @@
     },
     {
         "personality": "3",
-        "context": "1",
+        "context": "0",
         "prequisites": 0,
         "prerequisiteParameters": 0,
         "disqualifiers": 0,

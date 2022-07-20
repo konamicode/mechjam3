@@ -2,7 +2,6 @@
 event_inherited();
 animationHitboxData = undefined;
 hasPilot = true;
-name = noone;
 
 
 
