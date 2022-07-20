@@ -21,13 +21,13 @@ rivalDialogComment = "";
 function UpdateStrongestRival() {
 	if ( ds_map_size(rivalMap) > 0 ) {
 		var _rivalIdx = ds_map_find_first(rivalMap);
-		var _r, _record; 
+		var _r, _record;
 		//var _record = ds_list_size(_r.battleRecord);
 		//strongestRival[0] = _record;
 		//strongestRival[1] = _r.name;
 		repeat(ds_map_size(rivalMap))
 		{
-			_r = rivalMap[? _rivalIdx]; 
+			_r = rivalMap[? _rivalIdx];
 			_record = ds_list_size(_r.battleRecord);
 			if _record > strongestRival[0] {
 				strongestRival[0] = _record;
@@ -55,7 +55,7 @@ function EndCombat(result) {
 	}
 	else
 	{
-		if (result) 
+		if (result)
 			global.missionStatus = enmMissionStatus.succeed;
 		else
 		{
@@ -82,14 +82,20 @@ function EndCombat(result) {
 		{
 			ds_list_add(ds_map_find_value(rivalMap, spawnedRival.name).battleRecord, result);
 			spawnedRival = noone;
-		} 
+		}
 		SetAlarm(0, room_speed * 3);
 	}
+	if(spawnedRival != noone)
+	{
+		ds_list_add(ds_map_find_value(rivalMap, spawnedRival.name).battleRecord, result);
+		spawnedRival = noone;
+	}
+	SetAlarm(0, room_speed * 2);
 
 }
 
 function StartCombat(finalBattle) {
-	
+
 	isFinalBattle = finalBattle;
 	if(ds_map_size(rivalMap) > 0)
 	{
@@ -129,7 +135,7 @@ weaponMap = LoadWeapons("weapons.json");
 function LoadEnemyCatalog() {
 	var enemyList = ds_list_create();
 	var catalogFile = file_text_open_read("enemyCatalogue.json");
-		
+
 	var jsonStr = "";
 	while(!file_text_eof(catalogFile))
 	{
@@ -139,7 +145,7 @@ function LoadEnemyCatalog() {
 	file_text_close(catalogFile);
 	var enemyData = json_parse(jsonStr);
 	if ( array_length(enemyData) > 0) {
-		for (var i = 0; i < array_length(enemyData); i++) {	
+		for (var i = 0; i < array_length(enemyData); i++) {
 			ds_list_add(enemyList, enemyData[i]);
 		}
 		return enemyList;
@@ -161,7 +167,7 @@ function GetEnemiesForLevel() {
 		var _maxLevel = enemyCatalog[| i].maxLevel;
 		if(between(objManager.gameData.player.buffLevel, _minLevel, _maxLevel, true))
 		{
-			ds_list_add(_enemyPool, enemyCatalog[| i]);	
+			ds_list_add(_enemyPool, enemyCatalog[| i]);
 		}
 	}
 	if ( ds_list_size(_enemyPool) > 0)

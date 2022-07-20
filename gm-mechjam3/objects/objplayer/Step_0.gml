@@ -1,7 +1,6 @@
 if (actorState == state.dead) {
 	
-	instance_destroy();
-	
+
 	
 	
 } else {

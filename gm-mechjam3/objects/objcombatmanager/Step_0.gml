@@ -22,7 +22,6 @@ if (room == rmCombat)
 	
 	if layer_sequence_is_finished(seqRivalDialog) {
 		layer_sequence_headpos(seqRivalDialog, 0);
-		rivalDialogComment = "";
 	}
 	
 	//Check for level complete
