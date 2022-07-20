@@ -99,7 +99,8 @@ if(input_check_released("up"))
 		break;
 		case 240:
 			if (_moveLeft) {
-				if(mapY < array_length(objMapManager.mapData[mapY])-1) && ( mapX > 0)
+				var _arrY = array_length(objMapManager.mapData) - 1 ;
+				if( mapY < _arrY) && ( mapX > 0)
 				{
 					if(objMapManager.mapData[mapY + 1][mapX - 1].isPresent)
 					{
@@ -113,7 +114,7 @@ if(input_check_released("up"))
 				}		
 			} else
 			{
-				if(mapY < array_length(objMapManager.mapData[mapY])-1)
+				if (mapY < array_length(objMapManager.mapData) - 1)
 				{
 					if(objMapManager.mapData[mapY + 1][mapX].isPresent)
 					{
