@@ -161,3 +161,7 @@ function GetEnemiesForLevel() {
 		return undefined;
 }
 
+function PlayDialogSeq()
+{
+	layer_sequence_play(seqRivalDialog);
+}
