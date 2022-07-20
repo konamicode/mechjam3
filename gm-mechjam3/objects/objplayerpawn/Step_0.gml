@@ -147,7 +147,7 @@ if(input_check_released("up"))
 				}				
 			} else
 			{
-				if (mapY < array_length(objMapManager.mapData[mapY])-1) 
+				if (mapY < array_length(objMapManager.mapData) - 1)
 				{
 					if(objMapManager.mapData[mapY + 1][mapX].isPresent)
 					{
