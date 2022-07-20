@@ -132,7 +132,16 @@ function SpawnRivalFromData(_x, _y, rivalData)
 	rival.body = rivalData.body;
 	
 	//TODO: Plug in the other instances in rivalData
-	rival.weapons = rivalData.weapons;
+	//rival.weapons = rivalData.weapons;
+	if (ds_list_size(rivalData.weapons) > 0) {
+		for (var i = 0; i < ds_list_size(rivalData.weapons); i++)
+		{
+			rival.AddWeapon(rivalData.weapons[| i].label);
+		}
+	} else
+	{
+		show_debug_message("Why is there no fucking weapon");
+	}
 	var inst = CreateMechObject(rival, _x, _y, objMech);
 	var _component = new Component(componentType.weakpoint, "head", inst, Stun, stunType.heavy); 	
 	var _comp = rival.AddComponent(_component);

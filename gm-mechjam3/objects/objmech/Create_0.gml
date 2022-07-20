@@ -35,8 +35,13 @@ if (ds_list_size(weapons) > 0) {
 		fallbackWeaponName = "beamGun";
 	else fallbackWeaponName =  "beamSaber";
 } else {
-	weaponName = "melee";
-	fallbackWeaponName = weaponName;
+	if body == "Drone" {
+		weapon = weaponMap[? "beamGun"];
+		fallbackWeaponName = "beamGun"; }
+	else {
+	weapon = weaponMap[? "beamSaber"];
+	fallbackWeaponName =  "beamSaber";
+	}
 }
 
 function GetAnimationName() {
@@ -47,7 +52,10 @@ function GetAnimationName() {
 	return body + "_" + action + "_" + weaponName;
 }
 
-ammoCounter = weapon.clipSize;
+if variable_struct_exists( weapon, "clipSize")
+	ammoCounter = weapon.clipSize;
+else
+	show_message("Blowing up looking for a clipSize for " + weapon.label);
 
 animString = GetAnimationName();
 
