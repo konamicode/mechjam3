@@ -46,35 +46,45 @@ function RemoveEnemy(_id) {
 }
 
 function EndCombat(result) {
-	if (result) 
-		global.missionStatus = enmMissionStatus.succeed;
+	if(isFinalBattle)
+	{
+		objEndGameManager.playerWon = result;
+		objEndGameManager.rivalName = spawnedRival.name;
+		room_goto(rmGameEnd);
+		objEndGameManager.isActive = true;
+	}
 	else
 	{
-		global.missionStatus = enmMissionStatus.incomplete;
-		if(spawnedRival == noone)
+		if (result) 
+			global.missionStatus = enmMissionStatus.succeed;
+		else
 		{
-			for(i = 0; i < ds_list_size(enemyList); i++)
+			global.missionStatus = enmMissionStatus.incomplete;
+			if(spawnedRival == noone)
 			{
-				if(ds_list_find_value(enemyList, i).hasPilot == true)
+				for(i = 0; i < ds_list_size(enemyList); i++)
 				{
-					if(AttemptToAddRival(ds_list_find_index(enemyList, 0), result))
+					if(ds_list_find_value(enemyList, i).hasPilot == true)
 					{
-						//var rival = ds_list_find_value(rivalList, ds_list_size(rivalList)-1);
-						var rival = ds_map_find_last(rivalMap);
-						var rivalComment = objManager.dialogData.GetDialog(rival.personality, enmContext.rivalSpawnedPlayerDefeat);
-						show_debug_message(rivalComment);
+						if(AttemptToAddRival(ds_list_find_index(enemyList, 0), result))
+						{
+							//var rival = ds_list_find_value(rivalList, ds_list_size(rivalList)-1);
+							var rival = ds_map_find_last(rivalMap);
+							var rivalComment = objManager.dialogData.GetDialog(rival.personality, enmContext.rivalSpawnedPlayerDefeat);
+							show_debug_message(rivalComment);
+						}
+						break;
 					}
-					break;
 				}
 			}
 		}
+		if(spawnedRival != noone)
+		{
+			ds_list_add(ds_map_find_value(rivalMap, spawnedRival.name).battleRecord, result);
+			spawnedRival = noone;
+		} 
+		SetAlarm(0, room_speed * 3);
 	}
-	if(spawnedRival != noone)
-	{
-		ds_list_add(ds_map_find_value(rivalMap, spawnedRival.name).battleRecord, result);
-		spawnedRival = noone;
-	} 
-	SetAlarm(0, room_speed * 3);
 
 }
 

@@ -143,6 +143,7 @@
     {"id":{"name":"input_accessibility_global_cooldown_get","path":"scripts/input_accessibility_global_cooldown_get/input_accessibility_global_cooldown_get.yy",},"order":0,},
     {"id":{"name":"input_source_detect_new","path":"scripts/input_source_detect_new/input_source_detect_new.yy",},"order":3,},
     {"id":{"name":"virtMapPawn","path":"objects/virtMapPawn/virtMapPawn.yy",},"order":2,},
+    {"id":{"name":"rmGameEnd","path":"rooms/rmGameEnd/rmGameEnd.yy",},"order":5,},
     {"id":{"name":"__input_class_chord_state","path":"scripts/__input_class_chord_state/__input_class_chord_state.yy",},"order":2,},
     {"id":{"name":"DialogHelper","path":"scripts/DialogHelper/DialogHelper.yy",},"order":12,},
     {"id":{"name":"objAttack","path":"objects/objAttack/objAttack.yy",},"order":1,},
@@ -309,6 +310,7 @@
     {"id":{"name":"input_ignore_key_remove","path":"scripts/input_ignore_key_remove/input_ignore_key_remove.yy",},"order":4,},
     {"id":{"name":"input_cursor_x","path":"scripts/input_cursor_x/input_cursor_x.yy",},"order":12,},
     {"id":{"name":"input_binding_empty","path":"scripts/input_binding_empty/input_binding_empty.yy",},"order":0,},
+    {"id":{"name":"objEndGameManager","path":"objects/objEndGameManager/objEndGameManager.yy",},"order":9,},
     {"id":{"name":"sprGameController","path":"sprites/sprGameController/sprGameController.yy",},"order":1,},
     {"id":{"name":"input_x","path":"scripts/input_x/input_x.yy",},"order":2,},
     {"id":{"name":"objHexTile","path":"objects/objHexTile/objHexTile.yy",},"order":0,},
@@ -360,6 +362,7 @@
     {"roomId":{"name":"rmMap","path":"rooms/rmMap/rmMap.yy",},},
     {"roomId":{"name":"rmCombat","path":"rooms/rmCombat/rmCombat.yy",},},
     {"roomId":{"name":"rmSequenceTest","path":"rooms/rmSequenceTest/rmSequenceTest.yy",},},
+    {"roomId":{"name":"rmGameEnd","path":"rooms/rmGameEnd/rmGameEnd.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
