@@ -29,9 +29,8 @@ if (actorState == state.dead) {
 	
 	if input_check_pressed("aim") {
 		aiming = true;
-		//sprite_index = sprPlayer_idle_beamrifle;
-		//weapon = weapons[| GetWeaponByName("beamRifle",weapons)];
-		//weaponName = weapon.label;
+		weapon = weapons[| GetWeaponByName("beamRifle",weapons)];
+		weaponName = weapon.label;
 		ChangeAnimation(GetAnimationName());
 		
 	}
@@ -64,8 +63,8 @@ if (actorState == state.dead) {
 	
 	
 	if (input_check("shoot") && weaponName != "beamRifle") {
-		//weapon = weapons[| GetWeaponByName("beamRifle",weapons)];
-		//weaponName = weapon.label;	
+		weapon = weapons[| GetWeaponByName("beamRifle",weapons)];
+		weaponName = weapon.label;	
 		ChangeAnimation(GetAnimationName());
 	}
 	
