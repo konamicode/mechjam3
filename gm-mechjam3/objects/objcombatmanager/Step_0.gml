@@ -18,7 +18,7 @@ if (room == rmCombat)
 	}
 	
 	//Check for level complete
-	if (ds_list_size(enemyList) == 0) {
+	if (ds_list_size(enemyList) == 0)  {
 		if (spawnRival == true and spawnedRival == noone)
 		{
 			if(random(1) < rivalSpawnChance)
@@ -29,24 +29,45 @@ if (room == rmCombat)
 		else
 		{
 			//You win!
+
 			if (!changeRoom) {
 				if (spawnRival == true and spawnedRival == noone)
 				{
 					LevelRival(spawnedRival);
 				}
-				EndCombat(true);
-				changeRoom = true;
+				if (spawnedRival)
+				{
+					if layer_sequence_is_finished(seqRivalDialog)
+					{
+						EndCombat(true);
+						changeRoom = true;
+					}
+				} else
+				{
+					EndCombat(true);
+					changeRoom = true;
+				}
 			}
-		}
+	}
 		
-	} else if !instance_exists(objPlayer) {
+	} else if !instance_exists(objPlayer) && layer_sequence_is_finished(seqRivalDialog) {
 		if (!changeRoom) {
 			if (spawnRival == true and spawnedRival == noone)
 			{
 				LevelRival(spawnedRival);
 			}
-			EndCombat(false);	
-			changeRoom = true; 
+			if (spawnedRival)
+			{
+				if layer_sequence_is_finished(seqRivalDialog)
+				{
+					EndCombat(false);
+					changeRoom = true;
+				}
+			} else
+			{
+				EndCombat(false);
+				changeRoom = true;
+			}
 		}
 	}
 
