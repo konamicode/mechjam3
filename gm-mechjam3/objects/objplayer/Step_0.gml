@@ -30,8 +30,8 @@ if (actorState == state.dead) {
 	if input_check_pressed("aim") {
 		aiming = true;
 		//sprite_index = sprPlayer_idle_beamrifle;
-		weapon = weapons[| GetWeaponByName("beamRifle",weapons)];
-		weaponName = weapon.label;
+		//weapon = weapons[| GetWeaponByName("beamRifle",weapons)];
+		//weaponName = weapon.label;
 		ChangeAnimation(GetAnimationName());
 		
 	}
@@ -64,8 +64,8 @@ if (actorState == state.dead) {
 	
 	
 	if (input_check("shoot") && weaponName != "beamRifle") {
-		weapon = weapons[| GetWeaponByName("beamRifle",weapons)];
-		weaponName = weapon.label;	
+		//weapon = weapons[| GetWeaponByName("beamRifle",weapons)];
+		//weaponName = weapon.label;	
 		ChangeAnimation(GetAnimationName());
 	}
 	
@@ -94,6 +94,11 @@ if (actorState == state.dead) {
 
 				}
 				FireWeapon(x + _x,  y + _y, weapon.attack, {image_angle:GetAimDirection(), aimed: aiming});
+				switch(weaponName) {
+					case weaponName == "vulcans":
+						instance_create_layer(x + _x, y + _y, "FX", objFX, {x_offsetStart: _x, y_offsetStart: _y, follow: true, creator: other.id, image_xscale: other.image_xscale, sprite_index: sprFX_attack_vulcans});
+					break;
+				}
 			}
 		}
 		

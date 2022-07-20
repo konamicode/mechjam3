@@ -1,0 +1,5 @@
+if (follow)
+{
+	UpdatePos();
+
+}
