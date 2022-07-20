@@ -45,6 +45,12 @@ function GenerateMap()
 	
 	mapData[playerStartY][playerStartX].isLiberated = true;
 	
+	//TEMP - Place final boss fight on the map
+	bossX = irandom(width-1);
+	bossY = irandom(height-1);
+	
+	mapData[bossY][bossX].isFinalBattle = true;
+	
 	//Determine exclusion portion
 	var exclusionCount = floor((width * height) - (random_range(minDensity, maxDensity) * width * height));
 	
@@ -174,6 +180,7 @@ function DisplayMap()
 			tileMap[i][j].buff = mapData[i][j].buff;
 			tileMap[i][j].bonus = mapData[i][j].bonus;
 			tileMap[i][j].isPresent = mapData[i][j].isPresent;
+			tileMap[i][j].isFinalBattle = mapData[i][j].isFinalBattle;
 		}
 	}	
 	

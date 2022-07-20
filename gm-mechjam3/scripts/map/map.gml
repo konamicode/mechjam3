@@ -5,5 +5,6 @@ function mapTileData() constructor {
 	buff = enmBuffTypes.HP;
 	bonus = noone;
 	isPresent = true;
+	isFinalBattle = false;
 }
 

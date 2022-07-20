@@ -19,7 +19,7 @@ if ( room == rmMap) {
 	{
 		if(tileMap[playerPawn.mapY][playerPawn.mapX].isLiberated == false)
 		{
-			objCombatManager.StartCombat();	
+			objCombatManager.StartCombat(tileMap[playerPawn.mapY][playerPawn.mapX].isFinalBattle);
 		}
 	}	
 	

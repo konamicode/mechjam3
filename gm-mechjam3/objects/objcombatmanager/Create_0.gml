@@ -6,6 +6,7 @@ maxRivalCount = 10;
 spawnRival = false;
 spawnedRival = noone;
 rivalSpawnChance = 1;
+isFinalBattle = false;
 
 
 seqRivalAppears = -1;
@@ -77,8 +78,9 @@ function EndCombat(result) {
 
 }
 
-function StartCombat() {
+function StartCombat(finalBattle) {
 	
+	isFinalBattle = finalBattle;
 	if(ds_map_size(rivalMap) > 0)
 	{
 		if(random(1) <= rivalSpawnChance)
