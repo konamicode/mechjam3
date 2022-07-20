@@ -45,3 +45,14 @@ function DialogHelper() constructor
 	dialog = LoadDialog();
 
 }
+
+function SpawnDialogText() {
+	instance_create_layer(screenWidth/2, screenHeight/2, "GUI", objDialogDrawer);	
+}
+
+function DestroyDialogText() {
+	if instance_exists(objDialogDrawer)
+		with(objDialogDrawer)
+			instance_destroy();
+			
+}

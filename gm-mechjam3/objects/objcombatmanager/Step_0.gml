@@ -4,11 +4,18 @@ if (room == rmCombat)
 	if layer_sequence_is_finished(seqRivalAppears) {
 		layer_sequence_headpos(seqRivalAppears, 0);
 		spawnedRival = GetRandomRival();
-		ds_list_add(enemyList, SpawnRivalFromData(400, 160, spawnedRival));		
 		layer_sequence_destroy(seqRivalAppears);
-		var dialog = objManager.dialogData.GetDialog(spawnedRival.personality, enmContext.rivalArrives);
-		show_debug_message(dialog);
+		ds_list_add(enemyList, SpawnRivalFromData(400, 160, spawnedRival));
+		rivalDialogComment = objManager.dialogData.GetDialog(spawnedRival.personality, enmContext.rivalArrives);
+		show_debug_message(rivalDialogComment);
 		objMusicManager.RivalArrival();
+		layer_sequence_play(seqRivalDialog);
+	}
+	
+	if layer_sequence_is_finished(seqRivalDialog) {
+		layer_sequence_headpos(seqRivalDialog, 0);
+		layer_sequence_destroy(seqRivalAppears);
+		rivalDialogComment = "";
 	}
 	
 	//Check for level complete

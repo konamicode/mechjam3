@@ -129,6 +129,7 @@ function SpawnRivalFromData(_x, _y, rivalData)
 	rival.rangedPower = rivalData.rangedPower;
 	rival.name = rivalData.name;
 	rival.personality = rivalData.personality;
+	rival.body = rivalData.body;
 	
 	//TODO: Plug in the other instances in rivalData
 	rival.weapons = rivalData.weapons;
@@ -150,7 +151,7 @@ function GenerateRivalData(mech, initialResult)
 		rangedPower : mech.rangedPower,
 		moveSpeed : mech.moveSpeed,
 		
-		frame : mech.frame,
+		body : mech.body,
 		weapons : ds_list_create(),
 		weakpoints : ds_list_create(),
 		defenses : ds_list_create(),

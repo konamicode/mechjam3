@@ -9,9 +9,13 @@ rivalSpawnChance = 1;
 
 
 seqRivalAppears = -1;
+seqRivalDialog = -1;
 
 strongestRival = [0, "None"]
 
+
+
+rivalDialogComment = "";
 
 function UpdateStrongestRival() {
 	if ( ds_map_size(rivalMap) > 0 ) {

@@ -9,6 +9,12 @@ for ( var i = 0; i < ds_list_size(components); i++)
 	}
 }
 
+
+if instance_exists(statusEffectAnim) && statusEffectAnim != noone
+{
+	instance_destroy(statusEffectAnim);
+	statusEffectAnim = noone;
+}
 Cleanup();
 
 ds_list_destroy(weapons);

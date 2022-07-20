@@ -45,4 +45,10 @@ if (room == rmCombat) {
 		layer_sequence_pause(seqRivalAppears);
 	}
 	
+	if !layer_sequence_exists("GUI",seqRivalDialog)
+	{
+		seqRivalDialog = layer_sequence_create("GUI", 320, 180, sqRivalDialog);
+		layer_sequence_pause(seqRivalDialog);
+	}
+	
 }
