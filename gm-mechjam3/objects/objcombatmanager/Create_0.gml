@@ -5,7 +5,7 @@ rivalMap = ds_map_create();
 maxRivalCount = 5;
 spawnRival = false;
 spawnedRival = noone;
-rivalSpawnChance = 1;
+rivalSpawnChance = .67;
 isFinalBattle = false;
 
 
@@ -13,7 +13,6 @@ seqRivalAppears = -1;
 seqRivalDialog = -1;
 
 strongestRival = [0, "None"]
-
 
 
 rivalDialogComment = "";
