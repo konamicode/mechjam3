@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sndexplosion_01.wav",
+  "soundFile": "sndexplosion01.wav",
   "duration": 2.61024,
   "parent": {
     "name": "Explosions",
     "path": "folders/Sounds/FX/Explosions.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sndExplosion_01",
+  "name": "sndExplosion01",
   "tags": [],
   "resourceType": "GMSound",
 }
