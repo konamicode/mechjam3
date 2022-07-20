@@ -95,7 +95,7 @@ if (actorState == state.dead) {
 				}
 				FireWeapon(x + _x,  y + _y, weapon.attack, {image_angle:GetAimDirection(), aimed: aiming});
 				switch(weaponName) {
-					case weaponName == "vulcans":
+					case "vulcans":
 						instance_create_layer(x + _x, y + _y, "FX", objFX, {x_offsetStart: _x, y_offsetStart: _y, follow: true, creator: other.id, image_xscale: other.image_xscale, sprite_index: sprFX_attack_vulcans});
 					break;
 				}
