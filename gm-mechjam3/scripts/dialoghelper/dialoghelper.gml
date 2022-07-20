@@ -21,7 +21,7 @@ function DialogHelper() constructor
 	//TECH DEBT: This will need to account for prerequisites at some point
 	function GetDialog(personality, context)
 	{
-		availableDialog = ds_list_create();
+		var availableDialog = ds_list_create();
 		
 		//Parse dialog
 		for(i = 0; i < array_length(dialog); i++)
@@ -35,9 +35,16 @@ function DialogHelper() constructor
 				ds_list_add(availableDialog, curDialog.text);
 			}
 		}
+		var dialogIdx;
+		var dialogStr = "";
+		if (ds_list_size(availableDialog) > 0) {
+			dialogIdx = irandom(ds_list_size(availableDialog)-1);
+			dialogStr = ds_list_find_value(availableDialog, dialogIdx);
+		}
 		
-		var dialogIdx = irandom(ds_list_size(availableDialog)-1);
-		var dialogStr = ds_list_find_value(availableDialog, dialogIdx);
+		if (dialogStr == undefined) {
+			show_debug_message("Couldn't find dialog");	
+		} 
 		ds_list_destroy(availableDialog);
 		return dialogStr;
 	}
