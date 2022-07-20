@@ -9,12 +9,11 @@ if (room == rmCombat)
 		rivalDialogComment = objManager.dialogData.GetDialog(spawnedRival.personality, enmContext.rivalArrives);
 		show_debug_message(rivalDialogComment);
 		objMusicManager.RivalArrival();
-		layer_sequence_play(seqRivalDialog);
+		PlayDialogSeq();
 	}
 	
 	if layer_sequence_is_finished(seqRivalDialog) {
 		layer_sequence_headpos(seqRivalDialog, 0);
-		layer_sequence_destroy(seqRivalAppears);
 		rivalDialogComment = "";
 	}
 	
