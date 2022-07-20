@@ -1,7 +1,10 @@
 DrawWeapon();
 
+if sprite_index != -1
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c, image_alpha);
+else
+	show_debug_message("Couldn't find sprite: " + string(animString));
 
-draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, c, image_alpha);
 draw_set_color(c);	
 
 if global.debug {
