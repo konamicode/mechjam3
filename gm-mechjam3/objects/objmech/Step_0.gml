@@ -51,6 +51,7 @@ else {
 						alarm[1] = weapon.burstRate * room_speed;
 						canAttack = false;
 						ammoCounter -= 1;
+
 						var _sprite = GetAnimationName();
 						if (weapon.animSet != "none") {
 							ChangeAnimation(_sprite);
@@ -69,7 +70,9 @@ else {
 								_y = 0;
 
 							}
-							//FireWeapon(x + _x,  y + _y, weapon.attack, {image_angle:GetAimDirection(), aimed: aiming});
+							//fire vulcans?
+							
+							FireWeapon(x + _x,  y + _y, weapon.attack, {image_angle:GetTargetDirection(objPlayer), aimed: aiming});
 						}
 					}
 		
