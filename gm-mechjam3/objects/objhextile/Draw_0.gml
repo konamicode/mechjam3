@@ -11,34 +11,36 @@ if(isPresent)
 		draw_sprite_ext(sprite_index, image_index, x, y, 1, 1, 0, c_red, 1);
 		
 		//Buff icon
+		var _buffSprite = noone;
 		switch(buff)
 		{
 			case enmBuffTypes.HP:
 			{
-				draw_sprite(sprBuffHP, image_index, x, y);
+				_buffSprite = sprBuffHP;
 				break;
 			}
 			case enmBuffTypes.Stamina:
 			{
-				draw_sprite(sprBuffStamina, image_index, x, y);
+				_buffSprite = sprBuffStamina;
 				break;
 			}
 			case enmBuffTypes.Speed:
 			{
-				draw_sprite(sprBuffSpeed, image_index, x, y);
+				_buffSprite = sprBuffSpeed;
 				break;
 			}
 			case enmBuffTypes.MeleePower:
 			{
-				draw_sprite(sprBuffMeleeDmg, image_index, x, y);
+				_buffSprite = sprBuffMeleeDmg;
 				break;
 			}
 			case enmBuffTypes.RangedPower:
 			{
-				draw_sprite(sprBuffRangedDmg, image_index, x, y);
+				_buffSprite = sprBuffRangedDmg;
 				break;
 			}
 		}
+		//draw_sprite(_buffSprite, image_index, x, y);
 	}
 }
 

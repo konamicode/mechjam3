@@ -32,82 +32,136 @@ if(input_check_released("up"))
 	//MoveUp(objMapManager.mapData);
 	
 	//MoveTowards
-	
+	var _moveRight = !(mapY mod 2);
+	var _moveLeft = (mapY mod 2);
+
 	switch(facingDirection) {
 		case 0:
 			//move right ( x + 1)
 			MoveRight(objMapManager.mapData);
 			MoveToNewLocation();
 		break;
-		case 120:
-
-			if(mapY > 0) && ( mapX > 0)
-			{			
-				if(objMapManager.mapData[mapY-1][mapX-1].isPresent and 
-					(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][mapX].isLiberated))
-				{	
-					if (mapY mod 2)
-					{
-						MoveLeft(objMapManager.mapData);
-					}
-					mapY = mapY - 1;
-					
-				}				
-			}
-			MoveToNewLocation();
-		break;
 		case 60:
-
-			if(mapY > 0) && ( mapX > 0)
+			
+			if _moveRight  
 			{			
-				if(objMapManager.mapData[mapY-1][mapX].isPresent and 
-					(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][mapX].isLiberated))
-				{
-					if (mapY mod 2)
-						MoveRight(objMapManager.mapData);	
-					mapY = mapY - 1;					
-				}
+				if (mapY > 0) && (mapX < array_length(objMapManager.mapData[mapY]) -1)
+				{			
+					if(objMapManager.mapData[mapY-1][mapX + 1].isPresent and 
+						(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][map + 1].isLiberated))
+					{	
+						mapX = mapX + 1;
+						mapY = mapY - 1;					
+					}
 				
+				}
+			}
+			else {
+				if (mapY > 0)
+				{			
+					if(objMapManager.mapData[mapY-1][mapX].isPresent and 
+						(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][mapX].isLiberated))
+					{	
+						mapY = mapY - 1;					
+					}
+				
+				}
 			}
 			MoveToNewLocation();
 		break;
+		case 120:
+			if _moveLeft  
+			{			
+				if (mapY > 0 ) && (mapX > 0) {
+					if(objMapManager.mapData[mapY-1][mapX - 1].isPresent and 
+						(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][mapX - 1].isLiberated))
+					{	
+						mapX -= 1;
+						mapY = mapY - 1;			
+					}	
+				}
+			} else {
+				if(mapY > 0) 
+				{			
+					if(objMapManager.mapData[mapY-1][mapX].isPresent and 
+						(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][mapX].isLiberated))
+					{	
+						mapY = mapY - 1;			
+					}				
+				}
+			}
+			MoveToNewLocation();
+		break;
+
 		case 180:
 			MoveLeft(objMapManager.mapData);
 			MoveToNewLocation();			
 		break;
-		case 300:
-			if ((mapY < array_length(objMapManager.mapData[mapY])-1) && (mapX < array_length(objMapManager.mapData[mapX])-1))
-			{
-				if(objMapManager.mapData[mapY + 1][mapX + 1].isPresent)
+		case 240:
+			if (_moveLeft) {
+				if(mapY < array_length(objMapManager.mapData[mapY])-1) && ( mapX > 0)
 				{
-					if(objMapManager.mapData[mapY][mapX].isLiberated
-						or objMapManager.mapData[mapY + 1][mapX].isLiberated)
+					if(objMapManager.mapData[mapY + 1][mapX - 1].isPresent)
 					{
-						if (mapY mod 2)
-							MoveRight(objMapManager.mapData);
-						mapY = mapY + 1;
+						if(objMapManager.mapData[mapY][mapX].isLiberated
+							or objMapManager.mapData[mapY + 1][mapX - 1].isLiberated)
+						{
+							mapX -= 1;
+							mapY = mapY + 1;						
+						}
 					}
-				}
-			}	
+				}		
+			} else
+			{
+				if(mapY < array_length(objMapManager.mapData[mapY])-1)
+				{
+					if(objMapManager.mapData[mapY + 1][mapX].isPresent)
+					{
+						if(objMapManager.mapData[mapY][mapX].isLiberated
+							or objMapManager.mapData[mapY + 1][mapX].isLiberated)
+						{
+							mapY = mapY + 1;						
+						}
+					}
+				}		
+			
+			}
+			MoveToNewLocation();			
+		break;		
+		case 300:
+			if _moveRight
+			{
+				var _arrX = array_length(objMapManager.mapData[mapY]) - 1;
+				var _arrY = array_length(objMapManager.mapData) - 1 ;
+				if (mapY < _arrY) && (mapX < (_arrX))
+				{
+					if(objMapManager.mapData[mapY + 1][mapX + 1].isPresent)
+					{
+						if(objMapManager.mapData[mapY][mapX].isLiberated
+							or objMapManager.mapData[mapY + 1][mapX + 1].isLiberated)
+						{
+							mapX = mapX + 1;
+							mapY = mapY + 1;
+						}
+					}
+				}				
+			} else
+			{
+				if (mapY < array_length(objMapManager.mapData[mapY])-1) 
+				{
+					if(objMapManager.mapData[mapY + 1][mapX].isPresent)
+					{
+						if(objMapManager.mapData[mapY][mapX].isLiberated
+							or objMapManager.mapData[mapY + 1][mapX].isLiberated)
+						{
+							mapY = mapY + 1;
+						}
+					}
+				}	
+			}
 			MoveToNewLocation();
 		break;
-		case 240:
 
-			if(mapY < array_length(objMapManager.mapData[mapY])-1)
-			{
-				if(objMapManager.mapData[mapY + 1][mapX].isPresent)
-				{
-					if(objMapManager.mapData[mapY][mapX].isLiberated
-						or objMapManager.mapData[mapY + 1][mapX].isLiberated)
-					{
-						if (mapY mod 2)
-							MoveRight(objMapManager.mapData);
-						mapY = mapY + 1;						
-					}
-				}
-			}		
-			MoveToNewLocation();			
-		break;
 	}
 }
 
