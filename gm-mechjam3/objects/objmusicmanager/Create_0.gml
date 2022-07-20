@@ -16,3 +16,4 @@ function RivalArrival()
 	audio_stop_sound(curMusic);
 	curMusic = audio_play_sound(rivalMusic, 10, true);
 }
+

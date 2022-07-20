@@ -251,6 +251,7 @@
     {"id":{"name":"GameHelper","path":"scripts/GameHelper/GameHelper.yy",},"order":9,},
     {"id":{"name":"input_player_export","path":"scripts/input_player_export/input_player_export.yy",},"order":1,},
     {"id":{"name":"input_combo_create","path":"scripts/input_combo_create/input_combo_create.yy",},"order":1,},
+    {"id":{"name":"AudioHelper","path":"scripts/AudioHelper/AudioHelper.yy",},"order":13,},
     {"id":{"name":"sndMelee01","path":"sounds/sndMelee01/sndMelee01.yy",},"order":4,},
     {"id":{"name":"sprBullet","path":"sprites/sprBullet/sprBullet.yy",},"order":2,},
     {"id":{"name":"sprPlayer_attack_beamSaber","path":"sprites/sprPlayer_attack_beamSaber/sprPlayer_attack_beamSaber.yy",},"order":2,},

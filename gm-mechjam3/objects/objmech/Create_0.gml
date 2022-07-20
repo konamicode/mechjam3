@@ -212,10 +212,13 @@ function FireWeapon(_x, _y, _object ) {
 	if _object != noone
 		instance_create_layer(_x, _y, "Attacks", _object, {creator:id, image_angle: aimDir, aimed: aiming, dmg: _dmg});
 		
+	
 }
 
 if (!ds_map_exists(global.functionMap, FireWeapon))
 	global.functionMap[? "FireWeapon"] = method(undefined, FireWeapon);
+	
+
 	
 	
 function GetTargetDirection(target) {
