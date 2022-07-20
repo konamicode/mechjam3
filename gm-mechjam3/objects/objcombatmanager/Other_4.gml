@@ -1,4 +1,8 @@
-if (room = rmCombat) {
+if (room == rmMap) {
+	UpdateStrongestRival();
+}
+
+if (room == rmCombat) {
 	nextRoom = noone;
 	
 	CreatePlayer(87, 108, objManager.gameData.player);

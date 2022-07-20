@@ -10,8 +10,28 @@ rivalSpawnChance = 1;
 
 seqRivalAppears = -1;
 
+strongestRival = [0, "None"]
 
 
+function UpdateStrongestRival() {
+	if ( ds_map_size(rivalMap) > 0 ) {
+		var _rivalIdx = ds_map_find_first(rivalMap);
+		var _r, _record; 
+		//var _record = ds_list_size(_r.battleRecord);
+		//strongestRival[0] = _record;
+		//strongestRival[1] = _r.name;
+		repeat(ds_map_size(rivalMap))
+		{
+			_r = rivalMap[? _rivalIdx]; 
+			_record = ds_list_size(_r.battleRecord);
+			if _record > strongestRival[0] {
+				strongestRival[0] = _record;
+				strongestRival[1] = _r.name;
+			}
+			_rivalIdx = ds_map_find_next(rivalMap, _rivalIdx);
+		}
+	}
+}
 
 function RemoveEnemy(_id) {
 	var _index = ds_list_find_index(enemyList, _id);

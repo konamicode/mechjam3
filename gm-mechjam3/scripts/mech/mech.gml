@@ -157,7 +157,7 @@ function GenerateRivalData(mech, initialResult)
 	
 		battleRecord : ds_list_create(),
 		personality : irandom(enmPersonality.length),
-	
+
 		name : GenerateRivalName()
 	}
 	
@@ -181,7 +181,7 @@ function LevelRival(rivalData)
 	Ranged Damage: 10%
 	Speed: 5%
 	*/
-	
+
 	switch(rivalData.personality)
 	{
 		case enmPersonality.arrogant:

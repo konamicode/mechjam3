@@ -40,11 +40,17 @@ if (ds_list_size(weapons) > 0) {
 	fallbackWeaponName = weaponName;
 }
 
+function GetAnimationName() {
 
+	if (weapon.animSet == "none") 
+		return body + "_" + action + "_" + fallbackWeaponName ;
+	else
+	return body + "_" + action + "_" + weaponName;
+}
 
 ammoCounter = weapon.clipSize;
 
-animString = body + "_" + action + "_" + weaponName;	
+animString = GetAnimationName();
 
 updateHitboxFromSequence = false;
 
@@ -61,13 +67,7 @@ function GetHeadComponent() {
 
 head = GetHeadComponent();
 
-function GetAnimationName() {
 
-	if (weapon.animSet == "none") 
-		return body + "_" + action + "_" + fallbackWeaponName ;
-	else
-	return body + "_" + action + "_" + weaponName;
-}
 
 
 function ChangeHitbox(_newSequence) {

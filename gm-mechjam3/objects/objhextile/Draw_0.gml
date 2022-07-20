@@ -40,7 +40,7 @@ if(isPresent)
 				break;
 			}
 		}
-		//draw_sprite(_buffSprite, image_index, x, y);
+		draw_sprite(_buffSprite, image_index, x, y);
 	}
 }
 
