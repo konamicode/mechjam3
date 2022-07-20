@@ -17,6 +17,7 @@ if(isActive)
 		draw_text(room_width/2, 90, "killed the rebel pilot, ending the rebellion.");
 		draw_text(room_width/2, 120, "YOU LOSE");
 	}
+	
+	draw_text(room_width/2, 250, "Press Enter/A to Restart");
 }
 
-draw_text(room_width/2, 250, "Press Enter/A to Restart");

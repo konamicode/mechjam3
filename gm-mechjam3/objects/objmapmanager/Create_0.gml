@@ -45,12 +45,6 @@ function GenerateMap()
 	
 	mapData[playerStartY][playerStartX].isLiberated = true;
 	
-	//TEMP - Place final boss fight on the map
-	bossX = irandom(width-1);
-	bossY = irandom(height-1);
-	
-	mapData[bossY][bossX].isFinalBattle = true;
-	
 	//Determine exclusion portion
 	var exclusionCount = floor((width * height) - (random_range(minDensity, maxDensity) * width * height));
 	

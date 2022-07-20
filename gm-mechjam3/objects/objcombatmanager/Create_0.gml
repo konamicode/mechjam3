@@ -82,7 +82,8 @@ function EndCombat(result) {
 		{
 			ds_list_add(ds_map_find_value(rivalMap, spawnedRival.name).battleRecord, result);
 			spawnedRival = noone;
-		} 
+		}
+		AttemptToSpawnFinalBattle();
 		SetAlarm(0, room_speed * 3);
 	}
 
