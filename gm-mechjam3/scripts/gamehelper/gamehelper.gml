@@ -3,5 +3,7 @@
 function Init(){
 	randomize();
 	global.debug = true;
+	
 }
 
+global.functionMap = ds_map_create();

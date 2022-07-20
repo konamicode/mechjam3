@@ -36,6 +36,6 @@ roomMenu.SetSpacing(128);
 roomMenu.SetMargin(0);
 //
 
-global.functionMap = ds_map_create();
+//global.functionMap = ds_map_create();
 
 
