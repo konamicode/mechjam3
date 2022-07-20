@@ -3,11 +3,19 @@ if (room == rmCombat)
 {
 	if layer_sequence_is_finished(seqRivalAppears) {
 		layer_sequence_headpos(seqRivalAppears, 0);
-		spawnedRival = GetRandomRival();
+		var dialogContext = enmContext.rivalArrives;
+		if(isFinalBattle)
+		{
+			spawnedRival = rivalMap[? strongestRival[1]];
+			dialogContext = enmContext.startFinalBattle;
+		}
+		else
+		{
+			spawnedRival = GetRandomRival();
+		}
 		layer_sequence_destroy(seqRivalAppears);
 		ds_list_add(enemyList, SpawnRivalFromData(400, 160, spawnedRival));
-		rivalDialogComment = objManager.dialogData.GetDialog(spawnedRival.personality, enmContext.rivalArrives);
-		show_debug_message(rivalDialogComment);
+		rivalDialogComment = objManager.dialogData.GetDialog(spawnedRival.personality, dialogContext);
 		objMusicManager.RivalArrival();
 		PlayDialogSeq();
 	}
