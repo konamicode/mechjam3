@@ -21,7 +21,7 @@ function GoToStartRoom() {
 }
 
 function RollCredits() {
-	
+	room_goto(rmCredits);
 }
 
 gameData = new GameData();

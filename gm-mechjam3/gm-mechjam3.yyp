@@ -106,6 +106,7 @@
     {"id":{"name":"sprMissile","path":"sprites/sprMissile/sprMissile.yy",},"order":3,},
     {"id":{"name":"input_is_analogue","path":"scripts/input_is_analogue/input_is_analogue.yy",},"order":14,},
     {"id":{"name":"input_axis_threshold_set","path":"scripts/input_axis_threshold_set/input_axis_threshold_set.yy",},"order":1,},
+    {"id":{"name":"objCreditsManager","path":"objects/objCreditsManager/objCreditsManager.yy",},"order":12,},
     {"id":{"name":"__input_binding_get_label","path":"scripts/__input_binding_get_label/__input_binding_get_label.yy",},"order":3,},
     {"id":{"name":"input_player_ghost_get","path":"scripts/input_player_ghost_get/input_player_ghost_get.yy",},"order":8,},
     {"id":{"name":"PlayerHelper","path":"scripts/PlayerHelper/PlayerHelper.yy",},"order":7,},
@@ -347,6 +348,7 @@
     {"id":{"name":"sqMech_attack_bazooka","path":"sequences/sqMech_attack_bazooka/sqMech_attack_bazooka.yy",},"order":13,},
     {"id":{"name":"Helper","path":"scripts/Helper/Helper.yy",},"order":2,},
     {"id":{"name":"__input_hotswap_tick","path":"scripts/__input_hotswap_tick/__input_hotswap_tick.yy",},"order":14,},
+    {"id":{"name":"rmCredits","path":"rooms/rmCredits/rmCredits.yy",},"order":8,},
     {"id":{"name":"input_player_get_gamepad_type","path":"scripts/input_player_get_gamepad_type/input_player_get_gamepad_type.yy",},"order":6,},
     {"id":{"name":"input_cursor_limit_circle","path":"scripts/input_cursor_limit_circle/input_cursor_limit_circle.yy",},"order":6,},
     {"id":{"name":"input_default_mouse_wheel_up","path":"scripts/input_default_mouse_wheel_up/input_default_mouse_wheel_up.yy",},"order":7,},
@@ -388,6 +390,7 @@
     {"roomId":{"name":"rmGameEnd","path":"rooms/rmGameEnd/rmGameEnd.yy",},},
     {"roomId":{"name":"rmSequenceTest","path":"rooms/rmSequenceTest/rmSequenceTest.yy",},},
     {"roomId":{"name":"rmHowToPlay","path":"rooms/rmHowToPlay/rmHowToPlay.yy",},},
+    {"roomId":{"name":"rmCredits","path":"rooms/rmCredits/rmCredits.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
