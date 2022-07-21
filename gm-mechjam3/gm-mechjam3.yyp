@@ -322,6 +322,7 @@
     {"id":{"name":"__input_config_general","path":"scripts/__input_config_general/__input_config_general.yy",},"order":2,},
     {"id":{"name":"input_player_copy","path":"scripts/input_player_copy/input_player_copy.yy",},"order":0,},
     {"id":{"name":"__input_sdl2_database_funcs","path":"scripts/__input_sdl2_database_funcs/__input_sdl2_database_funcs.yy",},"order":26,},
+    {"id":{"name":"objBeamLarge","path":"objects/objBeamLarge/objBeamLarge.yy",},"order":7,},
     {"id":{"name":"mapMusic","path":"sounds/mapMusic/mapMusic.yy",},"order":2,},
     {"id":{"name":"input_binding_remove","path":"scripts/input_binding_remove/input_binding_remove.yy",},"order":6,},
     {"id":{"name":"objCombatManager","path":"objects/objCombatManager/objCombatManager.yy",},"order":5,},

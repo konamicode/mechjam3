@@ -77,6 +77,8 @@ if (room == rmCombat)
 				changeRoom = true;
 			}
 		}
+	} else
+	{
+		SetAlarm(3, 3 * room_speed);	
 	}
-
 }
