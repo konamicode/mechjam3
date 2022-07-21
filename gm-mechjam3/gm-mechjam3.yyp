@@ -135,6 +135,7 @@
     {"id":{"name":"sprWeap_idle_beamRifle","path":"sprites/sprWeap_idle_beamRifle/sprWeap_idle_beamRifle.yy",},"order":1,},
     {"id":{"name":"__input_source_relinquish","path":"scripts/__input_source_relinquish/__input_source_relinquish.yy",},"order":28,},
     {"id":{"name":"space_bg_01","path":"sprites/space_bg_01/space_bg_01.yy",},"order":0,},
+    {"id":{"name":"rmHowToPlay","path":"rooms/rmHowToPlay/rmHowToPlay.yy",},"order":7,},
     {"id":{"name":"sqMech_attack_beamSaber","path":"sequences/sqMech_attack_beamSaber/sqMech_attack_beamSaber.yy",},"order":1,},
     {"id":{"name":"input_keyboard_check_pressed","path":"scripts/input_keyboard_check_pressed/input_keyboard_check_pressed.yy",},"order":1,},
     {"id":{"name":"input_accessibility_verb_toggle_set","path":"scripts/input_accessibility_verb_toggle_set/input_accessibility_verb_toggle_set.yy",},"order":7,},
@@ -322,6 +323,7 @@
     {"id":{"name":"input_binding_remove","path":"scripts/input_binding_remove/input_binding_remove.yy",},"order":6,},
     {"id":{"name":"objCombatManager","path":"objects/objCombatManager/objCombatManager.yy",},"order":5,},
     {"id":{"name":"Map","path":"scripts/Map/Map.yy",},"order":1,},
+    {"id":{"name":"objHowToPlayManager","path":"objects/objHowToPlayManager/objHowToPlayManager.yy",},"order":11,},
     {"id":{"name":"spr_LrgRibbnNaked","path":"sprites/spr_LrgRibbnNaked/spr_LrgRibbnNaked.yy",},"order":3,},
     {"id":{"name":"sndMelee02","path":"sounds/sndMelee02/sndMelee02.yy",},"order":5,},
     {"id":{"name":"sprPlayer_idle_beamRifle","path":"sprites/sprPlayer_idle_beamRifle/sprPlayer_idle_beamRifle.yy",},"order":4,},
@@ -385,6 +387,7 @@
     {"roomId":{"name":"rmCombat","path":"rooms/rmCombat/rmCombat.yy",},},
     {"roomId":{"name":"rmGameEnd","path":"rooms/rmGameEnd/rmGameEnd.yy",},},
     {"roomId":{"name":"rmSequenceTest","path":"rooms/rmSequenceTest/rmSequenceTest.yy",},},
+    {"roomId":{"name":"rmHowToPlay","path":"rooms/rmHowToPlay/rmHowToPlay.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
