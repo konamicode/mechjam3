@@ -70,12 +70,10 @@ function EndCombat(result) {
 					curUnit.actorState = state.stun;
 					if(curUnit.hasPilot == true)
 					{
-						if(AttemptToAddRival(curUnit, result))
+						currentRivalName = AttemptToAddRival(curUnit, result);
+						if(currentRivalName != noone)
 						{
-							//var rival = ds_list_find_value(rivalList, ds_list_size(rivalList)-1);
-							var rival = ds_map_find_last(rivalMap);
-							currentRivalName = rival.name;
-							rivalDialogComment = objManager.dialogData.GetDialog(rival.personality, enmContext.rivalSpawnedPlayerDefeat);
+							rivalDialogComment = objManager.dialogData.GetDialog(ds_map_find_value(rivalMap, currentRivalName).personality, enmContext.rivalSpawnedPlayerDefeat);
 							show_debug_message(rivalDialogComment);
 							break;
 						}
