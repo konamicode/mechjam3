@@ -1,5 +1,5 @@
 {
-  "option_windowsuap_display_name": "Created with GameMaker",
+  "option_windowsuap_display_name": "Rivals in the Skies",
   "option_windowsuap_package_name": "YourPackageName",
   "option_windowsuap_publisher_display_name": "YourPublisherName",
   "option_windowsuap_package_display_name": "YourPackageDisplayName",
