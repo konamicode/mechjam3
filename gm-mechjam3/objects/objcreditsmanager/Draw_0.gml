@@ -39,13 +39,16 @@ if(isActive)
 	draw_text(room_width/2, 230, "Libraries Used");
 	
 	draw_set_color(c_white);
-	draw_text(110, 250, "Input");
-	draw_text(110, 270, "@JujuAdams");
+	draw_text(90, 250, "Input");
+	draw_text(90, 270, "@JujuAdams");
 	
-	draw_text(320, 250, "Vintage Anime SFX");
-	draw_text(320, 270, "Moon Echo Audio");
+	draw_text(220, 250, "Vintage Anime SFX");
+	draw_text(220, 270, "Moon Echo Audio");
 	
-	draw_text(520, 250, "Modular Mecha");
-	draw_text(520, 270, "Derek Brown");
+	draw_text(390, 250, "Modular Mecha SFX");
+	draw_text(390, 270, "Derek Brown");
+	
+	draw_text(540, 250, "Charybdis Font");
+	draw_text(540, 270, "Tepid Monkey");
 	
 }

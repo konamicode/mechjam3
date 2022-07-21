@@ -3,7 +3,7 @@
 function Init(){
 	randomize();
 	global.debug = true;
-	
+	draw_set_font(fntCharybdis);
 }
 
 global.functionMap = ds_map_create();

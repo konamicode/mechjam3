@@ -244,6 +244,7 @@
     {"id":{"name":"battleMusic","path":"sounds/battleMusic/battleMusic.yy",},"order":0,},
     {"id":{"name":"input_swap_gamepad_ab","path":"scripts/input_swap_gamepad_ab/input_swap_gamepad_ab.yy",},"order":5,},
     {"id":{"name":"input_xy","path":"scripts/input_xy/input_xy.yy",},"order":3,},
+    {"id":{"name":"fntCharybdis","path":"fonts/fntCharybdis/fntCharybdis.yy",},"order":0,},
     {"id":{"name":"input_player_reset","path":"scripts/input_player_reset/input_player_reset.yy",},"order":3,},
     {"id":{"name":"input_verb_group_active","path":"scripts/input_verb_group_active/input_verb_group_active.yy",},"order":2,},
     {"id":{"name":"input_binding_is_valid","path":"scripts/input_binding_is_valid/input_binding_is_valid.yy",},"order":5,},
@@ -468,6 +469,7 @@
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"enemyCatalogue.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"weapons.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"dialog.json","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"Charybdis.ttf","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.5.1.16",
