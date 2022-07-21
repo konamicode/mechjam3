@@ -14,7 +14,7 @@ if (room == rmCombat)
 			spawnedRival = GetRandomRival();
 		}
 		layer_sequence_destroy(seqRivalAppears);
-		ds_list_add(enemyList, SpawnRivalFromData(400, 160, spawnedRival));
+		ds_list_add(enemyList, SpawnRivalFromData(irandom_range(floor(room_width*.1), floor(room_width*.9)), irandom_range(floor(room_height*.1), floor(room_height*.9)), spawnedRival));
 		currentRivalName = spawnedRival.name;
 		rivalDialogComment = objManager.dialogData.GetDialog(spawnedRival.personality, dialogContext);
 		objMusicManager.RivalArrival();
