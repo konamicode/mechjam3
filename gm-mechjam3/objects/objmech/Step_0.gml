@@ -91,7 +91,7 @@ else {
 			{
 				action = "idle";
 				//SelectWeapon();
-				MoveWithinRange(weapon.range.minDist, objPlayer);
+				MoveWithinRange(weapon.range.minDist, objPlayer, GetTargetDirection(objPlayer));
 			}
 		break;
 		}

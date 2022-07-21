@@ -41,13 +41,14 @@ function DistanceToTarget(_target) {
 		return undefined;
 }
 
-function MoveWithinRange(_range, _target) {
+function MoveWithinRange(_range, _target, _dir) {
 	var _hor = sign(_target.x - x);
 	var _ver = sign(_target.y - y);
 	var _len = point_distance(0, 0, _hor, _ver);
-	if (_len > 0) {
-	    x += moveSpeed * _hor / _len;
-	    y += moveSpeed * _ver / _len;
+	
+	if (_len > _range) {
+	    x += lengthdir_x(_len, _dir);
+	    y += lengthdir_y(_len, _dir);
 	}
 }
 
