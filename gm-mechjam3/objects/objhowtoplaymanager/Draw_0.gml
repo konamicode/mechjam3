@@ -49,5 +49,5 @@ if(isActive)
 		}
 	}
 	draw_set_halign(fa_center);
-	draw_text(room_width/2, 340, "Page "+string(page+1)+"/"+string(pageCount));
+	draw_text(room_width/2, 340, "Page "+string(page+1)+"/"+string(pageCount+1));
 }
