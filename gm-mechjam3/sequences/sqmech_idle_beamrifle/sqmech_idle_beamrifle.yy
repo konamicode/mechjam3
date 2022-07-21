@@ -86,7 +86,7 @@
     "path": "folders/Sequences.yy",
   },
   "resourceVersion": "1.4",
-  "name": "sqPlayer_idle_beamRifle",
+  "name": "sqMech_idle_beamRifle",
   "tags": [],
   "resourceType": "GMSequence",
 }

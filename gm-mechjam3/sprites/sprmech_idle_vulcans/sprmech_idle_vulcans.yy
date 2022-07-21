@@ -93,8 +93,8 @@
     "resourceType": "GMNineSliceData",
   },
   "parent": {
-    "name": "Placeholder",
-    "path": "folders/Sprites/Placeholder.yy",
+    "name": "Mechs",
+    "path": "folders/Sprites/Mechs.yy",
   },
   "resourceVersion": "1.0",
   "name": "sprMech_idle_vulcans",

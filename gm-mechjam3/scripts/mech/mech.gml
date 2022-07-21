@@ -9,7 +9,7 @@ function Component(_type, _label, _creator, _onDestroy=noone, _destroyParams=[])
 	destroyParams = _destroyParams;
 }
 
-function Mech(_body = "Enemy" ) constructor {
+function Mech(_body = "Mech" ) constructor {
 
 	body = _body;
 	weapons = ds_list_create();
@@ -83,7 +83,7 @@ function AddEnemyFromCatalog(_x, _y, mechStruct){
 function AddEnemyFromData(_x, _y, _frame = "Mech", enemyType = "objMech", _weapons = [] ) {
 	//this function should ideally become redundant as we move entirely out of hardcoded/non-Data enemies
 	var enemy = new Mech(_frame);
-	if (array_length(mechStruct.weapons) > 0) {
+	if (array_length(_weapons) > 0) {
 		for (var i = 0; i < array_length(_weapons); i++)
 		{
 			enemy.AddWeapon(_weapons[i]);

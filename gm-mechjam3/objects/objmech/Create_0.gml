@@ -93,7 +93,9 @@ function ChangeAnimation(animString, resetIndex = true) {
 		animString = body + "_" + action + "_" + fallbackWeaponName ;
 		newSprite = asset_get_index("spr" + animString);
 	}
-	var newSeq = asset_get_index("sq" + animString);
+	
+	animString = "sqMech_" + action + "_" + weaponName;
+	var newSeq = asset_get_index(animString);
 	if (newSeq != -1 )
 		ChangeHitbox(newSeq);
 	if (newSprite != -1 ) {

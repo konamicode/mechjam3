@@ -18,7 +18,8 @@ if (room == rmCombat) {
 		enemyPool = ds_list_create();
 		enemyPool = GetEnemiesForLevel();
 		spawnList = ds_list_create();
-		if (enemyPool != undefined) {
+		var manualSpawn = true;
+		if (enemyPool != undefined) && (!manualSpawn) {
 			while (budget >= 0) {
 					//add enemies to spawn list	
 					_enemy = enemyPool[| irandom(ds_list_size(enemyPool) - 1)];
@@ -39,9 +40,9 @@ if (room == rmCombat) {
 			}
 		}
 		else {
-			ds_list_add(enemyList, AddEnemyFromData(448, 128, "Drone", objDrone, ["beamGun"]));
-			ds_list_add(enemyList, AddEnemyFromData(448, 288, "Drone", objDrone, ["bazooka"]));
-			ds_list_add(enemyList, AddEnemyFromData(540, 160, "Enemy", objMech, ["beamSaber"]));
+			//ds_list_add(enemyList, AddEnemyFromData(448, 128, "Drone", objDrone, ["beamGun"]));
+			//ds_list_add(enemyList, AddEnemyFromData(448, 288, "Drone", objDrone, ["bazooka"]));
+			ds_list_add(enemyList, AddEnemyFromData(540, 160, "Mech", objMech, ["bazooka"]));
 		}
 	}
 
