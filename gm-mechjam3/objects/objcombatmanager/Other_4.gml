@@ -42,7 +42,7 @@ if (room == rmCombat) {
 		else {
 			//ds_list_add(enemyList, AddEnemyFromData(448, 128, "Drone", objDrone, ["beamGun"]));
 			//ds_list_add(enemyList, AddEnemyFromData(448, 288, "Drone", objDrone, ["bazooka"]));
-			ds_list_add(enemyList, AddEnemyFromData(540, 160, "Mech", objMech, ["bazooka"]));
+			ds_list_add(enemyList, AddEnemyFromData(540, 160, "Mech", objMech, ["beamGun"]));
 		}
 	}
 
