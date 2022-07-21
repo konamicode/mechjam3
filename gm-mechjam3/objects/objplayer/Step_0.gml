@@ -74,31 +74,8 @@ if (actorState == state.dead) {
 			alarm[1] = weapon.burstRate * room_speed;
 			canAttack = false;
 			ammoCounter -= 1;
-			var _sprite = GetAnimationName();
-			if (weapon.animSet != "none") {
-				ChangeAnimation(_sprite);
-			} else {
-				image_index = 0;
-				var _x, _y;
-				try {
-					var _component = animationHitboxData[? weapon.position];
-					var _frame = GetHitboxAnimFrame(animationHitboxData, sprite_index, image_index);
-					var _frameData = _component[? _frame];
-					_x = _frameData[1];
-					_y = _frameData[2];
-				}
-				catch(_exception) {
-					_x = 0;
-					_y = 0;
 
-				}
-				FireWeapon(x + _x,  y + _y, weapon.attack, {image_angle:GetAimDirection(), aimed: aiming});
-				switch(weaponName) {
-					case "vulcans":
-						instance_create_layer(x + _x, y + _y, "FX", objFX, {x_offsetStart: _x, y_offsetStart: _y, follow: true, creator: other.id, image_xscale: other.image_xscale, sprite_index: sprFX_attack_vulcans});
-					break;
-				}
-			}
+			DoAttack();
 		}
 		
 		if( ammoCounter == 0) {
@@ -110,8 +87,6 @@ if (actorState == state.dead) {
 		
 	}
 	
-	
-	
 	if input_check_pressed("action") {
 		action = "attack";
 		var idx = GetWeaponByName("beamSaber", weapons)
@@ -121,7 +96,35 @@ if (actorState == state.dead) {
 			ChangeAnimation(GetAnimationName());
 		}
 	}
+	
+	if input_check("special") && canAttack {
+		action = "attack";		
+		if (ds_list_size(subweapons) > 0) {
+			weapon = subweapons[| subweaponIdx];
+			weaponName = weapon.label;		
+			subweaponAmmo = weapon.clipSize;
+			fireSubwpn = true;
+		}
+	}	
 }
+
+if (fireSubwpn) {
+	if (subweaponAmmo > 0) && canAttack {		
+		action = "attack";
+		alarm[1] = weapon.burstRate * room_speed;
+		subweaponAmmo -= 1;
+		show_debug_message("boom!");
+		DoAttack();
+		canAttack = false;
+	}
+	else if ( subweaponAmmo = 0) {	
+		canAttack = false;
+		alarm[1] = (weapon.fireRate - weapon.burstRate) * room_speed;
+		fireSubwpn = false;
+		DeductStamina(weapon.cost);
+	}
+}
+
 
 if input_check_pressed("subLeft") {
 	if ds_list_size(subweapons) > 0 {
@@ -130,7 +133,6 @@ if input_check_pressed("subLeft") {
 		else
 			subweaponIdx = ds_list_size(subweapons) - 1 ;		
 	}
-	
 }
 
 if input_check_pressed("subRight") {
@@ -140,5 +142,4 @@ if input_check_pressed("subRight") {
 		else
 			subweaponIdx = 0;
 	}
-		
 }

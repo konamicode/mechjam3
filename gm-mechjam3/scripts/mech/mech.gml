@@ -114,7 +114,7 @@ function CreatePlayer(_x, _y, playerData) {
 	player.AddWeapon("beamSaber");
 	player.AddSubWeapon("vulcans");
 	player.AddSubWeapon("bazooka");
-	player.AddSubWeapon("beamCannon");
+	//player.AddSubWeapon("beamCannon");
 	//for (var i = 0; i < array_length(player.subWeapons); i++ ) {
 			
 	//}
