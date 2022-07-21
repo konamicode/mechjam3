@@ -5,10 +5,10 @@ if (actorState == state.dead) {
 	
 } else {
 	
-	var _left = input_check("left");
-	var _right = input_check("right");
-	var _up = input_check("up");
-	var _down = input_check("down");
+	var _left = input_check("moveLeft");
+	var _right = input_check("moveRight");
+	var _up = input_check("moveUp");
+	var _down = input_check("moveDown");
 
 	var _hor = _right - _left;
 	var _ver = _down - _up;
@@ -123,3 +123,22 @@ if (actorState == state.dead) {
 	}
 }
 
+if input_check_pressed("subLeft") {
+	if ds_list_size(subweapons) > 0 {
+		if subweaponIdx > 0
+			subweaponIdx -= 1;
+		else
+			subweaponIdx = ds_list_size(subweapons) - 1 ;		
+	}
+	
+}
+
+if input_check_pressed("subRight") {
+	if ds_list_size(subweapons) > 0 {
+		if subweaponIdx < ( ds_list_size(subweapons) -1)
+			subweaponIdx += 1;
+		else
+			subweaponIdx = 0;
+	}
+		
+}

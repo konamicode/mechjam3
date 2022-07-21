@@ -12,6 +12,8 @@ aiming = false;
 aimCounter = 0;
 canAttack = true;
 
+subweaponIdx = 0;
+
 function GetAimDirection() {
 	var dir = undefined;
 

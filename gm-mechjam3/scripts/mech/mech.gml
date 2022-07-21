@@ -15,6 +15,7 @@ function Mech(_body = "Mech" ) constructor {
 	weapons = ds_list_create();
 	weakpoints = ds_list_create();
 	defenses = ds_list_create();
+	subweapons = ds_list_create();
 	
 	function Cleanup() {
 		ds_list_destroy(weapons);
@@ -40,6 +41,10 @@ function Mech(_body = "Mech" ) constructor {
 	
 	function AddWeapon(weapon) {
 		ds_list_add(weapons, objCombatManager.weaponMap[? weapon]);
+	}
+	
+	function AddSubWeapon(weapon) {
+		ds_list_add(subweapons, objCombatManager.weaponMap[? weapon]);
 	}
 	
 	function CopyWeapons(weaponList)
@@ -107,6 +112,9 @@ function CreatePlayer(_x, _y, playerData) {
 	player.rangedPower = playerData.rngAttackPower;
 	player.AddWeapon("beamRifle");
 	player.AddWeapon("beamSaber");
+	player.AddSubWeapon("vulcans");
+	player.AddSubWeapon("bazooka");
+	player.AddSubWeapon("beamCannon");
 	//for (var i = 0; i < array_length(player.subWeapons); i++ ) {
 			
 	//}

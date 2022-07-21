@@ -17,6 +17,11 @@ INPUT_DEFAULT_PROFILES = {
         down:  [input_binding_key(vk_down),  input_binding_key("S")],
         left:  [input_binding_key(vk_left),  input_binding_key("A")],
         right: [input_binding_key(vk_right), input_binding_key("D")],
+		
+		moveUp:    [input_binding_key(vk_up),    input_binding_key("W")],
+        moveDown:  [input_binding_key(vk_down),  input_binding_key("S")],
+        moveLeft:  [input_binding_key(vk_left),  input_binding_key("A")],
+        moveRight: [input_binding_key(vk_right), input_binding_key("D")],
         
         accept:  input_binding_key(vk_enter),
         cancel:  input_binding_key(vk_escape),
@@ -29,6 +34,9 @@ INPUT_DEFAULT_PROFILES = {
         shoot: input_binding_mouse_button(mb_left),
         aim: input_binding_mouse_button(mb_right),
 		action: input_binding_key(vk_space),
+		special: input_binding_key("F"),
+		subLeft: input_binding_key("Q"),
+		subRight: input_binding_key("E"),
         pause: input_binding_key(vk_escape),
     },
     
@@ -38,19 +46,27 @@ INPUT_DEFAULT_PROFILES = {
         down:  [input_binding_gamepad_axis(gp_axislv, false), input_binding_gamepad_button(gp_padd)],
         left:  [input_binding_gamepad_axis(gp_axislh, true),  input_binding_gamepad_button(gp_padl)],
         right: [input_binding_gamepad_axis(gp_axislh, false), input_binding_gamepad_button(gp_padr)],
+		
+		moveLeft:	[input_binding_gamepad_axis(gp_axislv, true) ],
+		moveRight:	[input_binding_gamepad_axis(gp_axislv, false)],
+		moveUp:		[input_binding_gamepad_axis(gp_axislh, true) ],
+		moveDown:	[input_binding_gamepad_axis(gp_axislh, false)],
         
         accept:  input_binding_gamepad_button(gp_start),
         cancel:  input_binding_gamepad_button(gp_select),
-        action:  input_binding_gamepad_button(gp_face1),
-        special: input_binding_gamepad_button(gp_face2),
-        
+		
         aim_up:    input_binding_gamepad_axis(gp_axisrv, true),
         aim_down:  input_binding_gamepad_axis(gp_axisrv, false),
         aim_left:  input_binding_gamepad_axis(gp_axisrh, true),
         aim_right: input_binding_gamepad_axis(gp_axisrh, false),
         
 		shoot:     [ input_binding_gamepad_button(gp_shoulderrb)],
-        
+        action:  input_binding_gamepad_button(gp_shoulderr),
+        special: input_binding_gamepad_button(gp_shoulderl),
+    //    defense: input_binding_gamepad_button(gp_shoulderlb), 
+	
+		subLeft:  [  input_binding_gamepad_button(gp_padl), input_binding_gamepad_button(gp_face2)],
+		subRight: [  input_binding_gamepad_button(gp_padr), input_binding_gamepad_button(gp_face3)],
 		aim: input_binding_gamepad_button(gp_shoulderlb),
 
         pause: input_binding_gamepad_button(gp_start),
