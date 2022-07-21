@@ -7,7 +7,7 @@ spawnRival = false;
 spawnedRival = noone;
 rivalSpawnChance = .67;
 isFinalBattle = false;
-
+mpGrid = noone;
 
 seqRivalAppears = -1;
 seqRivalDialog = -1;

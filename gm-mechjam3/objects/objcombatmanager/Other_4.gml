@@ -5,6 +5,8 @@ if (room == rmMap) {
 if (room == rmCombat) {
 	nextRoom = noone;
 	
+	mpGrid = mp_grid_create(0, 0, room_width/30, room_height/30, 30, 30); 
+	
 	CreatePlayer(87, 108, objManager.gameData.player);
 	
 	if(isFinalBattle)
