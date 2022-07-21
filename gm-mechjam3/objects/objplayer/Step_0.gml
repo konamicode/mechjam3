@@ -1,7 +1,8 @@
-if (actorState == state.dead) {
-	
+event_inherited();
 
-	
+if (actorState == state.dead) 
+{
+	objCombatManager.EndCombat(false);
 	
 } else {
 	

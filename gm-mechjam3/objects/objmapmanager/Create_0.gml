@@ -196,6 +196,7 @@ function PlayerVictory()
 
 function PlayerFailure()
 {
+	show_debug_message("FAILURE");
 	playerStartX = playerLastX;
 	playerStartY = playerLastY;
 	

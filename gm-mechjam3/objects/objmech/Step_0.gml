@@ -42,56 +42,59 @@ else {
 		case state.stun:
 		break;
 		default: 
-			var _dir = sign(objPlayer.x - x);
-			if (_dir != 0)
-				image_xscale = _dir;
+			if(objPlayer != noone and objPlayer.actorState != state.dead)
+			{
+				var _dir = sign(objPlayer.x - x);
+				if (_dir != 0)
+					image_xscale = _dir;
 		
-			if between(DistanceToTarget(objPlayer), weapon.range.minDist, weapon.range.maxDist){
-				if (canAttack) {
-					aimDir = GetTargetDirection(objPlayer);
-					if (ammoCounter > 0) {
-						action = "attack";
-						alarm[1] = weapon.burstRate * room_speed;
-						canAttack = false;
-						ammoCounter -= 1;
+				if between(DistanceToTarget(objPlayer), weapon.range.minDist, weapon.range.maxDist){
+					if (canAttack) {
+						aimDir = GetTargetDirection(objPlayer);
+						if (ammoCounter > 0) {
+							action = "attack";
+							alarm[1] = weapon.burstRate * room_speed;
+							canAttack = false;
+							ammoCounter -= 1;
 
-						var _sprite = GetAnimationName();
-						if (weapon.animSet != "none") {
-							ChangeAnimation(_sprite);
-						} else {
-							image_index = 0;
-							var _x, _y;
-							try {
-								var _component = animationHitboxData[? weapon.position];
-								var _frame = GetHitboxAnimFrame(animationHitboxData, sprite_index, image_index);
-								var _frameData = _component[? _frame];
-								_x = _frameData[1];
-								_y = _frameData[2];
-							}
-							catch(_exception) {
-								_x = 0;
-								_y = 0;
+							var _sprite = GetAnimationName();
+							if (weapon.animSet != "none") {
+								ChangeAnimation(_sprite);
+							} else {
+								image_index = 0;
+								var _x, _y;
+								try {
+									var _component = animationHitboxData[? weapon.position];
+									var _frame = GetHitboxAnimFrame(animationHitboxData, sprite_index, image_index);
+									var _frameData = _component[? _frame];
+									_x = _frameData[1];
+									_y = _frameData[2];
+								}
+								catch(_exception) {
+									_x = 0;
+									_y = 0;
 
-							}
-							//fire vulcans?
+								}
+								//fire vulcans?
 							
-							FireWeapon(x + _x,  y + _y, weapon.attack, {image_angle:GetTargetDirection(objPlayer), aimed: aiming});
+								FireWeapon(x + _x,  y + _y, weapon.attack, {image_angle:GetTargetDirection(objPlayer), aimed: aiming});
+							}
+						}
+		
+						if( ammoCounter == 0) {
+							canAttack = false;
+							alarm[1] = (weapon.fireRate - weapon.burstRate) * room_speed;
+							ammoCounter = weapon.clipSize;
+							DeductStamina(weapon.cost);
 						}
 					}
-		
-					if( ammoCounter == 0) {
-						canAttack = false;
-						alarm[1] = (weapon.fireRate - weapon.burstRate) * room_speed;
-						ammoCounter = weapon.clipSize;
-						DeductStamina(weapon.cost);
-					}
 				}
-			}
-			else
-			{
-				action = "idle";
-				//SelectWeapon();
-				MoveWithinRange(weapon.range.minDist, objPlayer, GetTargetDirection(objPlayer));
+				else
+				{
+					action = "idle";
+					//SelectWeapon();
+					MoveWithinRange(weapon.range.minDist, objPlayer, GetTargetDirection(objPlayer));
+				}
 			}
 		break;
 		}

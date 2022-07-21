@@ -161,6 +161,10 @@ function SpawnRivalFromData(_x, _y, rivalData)
 
 function GenerateRivalData(mech, initialResult)
 {
+	show_debug_message(mech);
+		show_debug_message(mech.hasPilot);
+		show_debug_message(mech.body);
+		
 	rivalData = {
 		
 		maxHp : mech.maxHp,

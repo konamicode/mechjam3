@@ -66,15 +66,18 @@ function EndCombat(result) {
 			{
 				for(i = 0; i < ds_list_size(enemyList); i++)
 				{
-					if(ds_list_find_value(enemyList, i).hasPilot == true)
+					var curUnit = ds_list_find_value(enemyList, i);
+					curUnit.actorState = state.stun;
+					if(curUnit.hasPilot == true)
 					{
-						if(AttemptToAddRival(ds_list_find_index(enemyList, 0), result))
+						if(AttemptToAddRival(curUnit, result))
 						{
 							//var rival = ds_list_find_value(rivalList, ds_list_size(rivalList)-1);
 							var rival = ds_map_find_last(rivalMap);
 							currentRivalName = rival.name;
 							rivalDialogComment = objManager.dialogData.GetDialog(rival.personality, enmContext.rivalSpawnedPlayerDefeat);
 							show_debug_message(rivalDialogComment);
+							break;
 						}
 						break;
 					}
