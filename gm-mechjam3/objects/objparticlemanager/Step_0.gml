@@ -10,5 +10,5 @@ if ( room == rmParticleTester ) {
 	}
 }
 
-part_emitter_stream(global.partSystemBG, global.emitBGBlasts, global.partBGBeam, 1);
-part_emitter_stream(global.partSystemBG, global.emitBGExplosions, global.partBGExplosion, 1);
+part_emitter_stream(global.partSystemBG, global.emitBGBlasts, global.partBGBeam, -3);
+part_emitter_stream(global.partSystemBG, global.emitBGExplosions, global.partBGExplosion, -5);
