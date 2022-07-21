@@ -46,6 +46,7 @@ else {
 		
 			if between(DistanceToTarget(objPlayer), weapon.range.minDist, weapon.range.maxDist){
 				if (canAttack) {
+					aimDir = GetTargetDirection(objPlayer);
 					if (ammoCounter > 0) {
 						action = "attack";
 						alarm[1] = weapon.burstRate * room_speed;
