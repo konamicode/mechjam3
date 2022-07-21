@@ -67,8 +67,7 @@ function EndCombat(result) {
 				for(i = 0; i < ds_list_size(enemyList); i++)
 				{
 					var curUnit = ds_list_find_value(enemyList, i);
-					//curUnit.actorState = state.stun;
-					if(curUnit.hasPilot == true)
+					if(instance_exists(curUnit) and curUnit.hasPilot == true)
 					{
 						currentRivalName = AttemptToAddRival(curUnit, result);
 						if(currentRivalName != noone)
