@@ -109,6 +109,7 @@
     {"id":{"name":"__input_binding_get_label","path":"scripts/__input_binding_get_label/__input_binding_get_label.yy",},"order":3,},
     {"id":{"name":"input_player_ghost_get","path":"scripts/input_player_ghost_get/input_player_ghost_get.yy",},"order":8,},
     {"id":{"name":"PlayerHelper","path":"scripts/PlayerHelper/PlayerHelper.yy",},"order":7,},
+    {"id":{"name":"sndGunfireBurst","path":"sounds/sndGunfireBurst/sndGunfireBurst.yy",},"order":6,},
     {"id":{"name":"input_player_connected","path":"scripts/input_player_connected/input_player_connected.yy",},"order":3,},
     {"id":{"name":"input_system_reset","path":"scripts/input_system_reset/input_system_reset.yy",},"order":9,},
     {"id":{"name":"input_gamepad_value","path":"scripts/input_gamepad_value/input_gamepad_value.yy",},"order":10,},

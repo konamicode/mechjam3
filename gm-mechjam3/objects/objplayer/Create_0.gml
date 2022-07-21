@@ -58,6 +58,8 @@ function DoAttack() {
 		
 		switch(weaponName) {
 			case "vulcans":
+				if !audio_is_playing(sndGunfireBurst)
+					PlaySoundByTag("vulcans");
 				instance_create_layer(x + _x, y + _y, "FX", objFX, {x_offsetStart: _x, y_offsetStart: _y, follow: true, creator: other.id, image_xscale: other.image_xscale, sprite_index: sprFX_attack_vulcans});
 			break;
 		}
