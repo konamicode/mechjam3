@@ -31,9 +31,10 @@ weapPosY = 0;
 if (ds_list_size(weapons) > 0) {
 	weapon = weapons[| 0];
 	weaponName = weapon.label;
+	fallbackWeaponName = weapon.animSet;
 	if body == "Drone"
 		fallbackWeaponName = "beamGun";
-	else fallbackWeaponName =  "beamSaber";
+	//else fallbackWeaponName =  "beamSaber";
 } else {
 	if body == "Drone" {
 		weapon = weaponMap[? "beamGun"];
@@ -46,7 +47,7 @@ if (ds_list_size(weapons) > 0) {
 
 function GetAnimationName() {
 
-	if (weapon.animSet == "none") 
+	if (weapon.animSet == "none")  || ( weapon.animSet != weapon.label)
 		return body + "_" + action + "_" + fallbackWeaponName ;
 	else
 	return body + "_" + action + "_" + weaponName;
@@ -85,7 +86,7 @@ function ChangeHitbox(_newSequence) {
 }
 
 function ChangeAnimation(animString, resetIndex = true) {
-	if (weapon.animSet == "none") 
+	if (weapon.animSet == "none") || ( weapon.animSet != weapon.label)
 		animString = body + "_" + action + "_" + fallbackWeaponName ;
 	
 	var newSprite = asset_get_index("spr" + animString);
@@ -94,7 +95,7 @@ function ChangeAnimation(animString, resetIndex = true) {
 		newSprite = asset_get_index("spr" + animString);
 	}
 	
-	animString = "sqMech_" + action + "_" + weaponName;
+	animString = "sqMech_" + action + "_" +  weapon.animSet;
 	var newSeq = asset_get_index(animString);
 	if (newSeq != -1 )
 		ChangeHitbox(newSeq);
@@ -118,7 +119,7 @@ function CheckAddFallback(map) {
 
 function DrawWeapon() {
 	var animTag;
-	if (weapon.animSet == "none") 
+	if (weapon.animSet == "none") || (weapon.animSet != weaponName)
 		animTag = "weapon_" + action + "_" + string_lower(fallbackWeaponName );
 		
 	else
@@ -187,7 +188,7 @@ function DrawWeapon() {
 			}
 		} 	
 		
-		var weaponSprite = asset_get_index("sprWeap_" + action + "_" + weaponName);
+		var weaponSprite = asset_get_index("sprWeap_" + action + "_" + weapon.animSet);
 		weapPosX = framePosX;
 		weapPosY = framePosY;
 		if (weaponSprite != -1 ) {
