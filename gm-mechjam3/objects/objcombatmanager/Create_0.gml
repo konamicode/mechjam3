@@ -73,27 +73,30 @@ function EndCombat(result) {
 						if(currentRivalName != noone)
 						{
 							rivalDialogComment = objManager.dialogData.GetDialog(ds_map_find_value(rivalMap, currentRivalName).personality, enmContext.rivalSpawnedPlayerDefeat);
-							show_debug_message(rivalDialogComment);
+							PlayDialogSeq();
 							break;
 						}
 						break;
 					}
 				}
-			}
+			} 
+			if(spawnedRival != noone)
+			{
+				ds_list_add(ds_map_find_value(rivalMap, spawnedRival.name).battleRecord, result);
+				rivalDialogComment = objManager.dialogData.GetDialog(ds_map_find_value(rivalMap, currentRivalName).personality, enmContext.rivalSpawnedPlayerDefeat);
+				PlayDialogSeq();
+				spawnedRival = noone;
+			}			
 		}
-		if(spawnedRival != noone)
-		{
-			ds_list_add(ds_map_find_value(rivalMap, spawnedRival.name).battleRecord, result);
-			spawnedRival = noone;
-		}
+
 		SetAlarm(0, room_speed * 3);
 	}
-	if(spawnedRival != noone)
-	{
-		ds_list_add(ds_map_find_value(rivalMap, spawnedRival.name).battleRecord, result);
-		spawnedRival = noone;
-	}
-	SetAlarm(0, room_speed * 2);
+	//if(spawnedRival != noone)
+	//{
+	//	ds_list_add(ds_map_find_value(rivalMap, spawnedRival.name).battleRecord, result);
+	//	spawnedRival = noone;
+	//}
+	//SetAlarm(0, room_speed * 2);
 
 }
 

@@ -39,7 +39,7 @@ if (room == rmCombat)
 			//You win!
 
 			if (!changeRoom) {
-				if (spawnRival == true and spawnedRival == noone)
+				if (spawnRival == true and spawnedRival != noone)
 				{
 					LevelRival(spawnedRival);
 				}
@@ -60,7 +60,7 @@ if (room == rmCombat)
 		
 	} else if !instance_exists(objPlayer) && layer_sequence_is_finished(seqRivalDialog) {
 		if (!changeRoom) {
-			if (spawnRival == true and spawnedRival == noone)
+			if (spawnRival == true and spawnedRival != noone)
 			{
 				LevelRival(spawnedRival);
 			}

@@ -3,7 +3,7 @@ event_inherited();
 if (actorState == state.dead) 
 {
 	objCombatManager.EndCombat(false);
-	
+
 } else {
 	
 	var _left = input_check("moveLeft");
