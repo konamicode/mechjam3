@@ -15,6 +15,9 @@ function PlaySoundByTag(_tag) {
 			
 		}
 		break;
+		case "bazooka":
+			_sound = sndBazooka;
+		break;
 		case "vulcans":
 			_sound = sndGunfireBurst;
 		break;
