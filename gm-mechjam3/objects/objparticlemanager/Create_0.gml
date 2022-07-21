@@ -21,6 +21,7 @@ part_type_direction(global.partBGExplosion, 0, 359, 0, 0);
 part_type_life(global.partBGExplosion, 7, 45); 
 
 global.partSystemBG = part_system_create();
+global.partSystem = part_system_create();
 //part_system_draw_order( global.partSystem, 0 ); 
 part_system_depth(global.partSystemBG, 400);
 ////part_system_depth(global.partSystem, 50);
@@ -31,6 +32,9 @@ part_system_depth(global.partSystemBG, 400);
 
 global.emitBGExplosions = part_emitter_create(global.partSystemBG);
 global.emitBGBlasts = part_emitter_create(global.partSystemBG);
+
+SetupParticleSparks();
+
 
 part_emitter_region(global.partSystemBG , global.emitBGExplosions, 0, screenWidth, 0, screenHeight , ps_shape_rectangle, ps_distr_gaussian);
 part_emitter_region(global.partSystemBG , global.emitBGBlasts, 0, screenWidth, 0, screenHeight , ps_shape_rectangle, ps_distr_gaussian);

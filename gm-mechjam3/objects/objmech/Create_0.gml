@@ -3,7 +3,7 @@ event_inherited();
 animationHitboxData = undefined;
 hasPilot = true;
 
-
+emitters = [];
 
 ////frame = instance_create_layer(x, y, "Instances", objComponent, { sprite_index : frame, creator: id } );
 
