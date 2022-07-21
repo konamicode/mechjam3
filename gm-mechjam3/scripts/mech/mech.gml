@@ -256,12 +256,26 @@ function GenerateRivalName()
 		"Steve",
 		"Fey",
 		"James",
+		"Ishmael",
+		"Yaz",
+		"Matte",
+		"Smith",
+		"Bolt"
 
 	];
 	lastNames = [
 		"Rynders",
 		"Harkness",
-		"Youngman"
+		"Youngman",
+		"Fodder",
+		"Calmington",
+		"Melville",
+		"Tomino",
+		"Yatate",
+		"Bidan",
+		"Ikari",
+		"Torrington",
+		"O'Neill"
 	];
 	var randomName = "";
 	var nameExists = true;
