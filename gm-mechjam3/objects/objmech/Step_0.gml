@@ -11,6 +11,7 @@ if (actorState == state.dead) {
 				{
 					//var rival = ds_list_find_value(objCombatManager.rivalList, ds_list_size(objCombatManager.rivalList)-1);
 					var rival = objCombatManager.rivalMap[? rivalName];
+					objCombatManager.currentRivalName = rivalName;
 					objCombatManager.rivalDialogComment = objManager.dialogData.GetDialog(rival.personality, enmContext.rivalSpawnedPlayerVictory);
 					with (objCombatManager)
 					{
@@ -20,6 +21,7 @@ if (actorState == state.dead) {
 			} else
 			{
 				var rival = objCombatManager.rivalMap[? name];
+				objCombatManager.currentRivalName = rivalName;				
 				objCombatManager.rivalDialogComment = objManager.dialogData.GetDialog(rival.personality, enmContext.playerBeatsRival);
 				with (objCombatManager)
 				{

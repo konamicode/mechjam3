@@ -15,6 +15,7 @@ if (room == rmCombat)
 		}
 		layer_sequence_destroy(seqRivalAppears);
 		ds_list_add(enemyList, SpawnRivalFromData(400, 160, spawnedRival));
+		currentRivalName = spawnedRival.name;
 		rivalDialogComment = objManager.dialogData.GetDialog(spawnedRival.personality, dialogContext);
 		objMusicManager.RivalArrival();
 		PlayDialogSeq();

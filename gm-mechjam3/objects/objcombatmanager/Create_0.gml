@@ -14,7 +14,7 @@ seqRivalDialog = -1;
 
 strongestRival = [0, "None"]
 
-
+currentRivalName = "";
 rivalDialogComment = "";
 
 function UpdateStrongestRival() {
@@ -72,6 +72,7 @@ function EndCombat(result) {
 						{
 							//var rival = ds_list_find_value(rivalList, ds_list_size(rivalList)-1);
 							var rival = ds_map_find_last(rivalMap);
+							currentRivalName = rival.name;
 							rivalDialogComment = objManager.dialogData.GetDialog(rival.personality, enmContext.rivalSpawnedPlayerDefeat);
 							show_debug_message(rivalDialogComment);
 						}

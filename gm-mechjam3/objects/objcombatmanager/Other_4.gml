@@ -48,13 +48,13 @@ if (room == rmCombat) {
 
 	if !layer_sequence_exists("Instances",seqRivalAppears)
 	{
-		seqRivalAppears = layer_sequence_create("Instances", 320, 180, sqRivalAppears);
+		seqRivalAppears = layer_sequence_create("Instances", room_width/2, room_height/2, sqRivalAppears);
 		layer_sequence_pause(seqRivalAppears);
 	}
 	
 	if !layer_sequence_exists("GUI",seqRivalDialog)
 	{
-		seqRivalDialog = layer_sequence_create("GUI", 320, 180, sqRivalDialog);
+		seqRivalDialog = layer_sequence_create("GUI", room_width/2, room_height/2, sqRivalDialog);
 		layer_sequence_pause(seqRivalDialog);
 	}
 	
