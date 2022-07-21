@@ -13,7 +13,7 @@ if(isActive)
 	draw_set_color(c_white);
 	draw_text(100, 70, "@AngryMobOfSteve");
 	draw_text(100, 90, "Art, Design, VFX,");
-	draw_text(100, 110, "Programming, SFX");
+	draw_text(100, 110, "Programming");
 	
 	draw_set_color(c_yellow);
 	draw_text(380, 50, "James Youngman");
@@ -25,7 +25,7 @@ if(isActive)
 	draw_set_color(c_yellow);
 	draw_text(100, 150, "Cassidy Liston");
 	draw_set_color(c_white);
-	draw_text(100, 170, "@");
+	draw_text(100, 170, "@CassidyL");
 	draw_text(100, 190, "Art, Sequences");
 	
 	draw_set_color(c_yellow);
@@ -33,4 +33,19 @@ if(isActive)
 	draw_set_color(c_white);
 	draw_text(380, 170, "@kamikazeblonde");
 	draw_text(380, 190, "Writing");
+	
+	draw_set_color(c_yellow);
+	draw_set_halign(fa_center);
+	draw_text(room_width/2, 230, "Libraries Used");
+	
+	draw_set_color(c_white);
+	draw_text(110, 250, "Input");
+	draw_text(110, 270, "@JujuAdams");
+	
+	draw_text(320, 250, "Vintage Anime SFX");
+	draw_text(320, 270, "Moon Echo Audio");
+	
+	draw_text(520, 250, "Modular Mecha");
+	draw_text(520, 270, "Derek Brown");
+	
 }
