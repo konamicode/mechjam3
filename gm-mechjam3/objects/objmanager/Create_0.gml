@@ -7,12 +7,20 @@ function GoToMapRoom() {
 	room_goto(rmMap);	
 }
 
+function GoToHowToPlay() {
+	room_goto(rmHowToPlay);	
+}
+
 function GoToCombatRoom() {
 	room_goto(rmCombat);
 }
 
 function GoToStartRoom() {
 	room_goto(rmMenu);
+	
+}
+
+function RollCredits() {
 	
 }
 
@@ -24,17 +32,12 @@ startMenu.AddItem("Start", GoToMapRoom);
 //startMenu.AddItem("New Game, 
 //startMenu.AddItem("Continue, 
 startMenu.AddItem("Options", DoNothing);
+startMenu.AddItem("How to Play", GoToHowToPlay);
+startMenu.AddItem("Credits", RollCredits);
+
 startMenu.AddItem("Quit", game_end);
 
 
-//comment these out when we launch, debug only
-roomMenu = new Menu( menuType.text, expandType.horizontal);
-roomMenu.AddItem("Go To Map", GoToMapRoom);
-roomMenu.AddItem("Go To Combat", GoToCombatRoom);
-roomMenu.AddItem("Go to Start", GoToStartRoom);
-roomMenu.SetSpacing(128);
-roomMenu.SetMargin(0);
-//
 
 //global.functionMap = ds_map_create();
 
