@@ -33,9 +33,6 @@ enum enmPersonality {
 	honorable,
 	loyal,
 	fighter,
-	cheeky, 
-	aloof,
-	eeyore,
 	length
 }
 
