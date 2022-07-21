@@ -21,7 +21,7 @@ if (actorState == state.dead) {
 			} else
 			{
 				var rival = objCombatManager.rivalMap[? name];
-				objCombatManager.currentRivalName = rivalName;				
+				objCombatManager.currentRivalName = name;				
 				objCombatManager.rivalDialogComment = objManager.dialogData.GetDialog(rival.personality, enmContext.playerBeatsRival);
 				with (objCombatManager)
 				{
