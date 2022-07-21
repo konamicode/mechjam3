@@ -12,7 +12,7 @@ part_type_life(global.partBGBeam, 7, 45);
 
 
 global.partBGExplosion = part_type_create();
-part_type_sprite(global.partBGExplosion, sprExplosion, true, true, 0);
+part_type_sprite(global.partBGExplosion, sprBGExplosion, true, true, 0);
 part_type_scale(global.partBGExplosion, 0.2, 0.2);
 part_type_size(global.partBGExplosion, 1, 1.5, -0.02, 0.02);
 //part_type_speed(global.partBGBeam, 0.2, 8, 0, 0);

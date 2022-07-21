@@ -330,6 +330,7 @@
     {"id":{"name":"objHowToPlayManager","path":"objects/objHowToPlayManager/objHowToPlayManager.yy",},"order":11,},
     {"id":{"name":"spr_LrgRibbnNaked","path":"sprites/spr_LrgRibbnNaked/spr_LrgRibbnNaked.yy",},"order":3,},
     {"id":{"name":"sndMelee02","path":"sounds/sndMelee02/sndMelee02.yy",},"order":5,},
+    {"id":{"name":"sprBGExplosion","path":"sprites/sprBGExplosion/sprBGExplosion.yy",},"order":4,},
     {"id":{"name":"sprPlayer_idle_beamRifle","path":"sprites/sprPlayer_idle_beamRifle/sprPlayer_idle_beamRifle.yy",},"order":4,},
     {"id":{"name":"input_ignore_key_remove","path":"scripts/input_ignore_key_remove/input_ignore_key_remove.yy",},"order":4,},
     {"id":{"name":"input_cursor_x","path":"scripts/input_cursor_x/input_cursor_x.yy",},"order":12,},
