@@ -31,9 +31,17 @@ weapPosY = 0;
 if (ds_list_size(weapons) > 0) {
 	weapon = weapons[| 0];
 	weaponName = weapon.label;
-	fallbackWeaponName = weapon.animSet;
+
 	if body == "Drone"
 		fallbackWeaponName = "beamGun";
+	else
+	{
+		if weapon.animSet == "none"
+			fallbackWeaponName = "beamSaber";
+		else
+			fallbackWeaponName = weapon.animSet;
+	}
+	
 	//else fallbackWeaponName =  "beamSaber";
 } else {
 	if body == "Drone" {
@@ -95,7 +103,7 @@ function ChangeAnimation(animString, resetIndex = true) {
 		newSprite = asset_get_index("spr" + animString);
 	}
 	
-	animString = "sqMech_" + action + "_" +  weapon.animSet;
+	animString = "sqMech_" + action + "_" + fallbackWeaponName;
 	var newSeq = asset_get_index(animString);
 	if (newSeq != -1 )
 		ChangeHitbox(newSeq);

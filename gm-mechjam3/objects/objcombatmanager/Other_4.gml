@@ -18,7 +18,7 @@ if (room == rmCombat) {
 		enemyPool = ds_list_create();
 		enemyPool = GetEnemiesForLevel();
 		spawnList = ds_list_create();
-		var manualSpawn = false;
+		var manualSpawn = true;
 		if (enemyPool != undefined) && (!manualSpawn) {
 			while (budget >= 0) {
 					//add enemies to spawn list	
