@@ -36,7 +36,7 @@ function DialogHelper() constructor
 			}
 		}
 		var dialogIdx;
-		var dialogStr = "";
+		var dialogStr = "...";
 		if (ds_list_size(availableDialog) > 0) {
 			dialogIdx = irandom(ds_list_size(availableDialog)-1);
 			dialogStr = ds_list_find_value(availableDialog, dialogIdx);
