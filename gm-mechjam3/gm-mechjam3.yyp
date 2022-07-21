@@ -51,6 +51,7 @@
     {"id":{"name":"input_profile_destroy","path":"scripts/input_profile_destroy/input_profile_destroy.yy",},"order":2,},
     {"id":{"name":"input_profile_get","path":"scripts/input_profile_get/input_profile_get.yy",},"order":4,},
     {"id":{"name":"input_player_import","path":"scripts/input_player_import/input_player_import.yy",},"order":2,},
+    {"id":{"name":"sprTitle","path":"sprites/sprTitle/sprTitle.yy",},"order":30,},
     {"id":{"name":"input_source_mode_set","path":"scripts/input_source_mode_set/input_source_mode_set.yy",},"order":7,},
     {"id":{"name":"spr_RibbnTxtFour","path":"sprites/spr_RibbnTxtFour/spr_RibbnTxtFour.yy",},"order":13,},
     {"id":{"name":"objExplosion","path":"objects/objExplosion/objExplosion.yy",},"order":4,},
