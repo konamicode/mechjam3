@@ -35,8 +35,8 @@ INPUT_DEFAULT_PROFILES = {
         aim: input_binding_mouse_button(mb_right),
 		action: input_binding_key(vk_space),
 		special: input_binding_key("F"),
-		subLeft: input_binding_key("Q"),
-		subRight: input_binding_key("E"),
+		subLeft: [input_binding_key("Q"), input_binding_mouse_wheel_up()],
+		subRight: [input_binding_key("E"), input_binding_mouse_wheel_down()],
         pause: input_binding_key(vk_escape),
     },
     
