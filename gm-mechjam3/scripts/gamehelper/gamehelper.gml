@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Init(){
 	randomize();
-	global.debug = true;
+	global.debug = false;
 	draw_set_font(fntCharybdis);
 }
 

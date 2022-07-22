@@ -77,11 +77,11 @@ function GetHeadComponent() {
 		var comp = components[| i];
 		if ( comp.label == "head" ) {
 			return comp;
-		}
+		} else return noone;
 	}
 }
 
-head = GetHeadComponent();
+
 
 
 
@@ -102,9 +102,13 @@ function ChangeAnimation(animString, resetIndex = true) {
 		animString = body + "_" + action + "_" + fallbackWeaponName ;
 		newSprite = asset_get_index("spr" + animString);
 	}
-	
-	animString = "sqMech_" + action + "_" + fallbackWeaponName;
+
+	animString = "sqMech_" + action + "_" + weaponName;
 	var newSeq = asset_get_index(animString);
+	if ( newSeq == -1) {
+		animString = "sqMech_" + action + "_" + fallbackWeaponName;
+		newSeq = asset_get_index(animString);
+	}
 	if (newSeq != -1 )
 		ChangeHitbox(newSeq);
 	if (newSprite != -1 ) {

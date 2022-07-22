@@ -56,8 +56,8 @@ if (room == rmCombat)
 					changeRoom = true;
 				}
 			}
-	}
-		
+				
+		}	
 	} else if !instance_exists(objPlayer) && layer_sequence_is_finished(seqRivalDialog) {
 		if (!changeRoom) {
 			if (spawnRival == true and spawnedRival != noone)
@@ -77,7 +77,8 @@ if (room == rmCombat)
 				changeRoom = true;
 			}
 		}
-	} else
+	} 
+	else
 	{
 		SetAlarm(3, 3 * room_speed);	
 	}

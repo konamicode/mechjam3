@@ -5,4 +5,8 @@ if ( global.debug && room == rmCombat)
 		mp_grid_draw(mpGrid);
 		draw_set_alpha(1);
 	}
+	
 }
+
+
+draw_text(5, 50, string(alarm[0]));

@@ -102,4 +102,6 @@ else {
 		break;
 		}
 	}
+	
+	head = GetHeadComponent();
 }
