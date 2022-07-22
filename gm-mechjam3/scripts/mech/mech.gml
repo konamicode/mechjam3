@@ -281,7 +281,7 @@ function GenerateRivalName()
 	var nameExists = true;
 	while(nameExists) {
 		var _s = specialNames[irandom(array_length(specialNames) - 1)];
-		var _combined = firstNames[irandom(2)]+" "+lastNames[irandom(2)];
+		var _combined = firstNames[irandom(array_length(firstNames) - 1)]+" "+lastNames[irandom(array_length(lastNames) - 1)];
 		randomName = choose( _s, _combined );
 		nameExists = ds_map_exists(rivalMap, randomName);
 	}
