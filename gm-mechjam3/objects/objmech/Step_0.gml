@@ -36,6 +36,13 @@ if (actorState == state.dead) {
 	
 }
 else {
+	if (stamina < maxStamina)
+	{
+		stamina += 0.1;
+	}
+	
+	stamina = clamp(stamina, 0, maxStamina);
+	
 	if (!isPlayer)
 	{
 		switch (actorState) {
@@ -51,7 +58,7 @@ else {
 						image_xscale = _dir;
 		
 					if between(DistanceToTarget(objPlayer), weapon.range.minDist, weapon.range.maxDist){
-						if (canAttack) {
+						if ((canAttack) && ( stamina > weapon.cost)) {
 							aimDir = GetTargetDirection(objPlayer);
 							if (ammoCounter > 0) {
 								action = "attack";
@@ -78,7 +85,9 @@ else {
 
 									}
 									//fire vulcans?
-							
+									if weaponName == "vulcans"
+										PlaySoundByTag("vulcans");
+									
 									FireWeapon(x + _x,  y + _y, weapon.attack, {image_angle:GetTargetDirection(objPlayer), aimed: aiming});
 								}
 							}
