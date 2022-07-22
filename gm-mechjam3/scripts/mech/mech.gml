@@ -255,7 +255,9 @@ function GenerateRivalName()
 		"Ham'an Corn",
 		"Milliardo Windcraft",
 		"Noa Dark",
-		"Kamal Majirif"
+		"Kamal Majirif",
+		"Gally Forward",
+		"Ahim Allard"
 	]
 	firstNames = [
 		"Steve",
@@ -265,7 +267,11 @@ function GenerateRivalName()
 		"Yaz",
 		"Matte",
 		"Smith",
-		"Bolt"
+		"Bolt",
+		"Aidan", 
+		"Orville",
+		"Vince",
+		"Joe"
 
 	];
 	lastNames = [
