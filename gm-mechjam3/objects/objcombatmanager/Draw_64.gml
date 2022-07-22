@@ -7,6 +7,3 @@ if ( global.debug && room == rmCombat)
 	}
 	
 }
-
-
-draw_text(5, 50, string(alarm[0]));

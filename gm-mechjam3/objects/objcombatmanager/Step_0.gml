@@ -6,6 +6,7 @@ if (room == rmCombat)
 		var dialogContext = enmContext.rivalArrives;
 		if(isFinalBattle)
 		{
+
 			spawnedRival = rivalMap[? strongestRival[1]];
 			dialogContext = enmContext.startFinalBattle;
 		}
@@ -23,6 +24,9 @@ if (room == rmCombat)
 	
 	if layer_sequence_is_finished(seqRivalDialog) {
 		layer_sequence_headpos(seqRivalDialog, 0);
+	} else
+	{
+		show_debug_message(layer_sequence_get_headpos(seqRivalDialog));
 	}
 	
 	//Check for level complete

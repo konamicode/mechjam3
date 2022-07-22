@@ -31,7 +31,7 @@ startMenu = new Menu();
 startMenu.AddItem("Start", GoToMapRoom);
 //startMenu.AddItem("New Game, 
 //startMenu.AddItem("Continue, 
-startMenu.AddItem("Options", DoNothing);
+//startMenu.AddItem("Options", DoNothing);
 startMenu.AddItem("How to Play", GoToHowToPlay);
 startMenu.AddItem("Credits", RollCredits);
 

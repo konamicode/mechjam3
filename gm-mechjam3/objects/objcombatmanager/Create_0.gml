@@ -112,6 +112,7 @@ function StartCombat(finalBattle) {
 	}
 	SetAlarm(1, 20);
 
+
 }
 
 function AttemptToAddRival(mech, result)

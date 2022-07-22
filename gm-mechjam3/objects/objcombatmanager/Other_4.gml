@@ -51,8 +51,15 @@ if (room == rmCombat) {
 
 	if !layer_sequence_exists("Instances",seqRivalAppears)
 	{
-		seqRivalAppears = layer_sequence_create("Instances", room_width/2, room_height/2, sqRivalAppears);
-		layer_sequence_pause(seqRivalAppears);
+		if(isFinalBattle)
+		{
+			seqRivalAppears = layer_sequence_create("Instances", room_width/2, room_height/2, sqNemesisAppears);
+			layer_sequence_play(seqRivalAppears);
+		}
+		else {
+			seqRivalAppears = layer_sequence_create("Instances", room_width/2, room_height/2, sqRivalAppears);
+			layer_sequence_pause(seqRivalAppears);
+		}
 	}
 	
 	if !layer_sequence_exists("GUI",seqRivalDialog)
