@@ -16,6 +16,7 @@ playerLastX = 0;
 playerLastY = 0;
 
 playerPawn = noone;
+tileReward = "";
 
 function GenerateMap()
 {

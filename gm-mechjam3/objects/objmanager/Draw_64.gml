@@ -4,8 +4,17 @@ switch(room) {
 	case rmMap:
 		if global.debug
 			draw_text(5, screenHeight - 20, "Rival Count: " + string(ds_map_size(objCombatManager.rivalMap)));
-			draw_text(screenWidth - 100, screenHeight - 30, "Strongest Rival " )
-			draw_text( screenWidth - 100, screenHeight - 15, string( objCombatManager.strongestRival[1]) + ": " + string(objCombatManager.strongestRival[0]) )
+		
+		var _align = draw_get_halign();
+		draw_set_halign(fa_left);
+		draw_text(50, 15, "Player Stats:" + string(gameData.player.maxHp) + " Energy: " + string(gameData.player.maxStamina)
+		+ " Speed: " + string(gameData.player.moveSpeed) + " Ranged Attack: " + string(gameData.player.rngAttackPower)
+		+ " Melee Attack: " + string(gameData.player.meleeAttackPower));
+		draw_text(50, screenHeight - 15, "Tile Reward: " + objMapManager.tileReward);
+		draw_set_halign(_align);
+		draw_text(screenWidth - 150, screenHeight - 30, "Strongest Rival " )
+		draw_text( screenWidth - 150, screenHeight - 15, string( objCombatManager.strongestRival[1]) )
+		
 	break;
 }
 
