@@ -69,7 +69,7 @@ if (actorState == state.dead)
 		ChangeAnimation(GetAnimationName());
 	}
 	
-	if input_check("shoot") && canAttack  {
+	if input_check("shoot") && canAttack && ( stamina > weapons[| 0].cost)  {
 		if (ammoCounter > 0) {
 			action = "attack";
 			alarm[1] = weapon.burstRate * room_speed;
@@ -88,13 +88,14 @@ if (actorState == state.dead)
 		
 	}
 	
-	if input_check_pressed("action") {
+	if input_check_pressed("action") && ( stamina > weapons[| 1].cost) {
 		action = "attack";
 		var idx = GetWeaponByName("beamSaber", weapons)
 		if (idx > 0) {
 			weapon = weapons[| idx];
 			weaponName = weapon.label;
 			ChangeAnimation(GetAnimationName());
+			DeductStamina(weapon.cost);
 		}
 	}
 	
