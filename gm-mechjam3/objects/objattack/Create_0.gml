@@ -19,8 +19,17 @@ function ApplyDamage(inst) {
 
 function VerifyCollider(_collider) {
 	if instance_exists(_collider) && instance_exists(creator) {
-		if (_collider != creator.id)
-			return true;
+		if (_collider != creator.id) {
+			//friendly fire check
+			if object_is_ancestor(_collider, objMech) 
+			{
+				if (_collider.isPlayer != creator.isPlayer) 
+					return true;
+				else
+					return false;
+			}
+			return true;	
+		}
 		else return false;
 	}
 	else return false;
