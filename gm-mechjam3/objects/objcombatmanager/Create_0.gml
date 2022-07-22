@@ -91,11 +91,11 @@ function EndCombat(result) {
 
 		//SetAlarm(0, room_speed * 3);
 	}
-	//if(spawnedRival != noone)
-	//{
-	//	ds_list_add(ds_map_find_value(rivalMap, spawnedRival.name).battleRecord, result);
-	//	spawnedRival = noone;
-	//}
+	if(spawnedRival != noone)
+	{
+		ds_list_add(ds_map_find_value(rivalMap, spawnedRival.name).battleRecord, result);
+		spawnedRival = noone;
+	}
 	SetAlarm(0, room_speed * 2);
 
 }
@@ -108,7 +108,8 @@ function StartCombat(finalBattle) {
 		if(random(1) <= rivalSpawnChance)
 		{
 			spawnRival = true;
-		}
+		} else
+			spawnRival = false;
 	}
 	SetAlarm(1, 20);
 
