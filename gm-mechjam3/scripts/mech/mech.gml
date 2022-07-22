@@ -104,9 +104,9 @@ function AddEnemyFromData(_x, _y, _frame = "Mech", enemyType = "objMech", _weapo
 function CreatePlayer(_x, _y, playerData) {
 	var player = new Mech("Player");
 	player.maxHp = playerData.maxHp;
-	player.hp = player.maxHp;
+	player.hp = playerData.maxHp;
 	player.maxStamina = playerData.maxStamina;
-	player.stamina = player.maxStamina;
+	player.stamina = playerData.maxStamina;
 	player.moveSpeed = playerData.moveSpeed;
 	player.meleePower = playerData.meleeAttackPower;
 	player.rangedPower = playerData.rngAttackPower;

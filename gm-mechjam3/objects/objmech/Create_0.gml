@@ -278,7 +278,7 @@ function ColliderOn(_x, _y) {
 		show_debug_message(attackHitboxData);
 		var _frameIdx = ds_map_find_first(attackHitboxData);
 		var _attack = attackHitboxData[? _frameIdx];
-		_posX = _attack[1] * (image_xscale);
+		_posX = _attack[1] * image_xscale;
 		_posY = _attack[2];
 		_left = _attack[3];
 		_right = _attack[3];

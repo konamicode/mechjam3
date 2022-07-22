@@ -46,7 +46,7 @@ function BeamCollision(x, y, length, dir, obj ) {
 }
 
 function BoxCollision(x, y, _left, _top, _right, _bottom, obj) {
-	var _collider = collision_rectangle(x - _left, y - _top, x + _right, y + _bottom, obj, true, true);
+	var _collider = collision_rectangle(x - _left, y - _top, x + _right, y + _bottom, obj, false, true);
 	if !VerifyCollider(_collider) {
 		_collider = noone;	
 	}
