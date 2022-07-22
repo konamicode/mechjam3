@@ -12,14 +12,14 @@ enum state {
 
 actorState = state.idle;
 
-maxHp = 100;
-hp = maxHp;
+//maxHp = 100;
+//hp = maxHp;
 
-maxStamina = 50;
-stamina = maxStamina;
+//maxStamina = 50;
+//stamina = maxStamina;
 
-meleePower = 10;
-rangedPower = 10;
+//meleePower = 10;
+//rangedPower = 10;
 
 aimDir = 0;
 lastDir = aimDir;
@@ -27,7 +27,7 @@ lastDir = aimDir;
 aim_x = 0;
 aim_y = 0;
 
-moveSpeed = 6.0;
+//moveSpeed = 6.0;
 
 canAttack = true;
 hitFlash = false;
