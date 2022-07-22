@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sprPlaceHolderHurtBox",
+    "path": "sprites/sprPlaceHolderHurtBox/sprPlaceHolderHurtBox.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
