@@ -7,7 +7,10 @@
 if ( room == rmMap) {
 	if(input_check_released("mapMenuConfirm"))
 	{
+		if(tileMap[playerPawn.mapY][playerPawn.mapX].isLiberated == false)
+		{
 			PlayerVictory();
+		}
 	}
 
 	if(input_check_released("cancel"))

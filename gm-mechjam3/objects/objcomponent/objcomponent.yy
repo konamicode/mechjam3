@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprPlaceHolderHurtBox",
-    "path": "sprites/sprPlaceHolderHurtBox/sprPlaceHolderHurtBox.yy",
+    "name": "sprHead_test",
+    "path": "sprites/sprHead_test/sprHead_test.yy",
   },
   "solid": false,
   "visible": false,

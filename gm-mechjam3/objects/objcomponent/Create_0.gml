@@ -7,10 +7,10 @@ function UpdatePos(x_offset = x_offsetStart, y_offset = y_offsetStart ) {
 }
 
 function UpdateRot(_angle) {
-	image_angle = _angle;	
+	//image_angle = _angle;	
 }
 
 function UpdateScale(_xscale, _yscale) {
-	image_xscale = _xscale;
-	image_yscale = _yscale;
+	image_xscale = sign(creator.image_xscale);
+	//image_yscale = _yscale;
 }

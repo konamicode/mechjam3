@@ -76,6 +76,13 @@ function GetHeadComponent() {
 	for ( var i = 0; i < ds_list_size(components); i++) {
 		var comp = components[| i];
 		if ( comp.label == "head" ) {
+			if (isPlayer) {
+				comp.sprite_index = sprHead_test;
+			}
+			else if ( name == "")
+				comp.sprite_index = sprHead_grunt;
+			else
+				comp.sprite_index = sprHead_test;
 			return comp;
 		} else return noone;
 	}
