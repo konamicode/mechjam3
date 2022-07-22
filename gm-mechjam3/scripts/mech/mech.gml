@@ -250,7 +250,12 @@ function GenerateRivalName()
 {
 	specialNames = [
 		"Branch Forsythe",
-		"Quattro Formaggi"
+		"Quattro Formaggi",
+		"Forst Cool",
+		"Ham'an Corn",
+		"Milliardo Windcraft",
+		"Noa Dark",
+		"Kamal Majirif"
 	]
 	firstNames = [
 		"Steve",
