@@ -73,7 +73,7 @@
     },
     {
         "personality": "1",
-        "context": "0",
+        "context": "1",
         "prequisites": 0,
         "prerequisiteParameters": 0,
         "disqualifiers": 0,
@@ -187,5 +187,203 @@
         "disqualifiers": 0,
         "disqualifierParameters": 0,
         "text": "One last duel...this time, to the death!"
+    },
+    {
+        "personality": "4",
+        "context": "0",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "Arggh!! Do you know how expensive this is to repair?!"
+    },
+    {
+        "personality": "4",
+        "context": "4",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "Whelp, looks like I'm gonna need a second job to pay off these repairs"
+    },
+    {
+        "personality": "4",
+        "context": "4",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "Curse you, foul fiend!"
+    },
+    {
+        "personality": "4",
+        "context": "5",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "Good day, sir.  I said good day!"
+    },
+    {
+        "personality": "4",
+        "context": "5",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "Bwaaahahahaha!  Really?  THAT'S the best you got?!"
+    },
+    {
+        "personality": "4",
+        "context": "2",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "Wow...that was a thing."
+    },
+    {
+        "personality": "4",
+        "context": "6",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "Are you sure about this?"
+    },
+    {
+        "personality": "4",
+        "context": "5",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "Woo hoo!  I knew I could do it!"
+    },
+    {
+        "personality": "4",
+        "context": "4",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "Finally!  Someone who knows what they're doing!"
+    },
+    {
+        "personality": "4",
+        "context": "4",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "My mechanic hates you."
+    },
+    {
+        "personality": "1",
+        "context": "5",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "That's on you, my friend."
+    },
+    {
+        "personality": "0",
+        "context": "4",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "No way!  How could I lose?!?!?!?!"
+    },
+    {
+        "personality": "3",
+        "context": "2",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "This is only the beginning."
+    },
+    {
+        "personality": "0",
+        "context": "5",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "Like you could ever beat me."
+    },
+    {
+        "personality": "3",
+        "context": "3",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "Let's Dance!"
+    },
+    {
+        "personality": "5",
+        "context": "4",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "Looks like I lost again"
+    },
+    {
+        "personality": "5",
+        "context": "1",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "I really thought you had me that time"
+    },
+    {
+        "personality": "5",
+        "context": "0",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "Another day, another defeat for me"
+    },
+    {
+        "personality": "5",
+        "context": "2",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "Do we really have to do this?"
+    },
+    {
+        "personality": "5",
+        "context": "3",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "Do we really have to do this?"
+    },
+    {
+        "personality": "5",
+        "context": "6",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "What ill fate to meet this way."
+    },
+    {
+        "personality": "0",
+        "context": "5",
+        "prequisites": 0,
+        "prerequisiteParameters": 0,
+        "disqualifiers": 0,
+        "disqualifierParameters": 0,
+        "text": "You Should Have Known Better"
     }
 ]

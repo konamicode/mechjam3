@@ -77,7 +77,7 @@ function GetHeadComponent() {
 		var comp = components[| i];
 		if ( comp.label == "head" ) {
 			if (isPlayer) {
-				comp.sprite_index = sprHead_test;
+				comp.sprite_index = sprHead_player;
 			}
 			else if ( name == "")
 				comp.sprite_index = sprHead_grunt;
