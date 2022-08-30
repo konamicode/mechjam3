@@ -1,7 +1,7 @@
 enemyList = ds_list_create();
 nextRoom = noone;
 changeRoom = false;
-rivalMap = ds_map_create();
+objManager.gameData.rivals = ds_map_create();
 maxRivalCount = 5;
 spawnRival = false;
 spawnedRival = noone;
@@ -18,21 +18,21 @@ currentRivalName = "";
 rivalDialogComment = "";
 
 function UpdateStrongestRival() {
-	if ( ds_map_size(rivalMap) > 0 ) {
-		var _rivalIdx = ds_map_find_first(rivalMap);
+	if ( ds_map_size(objManager.gameData.rivals) > 0 ) {
+		var _rivalIdx = ds_map_find_first(objManager.gameData.rivals);
 		var _r, _record;
 		//var _record = ds_list_size(_r.battleRecord);
 		//strongestRival[0] = _record;
 		//strongestRival[1] = _r.name;
-		repeat(ds_map_size(rivalMap))
+		repeat(ds_map_size(objManager.gameData.rivals))
 		{
-			_r = rivalMap[? _rivalIdx];
+			_r = objManager.gameData.rivals[? _rivalIdx];
 			_record = ds_list_size(_r.battleRecord);
 			if _record > strongestRival[0] {
 				strongestRival[0] = _record;
 				strongestRival[1] = _r.name;
 			}
-			_rivalIdx = ds_map_find_next(rivalMap, _rivalIdx);
+			_rivalIdx = ds_map_find_next(objManager.gameData.rivals, _rivalIdx);
 		}
 	}
 }
@@ -72,7 +72,7 @@ function EndCombat(result) {
 						currentRivalName = AttemptToAddRival(curUnit, result);
 						if(currentRivalName != noone)
 						{
-							rivalDialogComment = objManager.dialogData.GetDialog(ds_map_find_value(rivalMap, currentRivalName).personality, enmContext.rivalSpawnedPlayerDefeat);
+							rivalDialogComment = objManager.dialogData.GetDialog(ds_map_find_value(objManager.gameData.rivals, currentRivalName).personality, enmContext.rivalSpawnedPlayerDefeat);
 							PlayDialogSeq();
 							break;
 						}
@@ -82,8 +82,8 @@ function EndCombat(result) {
 			} 
 			if(spawnedRival != noone)
 			{
-				ds_list_add(ds_map_find_value(rivalMap, spawnedRival.name).battleRecord, result);
-				rivalDialogComment = objManager.dialogData.GetDialog(ds_map_find_value(rivalMap, currentRivalName).personality, enmContext.rivalSpawnedPlayerDefeat);
+				ds_list_add(ds_map_find_value(objManager.gameData.rivals, spawnedRival.name).battleRecord, result);
+				rivalDialogComment = objManager.dialogData.GetDialog(ds_map_find_value(objManager.gameData.rivals, currentRivalName).personality, enmContext.rivalSpawnedPlayerDefeat);
 				PlayDialogSeq();
 				spawnedRival = noone;
 			}			
@@ -93,7 +93,7 @@ function EndCombat(result) {
 	}
 	if(spawnedRival != noone)
 	{
-		ds_list_add(ds_map_find_value(rivalMap, spawnedRival.name).battleRecord, result);
+		ds_list_add(ds_map_find_value(objManager.gameData.rivals, spawnedRival.name).battleRecord, result);
 		spawnedRival = noone;
 	}
 	SetAlarm(0, room_speed * 2);
@@ -103,7 +103,7 @@ function EndCombat(result) {
 function StartCombat(finalBattle) {
 
 	isFinalBattle = finalBattle;
-	if(ds_map_size(rivalMap) > 0)
+	if(ds_map_size(objManager.gameData.rivals) > 0)
 	{
 		if(random(1) <= rivalSpawnChance)
 		{
@@ -119,11 +119,11 @@ function StartCombat(finalBattle) {
 function AttemptToAddRival(mech, result)
 {
 	//Roll to see if we want to promote the unit to a rival
-	var odds = 1 - (ds_map_size(rivalMap)/maxRivalCount);
+	var odds = 1 - (ds_map_size(objManager.gameData.rivals)/maxRivalCount);
 	if(random(1) < odds)
 	{
-		var rival = GenerateRivalData(mech, result)
-		ds_map_add(rivalMap, rival.name, rival);
+		var rival = GenerateRivalData(mech, result);
+		ds_map_add(objManager.gameData.rivals, rival.name, rival);
 		return rival.name;
 	}
 	return noone;
@@ -131,10 +131,10 @@ function AttemptToAddRival(mech, result)
 
 
 function GetRandomRival() {
-	var _array = ds_map_keys_to_array(objCombatManager.rivalMap);
+	var _array = ds_map_keys_to_array(objManager.gameData.rivals);
 	var _key = _array[irandom(array_length(_array) - 1)];
 	show_debug_message("Selecting Rival: " + string(_key));
-	return objCombatManager.rivalMap[? _key];
+	return objManager.gameData.rivals[? _key];
 }
 
 weaponMap = ds_map_create();

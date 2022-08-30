@@ -25,3 +25,8 @@ switch(room) {
 
 if keyboard_check_pressed(vk_f2)
 	global.debug = !global.debug;
+	
+if keyboard_check_pressed(vk_f4)
+{
+	gameData.Save();
+}

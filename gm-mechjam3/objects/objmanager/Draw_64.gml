@@ -3,7 +3,7 @@ switch(room) {
 	break;
 	case rmMap:
 	//	if global.debug
-			//draw_text(5, screenHeight - 20, "Rival Count: " + string(ds_map_size(objCombatManager.rivalMap)));
+			//draw_text(5, screenHeight - 20, "Rival Count: " + string(ds_map_size(objManager.gameData.rivals)));
 		
 		var _align = draw_get_halign();
 		draw_set_halign(fa_left);

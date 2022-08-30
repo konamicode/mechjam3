@@ -4,6 +4,9 @@ if (room = rmMap) {
 		PlayerFailure()	;
 	} else if (global.missionStatus == enmMissionStatus.succeed) {
 		PlayerVictory();
+	} else
+	{
+		PlayerLoadFromGameData();	
 	}
 	
 

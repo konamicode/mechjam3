@@ -14,4 +14,6 @@ function UpdateLastLocation()
 {
 	objMapManager.playerLastX = mapX;
 	objMapManager.playerLastY = mapY;
+	objManager.gameData.mapX = mapX;
+	objManager.gameData.mapY = mapY;
 }

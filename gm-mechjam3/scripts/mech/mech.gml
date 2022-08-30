@@ -257,7 +257,8 @@ function GenerateRivalName()
 		"Noa Dark",
 		"Kamal Majirif",
 		"Gally Forward",
-		"Ahim Allard"
+		"Ahim Allard",
+		"Carlos Andromeda"
 	]
 	firstNames = [
 		"Steve",
@@ -294,7 +295,7 @@ function GenerateRivalName()
 		var _s = specialNames[irandom(array_length(specialNames) - 1)];
 		var _combined = firstNames[irandom(array_length(firstNames) - 1)]+" "+lastNames[irandom(array_length(lastNames) - 1)];
 		randomName = choose( _s, _combined );
-		nameExists = ds_map_exists(rivalMap, randomName);
+		nameExists = ds_map_exists(objManager.gameData.rivals, randomName);
 	}
 	return randomName;
 }

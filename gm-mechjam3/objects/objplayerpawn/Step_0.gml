@@ -3,7 +3,7 @@
 if(input_check_released("left"))
 {	
 	UpdateLastLocation();
-	//MoveLeft(objMapManager.mapData);
+	//MoveLeft(objManager.gameData.mapData);
 	dirIdx += 1;
 	if dirIdx > array_length(directions) - 1
 		dirIdx = 0;
@@ -14,7 +14,7 @@ if(input_check_released("left"))
 if(input_check_released("right"))
 {
 	UpdateLastLocation();
-	//MoveRight(objMapManager.mapData);
+	//MoveRight(objManager.gameData.mapData);
 
 
 	if dirIdx == 0
@@ -29,7 +29,7 @@ facingDirection = directions[dirIdx];
 if(input_check_released("up"))
 {
 	UpdateLastLocation();
-	//MoveUp(objMapManager.mapData);
+	//MoveUp(objManager.gameData.mapData);
 	
 	//MoveTowards
 	var _moveRight = !(mapY mod 2);
@@ -38,17 +38,17 @@ if(input_check_released("up"))
 	switch(facingDirection) {
 		case 0:
 			//move right ( x + 1)
-			MoveRight(objMapManager.mapData);
+			MoveRight(objManager.gameData.mapData);
 			MoveToNewLocation();
 		break;
 		case 60:
 			
 			if _moveRight  
 			{			
-				if (mapY > 0) && (mapX < array_length(objMapManager.mapData[mapY]) -1)
+				if (mapY > 0) && (mapX < array_length(objManager.gameData.mapData[mapY]) -1)
 				{			
-					if(objMapManager.mapData[mapY-1][mapX + 1].isPresent and 
-						(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][mapX + 1].isLiberated))
+					if(objManager.gameData.mapData[mapY-1][mapX + 1].isPresent and 
+						(objManager.gameData.mapData[mapY][mapX].isLiberated or objManager.gameData.mapData[mapY-1][mapX + 1].isLiberated))
 					{	
 						mapX = mapX + 1;
 						mapY = mapY - 1;					
@@ -59,8 +59,8 @@ if(input_check_released("up"))
 			else {
 				if (mapY > 0)
 				{			
-					if(objMapManager.mapData[mapY-1][mapX].isPresent and 
-						(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][mapX].isLiberated))
+					if(objManager.gameData.mapData[mapY-1][mapX].isPresent and 
+						(objManager.gameData.mapData[mapY][mapX].isLiberated or objManager.gameData.mapData[mapY-1][mapX].isLiberated))
 					{	
 						mapY = mapY - 1;					
 					}
@@ -73,8 +73,8 @@ if(input_check_released("up"))
 			if _moveLeft  
 			{			
 				if (mapY > 0 ) && (mapX > 0) {
-					if(objMapManager.mapData[mapY-1][mapX - 1].isPresent and 
-						(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][mapX - 1].isLiberated))
+					if(objManager.gameData.mapData[mapY-1][mapX - 1].isPresent and 
+						(objManager.gameData.mapData[mapY][mapX].isLiberated or objManager.gameData.mapData[mapY-1][mapX - 1].isLiberated))
 					{	
 						mapX -= 1;
 						mapY = mapY - 1;			
@@ -83,8 +83,8 @@ if(input_check_released("up"))
 			} else {
 				if(mapY > 0) 
 				{			
-					if(objMapManager.mapData[mapY-1][mapX].isPresent and 
-						(objMapManager.mapData[mapY][mapX].isLiberated or objMapManager.mapData[mapY-1][mapX].isLiberated))
+					if(objManager.gameData.mapData[mapY-1][mapX].isPresent and 
+						(objManager.gameData.mapData[mapY][mapX].isLiberated or objManager.gameData.mapData[mapY-1][mapX].isLiberated))
 					{	
 						mapY = mapY - 1;			
 					}				
@@ -94,18 +94,18 @@ if(input_check_released("up"))
 		break;
 
 		case 180:
-			MoveLeft(objMapManager.mapData);
+			MoveLeft(objManager.gameData.mapData);
 			MoveToNewLocation();			
 		break;
 		case 240:
 			if (_moveLeft) {
-				var _arrY = array_length(objMapManager.mapData) - 1 ;
+				var _arrY = array_length(objManager.gameData.mapData) - 1 ;
 				if( mapY < _arrY) && ( mapX > 0)
 				{
-					if(objMapManager.mapData[mapY + 1][mapX - 1].isPresent)
+					if(objManager.gameData.mapData[mapY + 1][mapX - 1].isPresent)
 					{
-						if(objMapManager.mapData[mapY][mapX].isLiberated
-							or objMapManager.mapData[mapY + 1][mapX - 1].isLiberated)
+						if(objManager.gameData.mapData[mapY][mapX].isLiberated
+							or objManager.gameData.mapData[mapY + 1][mapX - 1].isLiberated)
 						{
 							mapX -= 1;
 							mapY = mapY + 1;						
@@ -114,12 +114,12 @@ if(input_check_released("up"))
 				}		
 			} else
 			{
-				if (mapY < array_length(objMapManager.mapData) - 1)
+				if (mapY < array_length(objManager.gameData.mapData) - 1)
 				{
-					if(objMapManager.mapData[mapY + 1][mapX].isPresent)
+					if(objManager.gameData.mapData[mapY + 1][mapX].isPresent)
 					{
-						if(objMapManager.mapData[mapY][mapX].isLiberated
-							or objMapManager.mapData[mapY + 1][mapX].isLiberated)
+						if(objManager.gameData.mapData[mapY][mapX].isLiberated
+							or objManager.gameData.mapData[mapY + 1][mapX].isLiberated)
 						{
 							mapY = mapY + 1;						
 						}
@@ -132,14 +132,14 @@ if(input_check_released("up"))
 		case 300:
 			if _moveRight
 			{
-				var _arrX = array_length(objMapManager.mapData[mapY]) - 1;
-				var _arrY = array_length(objMapManager.mapData) - 1 ;
+				var _arrX = array_length(objManager.gameData.mapData[mapY]) - 1;
+				var _arrY = array_length(objManager.gameData.mapData) - 1 ;
 				if (mapY < _arrY) && (mapX < (_arrX))
 				{
-					if(objMapManager.mapData[mapY + 1][mapX + 1].isPresent)
+					if(objManager.gameData.mapData[mapY + 1][mapX + 1].isPresent)
 					{
-						if(objMapManager.mapData[mapY][mapX].isLiberated
-							or objMapManager.mapData[mapY + 1][mapX + 1].isLiberated)
+						if(objManager.gameData.mapData[mapY][mapX].isLiberated
+							or objManager.gameData.mapData[mapY + 1][mapX + 1].isLiberated)
 						{
 							mapX = mapX + 1;
 							mapY = mapY + 1;
@@ -148,12 +148,12 @@ if(input_check_released("up"))
 				}				
 			} else
 			{
-				if (mapY < array_length(objMapManager.mapData) - 1)
+				if (mapY < array_length(objManager.gameData.mapData) - 1)
 				{
-					if(objMapManager.mapData[mapY + 1][mapX].isPresent)
+					if(objManager.gameData.mapData[mapY + 1][mapX].isPresent)
 					{
-						if(objMapManager.mapData[mapY][mapX].isLiberated
-							or objMapManager.mapData[mapY + 1][mapX].isLiberated)
+						if(objManager.gameData.mapData[mapY][mapX].isLiberated
+							or objManager.gameData.mapData[mapY + 1][mapX].isLiberated)
 						{
 							mapY = mapY + 1;
 						}
@@ -173,5 +173,5 @@ if(input_check_released("down"))
 	mapY = objMapManager.playerLastY;
 	MoveToNewLocation();
 	//UpdateLastLocation();
-	//MoveDown(objMapManager.mapData);
+	//MoveDown(objManager.gameData.mapData);
 }

@@ -10,9 +10,9 @@ function mapTileData() constructor {
 
 function AttemptToSpawnFinalBattle()
 {
-	var map = objMapManager.mapData;
+	var map = objManager.gameData.mapData;
 	//Make sure we have a rival to fight
-	if(ds_map_size(objCombatManager.rivalMap) == 0)
+	if(ds_map_size(objManager.gameData.rivals) == 0)
 	{
 		return;
 	}

@@ -5,7 +5,7 @@ height = 6;
 minDensity = 0.8;
 maxDensity = 0.9;
 
-mapData = [];
+//objManager.gameData.mapData = [];
 tileMap = [];
 traversalArray = [];
 
@@ -23,7 +23,7 @@ function GenerateMap()
 	//Initialize the tile data array
 	for(i = 0; i < height; i++)
 	{
-		mapData[i] = [width];
+		objManager.gameData.mapData[i] = [width];
 		traversalArray[i] = [width];
 	}
 	
@@ -31,8 +31,8 @@ function GenerateMap()
 	{
 		for(k = 0; k < width; k++)
 		{
-			mapData[j][k] = new mapTileData();
-			mapData[j][k].buff = irandom(enmBuffTypes.Length-1);
+			objManager.gameData.mapData[j][k] = new mapTileData();
+			objManager.gameData.mapData[j][k].buff = irandom(enmBuffTypes.Length-1);
 			traversalArray[j][k] = 0;
 		}
 	}
@@ -43,8 +43,10 @@ function GenerateMap()
 	
 	playerLastX = playerStartX;
 	playerLastY = playerStartY;
+	objManager.gameData.mapX = playerStartX;;
+	objManager.gameData.mapY = playerStartY;;
 	
-	mapData[playerStartY][playerStartX].isLiberated = true;
+	objManager.gameData.mapData[playerStartY][playerStartX].isLiberated = true;
 	
 	//Determine exclusion portion
 	var exclusionCount = floor((width * height) - (random_range(minDensity, maxDensity) * width * height));
@@ -54,12 +56,12 @@ function GenerateMap()
 		var xLoc = irandom(height-1);
 		var yLoc = irandom(width-1);
 		
-		if(mapData[xLoc][yLoc].isLiberated == false and mapData[xLoc][yLoc].isPresent == true)
+		if(objManager.gameData.mapData[xLoc][yLoc].isLiberated == false and objManager.gameData.mapData[xLoc][yLoc].isPresent == true)
 		{
 			traversalArray[xLoc][yLoc] = -1;
 			if(ValidateMap() == true)
 			{
-				mapData[xLoc][yLoc].isPresent = false;
+				objManager.gameData.mapData[xLoc][yLoc].isPresent = false;
 				exclusionCount = exclusionCount - 1;
 			}
 			else
@@ -171,11 +173,11 @@ function DisplayMap()
 			var yLoc = ((i * sprite_get_height(sprHexTile)) - i * (sprite_get_height(sprHexTile))/4) + sprite_get_height(sprHexTile);
 					
 			tileMap[i][j] = instance_create_layer(xLoc, yLoc, "Map", objHexTile);
-			tileMap[i][j].isLiberated = mapData[i][j].isLiberated;
-			tileMap[i][j].buff = mapData[i][j].buff;
-			tileMap[i][j].bonus = mapData[i][j].bonus;
-			tileMap[i][j].isPresent = mapData[i][j].isPresent;
-			tileMap[i][j].isFinalBattle = mapData[i][j].isFinalBattle;
+			tileMap[i][j].isLiberated = objManager.gameData.mapData[i][j].isLiberated;
+			tileMap[i][j].buff = objManager.gameData.mapData[i][j].buff;
+			tileMap[i][j].bonus = objManager.gameData.mapData[i][j].bonus;
+			tileMap[i][j].isPresent = objManager.gameData.mapData[i][j].isPresent;
+			tileMap[i][j].isFinalBattle = objManager.gameData.mapData[i][j].isFinalBattle;
 		}
 	}	
 	
@@ -187,8 +189,8 @@ function DisplayMap()
 //Tile encounter results
 function PlayerVictory()
 {	
-	objManager.gameData.player.UpgradePlayer(mapData[playerPawn.mapY][playerPawn.mapX].buff);
-	mapData[playerPawn.mapY][playerPawn.mapX].isLiberated = true;
+	objManager.gameData.player.UpgradePlayer(objManager.gameData.mapData[playerPawn.mapY][playerPawn.mapX].buff);
+	objManager.gameData.mapData[playerPawn.mapY][playerPawn.mapX].isLiberated = true;
 	tileMap[playerPawn.mapY][playerPawn.mapX].isLiberated = true;
 	
 	playerPawn.UpdateLastLocation();
@@ -211,9 +213,23 @@ function PlayerFailure()
 	ClearMissionStatus();
 }
 
+function PlayerLoadFromGameData(){
+	playerStartX = objManager.gameData.mapX;
+	playerStartY = objManager.gameData.mapY;
+
+	
+	playerLastX = playerStartX;
+	playerLastY = playerStartY;
+	
+	playerPawn.mapX = playerStartX;
+	playerPawn.mapY = playerStartY;
+	playerPawn.MoveToNewLocation();
+}
+
 function ClearMissionStatus() {
 	global.missionStatus = enmMissionStatus.none;
 }
 
 ClearMissionStatus();
-GenerateMap();
+if (array_length(objManager.gameData.mapData) == 0) 
+	GenerateMap();

@@ -7,7 +7,7 @@ if (room == rmCombat)
 		if(isFinalBattle)
 		{
 
-			spawnedRival = rivalMap[? strongestRival[1]];
+			spawnedRival = objManager.gameData.rivals[? strongestRival[1]];
 			dialogContext = enmContext.startFinalBattle;
 		}
 		else

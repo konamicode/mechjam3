@@ -6,4 +6,7 @@ function Init(){
 	draw_set_font(fntCharybdis);
 }
 
+
+
+
 global.functionMap = ds_map_create();
