@@ -34,9 +34,10 @@ if (room == rmCombat) {
 				var _enemyStruct = spawnList[| i];
 				var _rx, _ry;
 				do {
-					_rx = irandom_range(floor(room_width*.1), floor(room_width*.9));
+					_rx = irandom_range(floor(room_width*.33), floor(room_width*.9));
 					_ry = irandom_range(floor(room_height*.1), floor(room_height*.9));
-				} until (!place_meeting(_rx, _ry, objPlayer));
+				} until (!collision_circle(_rx, _ry, 100, objPlayer, false, false))
+				// (!place_meeting(_rx, _ry, objPlayer));
 			
 				ds_list_add(enemyList, AddEnemyFromCatalog(_rx, _ry, _enemyStruct)); 
 			

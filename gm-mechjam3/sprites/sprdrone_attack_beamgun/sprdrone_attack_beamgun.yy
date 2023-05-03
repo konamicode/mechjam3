@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sprDrone_attack_beamGun",
   "bboxMode": 0,
   "collisionKind": 0,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 33,
   "height": 15,
   "textureGroupId": {
@@ -24,29 +28,31 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_attack_beamGun/sprDrone_attack_beamGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_attack_beamGun/sprDrone_attack_beamGun.yy",},"LayerId":{"name":"865f266a-a1e4-4c60-8b2f-2ac8f258f089","path":"sprites/sprDrone_attack_beamGun/sprDrone_attack_beamGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sprDrone_attack_beamGun","path":"sprites/sprDrone_attack_beamGun/sprDrone_attack_beamGun.yy",},"resourceVersion":"1.0","name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2e606c4b-52b6-4a93-baa4-cacbf4f0e957",},
   ],
   "sequence": {
-    "spriteId": {"name":"sprDrone_attack_beamGun","path":"sprites/sprDrone_attack_beamGun/sprDrone_attack_beamGun.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sprDrone_attack_beamGun",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 1.0,
+    "length": 2.0,
     "events": {"Keyframes":[
-        {"id":"379d54b6-46b1-46aa-b164-e785133feaa2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Events":[
+        {"id":"a5ce7d26-8370-4230-ae3d-89a97fbe7cd9","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Events":[
                 "FireWeapon:14_-1",
               ],"resourceVersion":"1.0","resourceType":"MessageEventKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<MessageEventKeyframe>",},
       ],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"05a18ac4-5c89-4797-8568-399161115d7a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b40f74a7-9df5-4692-84c3-012b9ce9a0ac","path":"sprites/sprDrone_attack_beamGun/sprDrone_attack_beamGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+            {"id":"93f57080-fcd5-43a8-bb04-94f88561dac3","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2e606c4b-52b6-4a93-baa4-cacbf4f0e957","path":"sprites/sprDrone_attack_beamGun/sprDrone_attack_beamGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +68,13 @@
     "yorigin": 7,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sprDrone_attack_beamGun","path":"sprites/sprDrone_attack_beamGun/sprDrone_attack_beamGun.yy",},
-    "resourceVersion": "1.4",
-    "name": "sprDrone_attack_beamGun",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"865f266a-a1e4-4c60-8b2f-2ac8f258f089","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"865f266a-a1e4-4c60-8b2f-2ac8f258f089","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Weapons",
     "path": "folders/Sprites/Weapons.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sprDrone_attack_beamGun",
-  "tags": [],
-  "resourceType": "GMSprite",
 }
